@@ -9,37 +9,39 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import { useTheme } from "@mui/material/styles";
+import { Link } from "react-router-dom";
 
 const pages = [
-  "Overview",
-  "Tracks",
-  "Submission",
-  "Committee",
-  "Schedule",
-  "Registration",
-  "Call for papers",
-  "Contact Us",
+  { name: "Overview", path: "/" },
+  { name: "Tracks", path: "/tracks" },
+  { name: "Submission", path: "/submission" },
+  { name: "Committee", path: "/committee" },
+  { name: "Schedule", path: "/schedule" },
+  { name: "Registration", path: "/registration" },
+  { name: "Call for papers", path: "/call" },
+  { name: "Contact Us", path: "/contact" },
 ];
-const settings = [];
 
-function Navbar() {
+function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const theme = useTheme();
+  const [menuOpen, setMenuOpen] = React.useState(false);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
+    setMenuOpen(true);
   };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+    setMenuOpen(false);
   };
 
   return (
     <AppBar
       position="static"
       sx={{
-        background: 'linear-gradient(162deg, rgba(75,67,193,0.9809173669467787) 0%, rgba(58,58,194,1) 32%, rgba(58,110,195,1) 56%)',
+        background:
+          "linear-gradient(162deg, rgba(75,67,193,0.9809173669467787) 0%, rgba(58,58,194,1) 32%, rgba(58,110,195,1) 56%)",
         backdropFilter: "blur(10px)",
         boxShadow: "none",
         marginBottom: "3px",
@@ -47,10 +49,15 @@ function Navbar() {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+            }}
+          >
             <IconButton
               size="large"
-              aria-label="account of current user"
+              aria-label="menu"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
@@ -61,28 +68,42 @@ function Navbar() {
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
+              open={menuOpen}
+              onClose={handleCloseNavMenu}
               anchorOrigin={{
                 vertical: "bottom",
                 horizontal: "left",
               }}
-              keepMounted
               transformOrigin={{
                 vertical: "top",
                 horizontal: "left",
               }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
+              getContentAnchorEl={null}
+              elevation={10}
+              PaperProps={{
+                sx: { width: 200 }, // Set the desired width here
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
                   <Typography
                     textAlign="center"
-                    sx={{ fontFamily: "inherit", color: "white" }}
+                    sx={{
+                      fontFamily: "inherit",
+                      background:
+                        "linear-gradient(162deg, rgba(75,67,193,0.9809173669467787) 0%, rgba(58,58,194,1) 32%, rgba(58,110,195,1) 56%)",
+                      backdropFilter: "blur(10px)",
+                      boxShadow: "none",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
                   >
-                    {page}
+                    <Link
+                      to={page.path}
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      {page.name}
+                    </Link>
                   </Typography>
                 </MenuItem>
               ))}
@@ -97,8 +118,7 @@ function Navbar() {
           >
             {pages.map((page) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                key={page.name}
                 sx={{
                   my: 2,
                   color: "white",
@@ -106,11 +126,13 @@ function Navbar() {
                   fontFamily: "inherit",
                   backgroundColor: "transparent",
                   "&:hover": {
-                    backgroundColor: "rgba(255, 255, 255, 0.2)", // Adjust the opacity and color as needed
+                    backgroundColor: "rgba(255, 255, 255, 0.2)",
                   },
                 }}
+                component={Link}
+                to={page.path}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
           </Box>
@@ -120,4 +142,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default ResponsiveAppBar;
