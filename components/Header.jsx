@@ -6,16 +6,9 @@ const Header = () => {
       <div className="main-logo">
         <img src="https://msit.in/static/img/msit.png" alt="MSIT Logo" />
       </div>
-      <div className="content">
-        <h3>
-          2nd International Conference on Artificial Intelligence and
-          Applications (ICAIA 2024)
-        </h3>
-        <p>
-          In association with Wentworth Institute of Technology, Boston-USA &
-          Springer
-        </p>
-        <p>19-20 March 2024</p>
+          <div className="content">
+              <h1>Maharaja Surajmal Institue of Technology</h1>
+              <span className="sub-heading">Affiliated to GGSIPU | NAAC Accredited 'A' Grade | NBA (CSE, IT, ECE,EEE) | Approved by AICTE | ISO 9001:2015 Certified</span>
       </div>
       {/* <div className="back-logo">
         <img className="g20" src="/images/g20.jpg" alt="G20 Logo" />

@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     gap: 3rem;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 img {
@@ -28,6 +28,11 @@ img {
     width: 50px;
     height: auto;
     margin: 0 5px;
+}
+
+.sub-heading {
+    font-size: 1rem;
+    color: #FF2400;
 }
 
 .navbar {
