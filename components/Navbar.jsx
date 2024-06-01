@@ -39,7 +39,7 @@ function Navbar() {
     <AppBar
       position="static"
       sx={{
-        backgroundColor: 'rgba(29, 45, 207, 0.8)',
+        background: 'linear-gradient(162deg, rgba(75,67,193,0.9809173669467787) 0%, rgba(58,58,194,1) 32%, rgba(58,110,195,1) 56%)',
         backdropFilter: "blur(10px)",
         boxShadow: "none",
         marginBottom: "3px",

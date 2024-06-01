@@ -32,8 +32,11 @@ img {
 
 .sub-heading {
     font-size: 1rem;
-    color: #FF2400;
+    background: linear-gradient(22deg, rgba(234, 139, 36, 1) 0%, rgba(238, 9, 18, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
 
 .navbar {
     background-color: #333;
