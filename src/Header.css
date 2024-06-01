@@ -1,7 +1,8 @@
 .above-section {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 3rem;
     padding: 1rem;
 }
 
