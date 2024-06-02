@@ -14,6 +14,7 @@ import ListItemText from "@mui/material/ListItemText";
 import { Link, useLocation } from "react-router-dom";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { keyframes } from "@mui/system";
 
 const pages = [
   { name: "Overview", path: "/" },
@@ -26,16 +27,39 @@ const pages = [
   { name: "Contact Us", path: "/contact" },
 ];
 
+const rotateOpen = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+`;
+
+const rotateClose = keyframes`
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+`;
+
 function ResponsiveAppBar() {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
   const [marginTop, setMarginTop] = React.useState('0px');
   const location = useLocation();
 
   const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.up('sm'));
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMediumScreen = useMediaQuery(theme.breakpoints.between('sm', 'md'));
+  const isLargeScreen = useMediaQuery(theme.breakpoints.up('md'));
 
   const handleDrawerToggle = () => {
     setDrawerOpen(!drawerOpen);
+    if (!drawerOpen) {
+      document.documentElement.scrollTop = 350;
+    }
   };
 
   const handleCloseDrawer = () => {
@@ -48,12 +72,17 @@ function ResponsiveAppBar() {
       if (navbar) {
         const navbarRect = navbar.getBoundingClientRect();
         if (navbarRect.top <= 0) {
-          setMarginTop('3.5rem');
+          if (isMediumScreen) {
+            setMarginTop('4rem');
+          } else {
+            setMarginTop('3.5rem');
+          }
         } else {
           setMarginTop(`${navbarRect.bottom}px`);
         }
       }
     };
+
 
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Initial check
@@ -61,7 +90,13 @@ function ResponsiveAppBar() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [isMediumScreen, isSmallScreen]);
+
+  React.useEffect(() => {
+    if (isLargeScreen && drawerOpen) {
+      setDrawerOpen(false);
+    }
+  }, [isLargeScreen, drawerOpen]);
 
   return (
     <AppBar
@@ -89,7 +124,11 @@ function ResponsiveAppBar() {
               aria-label="menu"
               onClick={handleDrawerToggle}
               color="inherit"
-              sx={{ position: 'absolute', zIndex: 1300 }}
+              sx={{
+                position: 'absolute',
+                zIndex: 1300,
+                animation: drawerOpen ? `${rotateOpen} 0.3s` : `${rotateClose} 0.3s`,
+              }}
             >
               {drawerOpen ? <CloseIcon sx={{ fontSize: 32 }} /> : <MenuIcon sx={{ fontSize: 32 }} />}
             </IconButton>
@@ -102,11 +141,10 @@ function ResponsiveAppBar() {
               }}
               PaperProps={{
                 sx: {
-                  width: '250px',
+                  width: '60vw',
                   mt: marginTop,
-                  ...(isSmallScreen && {
-                    mt: '4rem'
-                  }),
+                  overflow: 'auto',
+                  height: '100vh',
                 }
               }}
             >
@@ -117,6 +155,7 @@ function ResponsiveAppBar() {
                     "linear-gradient(162deg, rgba(75,67,193,0.9809173669467787) 0%, rgba(58,58,194,1) 32%, rgba(58,110,195,1) 56%)",
                   height: "100%",
                   color: "white",
+                  overflorY: "auto",
                 }}
                 role="presentation"
                 onClick={handleCloseDrawer}
