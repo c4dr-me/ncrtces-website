@@ -146,7 +146,7 @@ function ResponsiveAppBar() {
               }}
               PaperProps={{
                 sx: {
-                  width: '60vw',
+                  width: '15.625rem',
                   mt: marginTop,
                   overflow: 'auto',
                   height: '100vh',

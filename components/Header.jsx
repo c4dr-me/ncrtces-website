@@ -4,7 +4,8 @@ const Header = () => {
   return (
     <div className="above-section">
       <div className="main-logo">
-        <img src="https://msit.in/static/img/msit.png" alt="MSIT Logo" />
+      <img src="https://msit.in/static/img/msit.png" alt="MSIT Logo" width="100" height="100" />
+
       </div>
       <div className="content">
         <h1>Maharaja Surajmal Institute Of Technology</h1>
