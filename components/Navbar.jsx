@@ -23,6 +23,7 @@ const pages = [
   { name: "Committee", path: "/committee" },
   { name: "Schedule", path: "/schedule" },
   { name: "Registration", path: "/registration" },
+  { name: "Patrons", path: "/patron" },
   { name: "Call for papers", path: "/call" },
   { name: "Contact Us", path: "/contact" },
 ];
@@ -30,18 +31,22 @@ const pages = [
 const rotateOpen = keyframes`
   from {
     transform: rotate(0deg);
+ 
   }
   to {
     transform: rotate(90deg);
+
   }
 `;
 
 const rotateClose = keyframes`
   from {
     transform: rotate(90deg);
+
   }
   to {
     transform: rotate(0deg);
+
   }
 `;
 
@@ -58,7 +63,7 @@ function ResponsiveAppBar() {
   const handleDrawerToggle = () => {
     setDrawerOpen(!drawerOpen);
     if (!drawerOpen) {
-      document.documentElement.scrollTop = 350;
+      window.scrollTo({ top: 350, behavior: "smooth" });
     }
   };
 
@@ -127,7 +132,7 @@ function ResponsiveAppBar() {
               sx={{
                 position: 'absolute',
                 zIndex: 1300,
-                animation: drawerOpen ? `${rotateOpen} 0.3s` : `${rotateClose} 0.3s`,
+                animation: drawerOpen ? `${rotateOpen} 200ms ease-in forwards` : `${rotateClose} 200ms ease-in forwards;`,
               }}
             >
               {drawerOpen ? <CloseIcon sx={{ fontSize: 32 }} /> : <MenuIcon sx={{ fontSize: 32 }} />}

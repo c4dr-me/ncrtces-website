@@ -1,0 +1,14 @@
+.main {
+    background: url('../college_blur_img.jpg');
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    color: white;
+    font-size: 1.1rem;
+    text-align: center;
+}

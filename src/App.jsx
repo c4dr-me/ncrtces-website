@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from "react-route
 
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
-import Main from "../components/Main";
+import Main from "../components/MainContent";
 
 import Overview from "../pages/Overview";
 import Tracks from "../pages/Tracks";
@@ -13,6 +13,7 @@ import Schedule from "../pages/Schedule";
 import Registration from "../pages/Registration";
 import Call from "../pages/Call";
 import Contact from "../pages/Contact";
+import Patron from "../pages/Patron";
 
 const App = () => {
   const MainContent = () => {
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="/committee" element={<Committee />} />
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/registration" element={<Registration />} />
+          <Route path="/patron" element={<Patron />} />
           <Route path="/call" element={<Call />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
