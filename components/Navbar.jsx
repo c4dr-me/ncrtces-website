@@ -63,7 +63,7 @@ function ResponsiveAppBar() {
   const handleDrawerToggle = () => {
     setDrawerOpen(!drawerOpen);
     if (!drawerOpen) {
-      window.scrollTo({ top: 350, behavior: "smooth" });
+      window.scrollTo({ top: 400, behavior: "smooth" });
     }
   };
 
