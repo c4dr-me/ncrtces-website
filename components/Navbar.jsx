@@ -66,9 +66,11 @@ function ResponsiveAppBar() {
   const handleDrawerToggle = () => {
     setDrawerOpen(!drawerOpen);
     if (!drawerOpen) {
-      window.scrollTo({ top: 300, behavior: "smooth" });
+      let scrollPosition = 500; 
+      window.scrollTo({ top: scrollPosition, behavior: "smooth" });
     }
   };
+  
 
   const handleCloseDrawer = () => {
     setDrawerOpen(false);
@@ -83,7 +85,8 @@ function ResponsiveAppBar() {
           setIsNavbarAtTop(true);
           if (isMediumScreen) {
             setMarginTop("4rem");
-          } else {
+          }
+          else {
             setMarginTop("3.4rem");
           }
         } else {
