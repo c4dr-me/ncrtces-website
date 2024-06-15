@@ -55,18 +55,10 @@ function ResponsiveAppBar() {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const isMediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"));
   const isLargeScreen = useMediaQuery(theme.breakpoints.up("md"));
+  const isVerySmallScreen = window.matchMedia("(max-width: 325px)").matches;
 
   const handleDrawerToggle = () => {
     setDrawerOpen(!drawerOpen);
-    if (!drawerOpen) {
-      let scrollPosition = 425; // Default for large screens
-      if (isSmallScreen) {
-        scrollPosition = 325; // For small screens
-      } else if (isMediumScreen) {
-        scrollPosition = 375; // For medium screens
-      }
-      window.scrollTo({ top: scrollPosition, behavior: "smooth" });
-    }
   };
 
   const handleCloseDrawer = () => {
@@ -155,7 +147,7 @@ function ResponsiveAppBar() {
                 sx: {
                   width: "15.625rem",
                   mt: marginTop,
-                  height: "100%",
+                  Height: "100%",
                 },
               }}
             >
@@ -164,9 +156,9 @@ function ResponsiveAppBar() {
                   width: 250,
                   background:
                     "linear-gradient(162deg, rgba(75,67,193,0.9809173669467787) 0%, rgba(58,58,194,1) 32%, rgba(58,110,195,1) 56%)",
-                  height: "100%",
+                  minHeight: "110vh",
                   color: "white",
-                  overflowY: "auto",
+                  overflowY: "scroll",
                 }}
                 role="presentation"
                 onClick={handleCloseDrawer}
