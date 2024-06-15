@@ -31,36 +31,28 @@ const pages = [
 const rotateOpen = keyframes`
   from {
     transform: rotate(0deg);
- 
   }
   to {
     transform: rotate(180deg);
-
   }
 `;
 
 const rotateClose = keyframes`
   from {
     transform: rotate(180deg);
-
   }
   to {
     transform: rotate(0deg);
-
   }
 `;
 
 function ResponsiveAppBar() {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
-  const [marginTop, setMarginTop] = React.useState("0px");
-  const [isNavbarAtTop, setIsNavbarAtTop] = React.useState(false);
-
 
   const location = useLocation();
 
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-  const isMediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"));
   const isLargeScreen = useMediaQuery(theme.breakpoints.up("md"));
 
   const handleDrawerToggle = () => {
@@ -70,47 +62,16 @@ function ResponsiveAppBar() {
       window.scrollTo({ top: scrollPosition, behavior: "smooth" });
     }
   };
-  
 
   const handleCloseDrawer = () => {
     setDrawerOpen(false);
   };
 
   React.useEffect(() => {
-    const handleScroll = () => {
-      const navbar = document.querySelector("#appbar");
-      if (navbar) {
-        const navbarRect = navbar.getBoundingClientRect();
-        if (navbarRect.top <= 0) {
-          setIsNavbarAtTop(true);
-          if (isMediumScreen) {
-            setMarginTop("4rem");
-          }
-          else {
-            setMarginTop("3.4rem");
-          }
-        } else {
-          setIsNavbarAtTop(false);
-          setMarginTop(`${navbarRect.bottom}px`);
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initial check
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [isMediumScreen, isSmallScreen]);
-
-  React.useEffect(() => {
     if (isLargeScreen && drawerOpen) {
       setDrawerOpen(false);
     }
   }, [isLargeScreen, drawerOpen]);
-
-  
 
   return (
     <AppBar
@@ -152,59 +113,58 @@ function ResponsiveAppBar() {
                 <MenuIcon sx={{ fontSize: 32 }} />
               )}
             </IconButton>
-            {isNavbarAtTop && (
-              <Drawer
-                anchor="left"
-                open={drawerOpen}
-                onClose={handleCloseDrawer}
-                ModalProps={{
-                  keepMounted: true, // Better open performance on mobile.
+            <Drawer
+              anchor="left"
+              open={drawerOpen}
+              onClose={handleCloseDrawer}
+              ModalProps={{
+                keepMounted: true, // Better open performance on mobile.
+              }}
+              PaperProps={{
+                sx: {
+                  width: "15.625rem",
+                  height: "100%",
+                  overflowY: "auto",
+                  marginTop: "189px",// Ensure the drawer is scrollable
+                },
+              }}
+            >
+              <Box
+                sx={{
+                  width: 250,
+                  background:
+                    "linear-gradient(162deg, rgba(75,67,193,0.9809173669467787) 0%, rgba(58,58,194,1) 32%, rgba(58,110,195,1) 56%)",
+                  height: "100%",
+                  color: "white",
+                  overflowY: "auto",
                 }}
-                PaperProps={{
-                  sx: {
-                    width: "15.625rem",
-                    mt: marginTop,
-                    height: "100%",
-                  },
-                }}
+                role="presentation"
+                onClick={handleCloseDrawer}
+                onKeyDown={handleCloseDrawer}
               >
-                <Box
-                  sx={{
-                    width: 250,
-                    background:
-                      "linear-gradient(162deg, rgba(75,67,193,0.9809173669467787) 0%, rgba(58,58,194,1) 32%, rgba(58,110,195,1) 56%)",
-                    height: "100%",
-                    color: "white",
-                    overflowY: "auto",
-                  }}
-                  role="presentation"
-                  onClick={handleCloseDrawer}
-                  onKeyDown={handleCloseDrawer}
-                >
-                  <List>
-                    {pages.map((page) => (
-                      <ListItem
-                        key={page.name}
-                        component={Link}
-                        to={page.path}
-                        sx={{
-                          color: "white",
-                          backgroundColor:
-                            location.pathname === page.path
-                              ? "rgba(255, 255, 255, 0.2)"
-                              : "transparent",
-                          "&:hover": {
-                            backgroundColor: "rgba(255, 255, 255, 0.1)",
-                          },
-                        }}
-                      >
-                        <ListItemText primary={page.name} />
-                      </ListItem>
-                    ))}
-                  </List>
-                </Box>
-              </Drawer>
-            )}
+                <List>
+                  {pages.map((page) => (
+                    <ListItem
+                      key={page.name}
+                      component={Link}
+                      to={page.path}
+                      sx={{
+                        color: "white",
+                        backgroundColor:
+                          location.pathname === page.path
+                            ? "rgba(255, 255, 255, 0.2)"
+                            : "transparent",
+                        "&:hover": {
+                          backgroundColor: "rgba(255, 255, 255, 0.1)",
+                        },
+                      }}
+                    >
+                      <ListItemText primary={page.name} />
+                    </ListItem>
+                  ))}
+                </List>
+              </Box>
+            </Drawer>
           </Box>
           <Box
             sx={{
