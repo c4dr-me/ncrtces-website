@@ -48,17 +48,23 @@ const rotateClose = keyframes`
 
 function ResponsiveAppBar() {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
-
+  const [marginTop, setMarginTop] = React.useState("0px");
   const location = useLocation();
 
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"));
   const isLargeScreen = useMediaQuery(theme.breakpoints.up("md"));
 
   const handleDrawerToggle = () => {
     setDrawerOpen(!drawerOpen);
     if (!drawerOpen) {
-      let scrollPosition = 500; 
+      let scrollPosition = 425; // Default for large screens
+      if (isSmallScreen) {
+        scrollPosition = 325; // For small screens
+      } else if (isMediumScreen) {
+        scrollPosition = 375; // For medium screens
+      }
       window.scrollTo({ top: scrollPosition, behavior: "smooth" });
     }
   };
@@ -66,6 +72,31 @@ function ResponsiveAppBar() {
   const handleCloseDrawer = () => {
     setDrawerOpen(false);
   };
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const navbar = document.querySelector("#appbar");
+      if (navbar) {
+        const navbarRect = navbar.getBoundingClientRect();
+        if (navbarRect.top <= 0) {
+          if (isMediumScreen) {
+            setMarginTop("4rem");
+          } else {
+            setMarginTop("3.4rem");
+          }
+        } else {
+          setMarginTop(`${navbarRect.bottom}px`);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initial check
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isMediumScreen, isSmallScreen]);
 
   React.useEffect(() => {
     if (isLargeScreen && drawerOpen) {
@@ -104,7 +135,7 @@ function ResponsiveAppBar() {
                 zIndex: 1300,
                 animation: drawerOpen
                   ? `${rotateOpen} 200ms ease-in forwards`
-                  : `${rotateClose} 200ms ease-in forwards;`,
+                  : `${rotateClose} 200ms ease-in forwards`,
               }}
             >
               {drawerOpen ? (
@@ -123,9 +154,8 @@ function ResponsiveAppBar() {
               PaperProps={{
                 sx: {
                   width: "15.625rem",
+                  mt: marginTop,
                   height: "100%",
-                  overflowY: "auto",
-                  marginTop: "189px",// Ensure the drawer is scrollable
                 },
               }}
             >
