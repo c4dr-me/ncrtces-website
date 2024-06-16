@@ -9,6 +9,11 @@
 
 .box {
     color: white;
+    width: 50rem;
     font-size: 1.1rem;
     text-align: center;
+}
+.name{
+    color: rgb(178 195 58);
+    margin-top: 20px;
 }
