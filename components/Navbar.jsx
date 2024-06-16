@@ -55,7 +55,7 @@ function ResponsiveAppBar() {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const isMediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"));
   const isLargeScreen = useMediaQuery(theme.breakpoints.up("md"));
-  const isVerySmallScreen = window.matchMedia("(max-width: 325px)").matches;
+
 
   const handleDrawerToggle = () => {
     setDrawerOpen(!drawerOpen);
@@ -71,9 +71,12 @@ function ResponsiveAppBar() {
       if (navbar) {
         const navbarRect = navbar.getBoundingClientRect();
         if (navbarRect.top <= 0) {
-          if (isMediumScreen) {
+          if (window.innerWidth >= 320) { // Check if the screen size is small
+            setMarginTop("6rem"); // Adjust this value as needed
+          }
+          else if (isMediumScreen) {
             setMarginTop("4rem");
-          } else {
+          }else {
             setMarginTop("3.4rem");
           }
         } else {
