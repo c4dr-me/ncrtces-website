@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import MainContent from "../components/MainContent";
 import About from "../pages/About";
@@ -7,10 +6,10 @@ import Patron from "../pages/Patron";
 // import Overview from "../pages/Overview";
 // import Tracks from "../pages/Tracks";
 // import Submission from "../pages/Submission";
-// import Committee from "../pages/Committee";
+import Committee from "../pages/Committee";
 // import Schedule from "../pages/Schedule";
 // import Registration from "../pages/Registration";
-// import Contact from "../pages/Contact";
+import Contact from "../pages/Contact";
 
 const App = () => {
   // const MainContent = () => {
@@ -26,7 +25,9 @@ const App = () => {
        
         <MainContent />
         <About />
+        <Committee />
         <Patron />
+        <Contact />
         {/* <Routes>
           <Route exact path="/" element={<Overview />} />
           <Route path="/tracks" element={<Tracks />} />
