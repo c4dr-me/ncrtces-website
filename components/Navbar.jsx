@@ -17,15 +17,15 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { keyframes } from "@mui/system";
 
 const pages = [
-  { name: "Overview" , sname: "overview"},
-  { name: "About Us" , sname: "about"},
-  { name: "Tracks", sname: "track"},
-  { name: "Submission", sname: "sub"},
-  { name: "Committee", sname: "commit"},
-  { name: "Schedule", sname: "schedule"},
-  { name: "Registration", sname: "reg"},
-  { name: "Patrons", sname: "patron"},
-  { name: "Contact Us", sname: "contact"},
+  { name: "Overview", sname: "overview" },
+  { name: "About Us", sname: "about" },
+  { name: "Tracks", sname: "track" },
+  { name: "Submission", sname: "sub" },
+  { name: "Committee", sname: "commit" },
+  { name: "Schedule", sname: "schedule" },
+  { name: "Registration", sname: "reg" },
+  { name: "Patrons", sname: "patron" },
+  { name: "Contact Us", sname: "contact" },
 ];
 
 const rotateOpen = keyframes`
@@ -56,7 +56,6 @@ function ResponsiveAppBar() {
   const isMediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"));
   const isLargeScreen = useMediaQuery(theme.breakpoints.up("md"));
 
-
   const handleDrawerToggle = () => {
     setDrawerOpen(!drawerOpen);
   };
@@ -71,12 +70,9 @@ function ResponsiveAppBar() {
       if (navbar) {
         const navbarRect = navbar.getBoundingClientRect();
         if (navbarRect.top <= 0) {
-          if (window.innerWidth >= 320) { // Check if the screen size is small
-            setMarginTop("6rem"); // Adjust this value as needed
-          }
-          else if (isMediumScreen) {
+          if (isMediumScreen) {
             setMarginTop("4rem");
-          }else {
+          } else {
             setMarginTop("3.4rem");
           }
         } else {
@@ -109,14 +105,52 @@ function ResponsiveAppBar() {
         backdropFilter: "blur(10px)",
         boxShadow: "none",
         marginBottom: "3px",
+        overflow: "hidden",
       }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
+         
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <img
+              src="https://msit.in/static/img/msit.png"
+              alt="Logo"
+              style={{ height: "50px", width: "50px", marginRight: "1rem" }}
+            />
+          </Box>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+              justifyContent: "space-between",
+            }}
+          >
+            {pages.map((page) => (
+              <Button
+                key={page.name}
+                component={Link}
+                to={page.sname}
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  fontFamily: "inherit",
+                  backgroundColor: "transparent",
+                  "&:hover": {
+                    backgroundColor: "rgba(255, 255, 255, 0.2)",
+                  },
+                }}
+              >
+                {page.name}
+              </Button>
+            ))}
+          </Box>
+          
           <Box
             sx={{
               flexGrow: 1,
               display: { xs: "flex", md: "none" },
+              justifyContent: "flex-end",
               alignItems: "center",
             }}
           >
@@ -126,8 +160,6 @@ function ResponsiveAppBar() {
               onClick={handleDrawerToggle}
               color="inherit"
               sx={{
-                position: "absolute",
-                zIndex: 1300,
                 animation: drawerOpen
                   ? `${rotateOpen} 200ms ease-in forwards`
                   : `${rotateClose} 200ms ease-in forwards`,
@@ -140,7 +172,7 @@ function ResponsiveAppBar() {
               )}
             </IconButton>
             <Drawer
-              anchor="left"
+              anchor="right"
               open={drawerOpen}
               onClose={handleCloseDrawer}
               ModalProps={{
@@ -190,33 +222,6 @@ function ResponsiveAppBar() {
                 </List>
               </Box>
             </Drawer>
-          </Box>
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "none", md: "flex" },
-              justifyContent: "space-between",
-            }}
-          >
-            {pages.map((page) => (
-              <Button
-                key={page.name}
-                component={Link}
-                to={page.sname}
-                sx={{
-                  my: 2,
-                  color: "white",
-                  display: "block",
-                  fontFamily: "inherit",
-                  backgroundColor: "transparent",
-                  "&:hover": {
-                    backgroundColor: "rgba(255, 255, 255, 0.2)",
-                  },
-                }}
-              >
-                {page.name}
-              </Button>
-            ))}
           </Box>
         </Toolbar>
       </Container>

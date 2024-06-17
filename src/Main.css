@@ -5,6 +5,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .box {
@@ -13,7 +16,8 @@
     font-size: 1.1rem;
     text-align: center;
 }
-.name{
+
+.name {
     color: rgb(178 195 58);
     margin-top: 20px;
 }
