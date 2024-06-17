@@ -14,6 +14,7 @@ import ListItemText from "@mui/material/ListItemText";
 import { Link as ScrollLink } from "react-scroll";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import "./navbar.css";
 
 const pages = [
   { name: "Overview", sname: "overview" },
@@ -94,6 +95,8 @@ function ResponsiveAppBar() {
                 spy={true}
                 smooth={true}
                 duration={500}
+                offset={-66}
+                activeClass="active"
                 sx={{
                   my: 2,
                   color: "white",
@@ -190,7 +193,7 @@ function ResponsiveAppBar() {
                       spy={true}
                       smooth={true}
                       duration={500}
-                       activeClass="active"
+                      activeClass="active"
                       sx={{
                         color: "white",
                         backgroundColor:
