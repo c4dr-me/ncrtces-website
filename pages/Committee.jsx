@@ -2,9 +2,9 @@ import React from 'react'
 
 const Committee = () => {
   return (
-    <div id="commit">
+    <section id="commit">
       <h1>Commitee</h1>
-    </div>
+    </section>
   )
 }
 

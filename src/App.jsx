@@ -18,9 +18,12 @@ const App = () => {
   //   return location.pathname === "/" ? <Main /> : null;
   // };
   return (
-    <>
-      <Router>
+    <div>
+      {/* <Router> */}
+   
         <Navbar />
+
+       
         <MainContent />
         <About />
         <Patron />
@@ -36,8 +39,8 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <MainContent /> */}
-      </Router>
-    </>
+      {/* </Router> */}
+    </div>
   );
 };
 

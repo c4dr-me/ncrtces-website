@@ -2,7 +2,7 @@ import React from 'react'
 import '../src/Patron.css'
 const Patrons = () => {
     return (
-        <div className="patrons" id="patron">
+        <section className="patrons" id="patron">
             <h1>Patrons</h1>
             <ul
                 className="mx-3 md:ml-32">
@@ -18,7 +18,7 @@ const Patrons = () => {
             {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi odio placeat vel, exercitationem, quam similique veritatis perferendis eaque perspiciatis impedit nesciunt dolorum laudantium ducimus ex id explicabo cumque aut. Omnis?
             Error, possimus quisquam. Nesciunt suscipit delectus alias recusandae, eum veritatis cupiditate asperiores neque quae perspiciatis. Distinctio earum quis exercitationem odit optio nostrum corrupti veniam illum molestias! Laboriosam ab ipsam molestias.
             Nesciunt explicabo vel eaque! Laboriosam deserunt voluptatem, amet velit reiciendis eaque cumque quae nemo, doloremque cupiditate provident alias. Alias, non pariatur. Magni nulla ipsum tenetur, eveniet tempora est incidunt error.</p> */}
-        </div>
+        </section>
     )
 }
 

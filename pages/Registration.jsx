@@ -2,9 +2,9 @@ import React from 'react'
 
 const Registration = () => {
   return (
-    <div id='reg'>
+    <section id='reg'>
       <h1>Registrations</h1>
-    </div>
+    </section>
   )
 }
 

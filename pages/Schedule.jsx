@@ -2,9 +2,9 @@ import React from 'react'
 
 const Schedule = () => {
   return (
-    <div id="schedule">
+    <section id="schedule">
       <h1>Schedule</h1>
-    </div>
+    </section>
   )
 }
 

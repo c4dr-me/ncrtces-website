@@ -11,10 +11,9 @@ import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
-import { Link, useLocation } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { keyframes } from "@mui/system";
 
 const pages = [
   { name: "Overview", sname: "overview" },
@@ -27,33 +26,19 @@ const pages = [
   { name: "Patrons", sname: "patron" },
   { name: "Contact Us", sname: "contact" },
 ];
-
-const rotateOpen = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(180deg);
-  }
-`;
-
-const rotateClose = keyframes`
-  from {
-    transform: rotate(180deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-`;
+const ForwardedScrollLink = React.forwardRef((props, ref) => (
+  <div ref={ref}>
+  <ScrollLink {...props} />
+</div>
+)); // this function is used for forwarding the ref of custom elemtns i.e which are not native elements like listitems and buttons from react mui
 
 function ResponsiveAppBar() {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
-  const [marginTop, setMarginTop] = React.useState("0px");
-  const location = useLocation();
+  // const [marginTop, setMarginTop] = React.useState("0px");
 
   const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-  const isMediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"));
+  // const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  // const isMediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"));
   const isLargeScreen = useMediaQuery(theme.breakpoints.up("md"));
 
   const handleDrawerToggle = () => {
@@ -65,35 +50,11 @@ function ResponsiveAppBar() {
   };
 
   React.useEffect(() => {
-    const handleScroll = () => {
-      const navbar = document.querySelector("#appbar");
-      if (navbar) {
-        const navbarRect = navbar.getBoundingClientRect();
-        if (navbarRect.top <= 0) {
-          if (isMediumScreen) {
-            setMarginTop("4rem");
-          } else {
-            setMarginTop("3.4rem");
-          }
-        } else {
-          setMarginTop(`${navbarRect.bottom}px`);
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initial check
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [isMediumScreen, isSmallScreen]);
-
-  React.useEffect(() => {
     if (isLargeScreen && drawerOpen) {
       setDrawerOpen(false);
     }
   }, [isLargeScreen, drawerOpen]);
+
 
   return (
     <AppBar
@@ -110,12 +71,12 @@ function ResponsiveAppBar() {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-         
+          {/* Logo should always be visible */}
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <img
               src="https://msit.in/static/img/msit.png"
               alt="Logo"
-              style={{ height: "50px", width: "50px", marginRight: "1rem" }}
+              style={{ height: "50px", width: "50px", marginRight: "5px" }}
             />
           </Box>
           <Box
@@ -128,8 +89,11 @@ function ResponsiveAppBar() {
             {pages.map((page) => (
               <Button
                 key={page.name}
-                component={Link}
+                component={ForwardedScrollLink}
                 to={page.sname}
+                spy={true}
+                smooth={true}
+                duration={500}
                 sx={{
                   my: 2,
                   color: "white",
@@ -145,7 +109,7 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
-          
+
           <Box
             sx={{
               flexGrow: 1,
@@ -160,16 +124,12 @@ function ResponsiveAppBar() {
               onClick={handleDrawerToggle}
               color="inherit"
               sx={{
-                animation: drawerOpen
-                  ? `${rotateOpen} 200ms ease-in forwards`
-                  : `${rotateClose} 200ms ease-in forwards`,
+                transform: drawerOpen ? "rotate(180deg)" : "rotate(0deg)",
+                transition: "transform 200ms ease-in",
+                display: { md: "none" }, // Hide on larger screens
               }}
             >
-              {drawerOpen ? (
-                <CloseIcon sx={{ fontSize: 32 }} />
-              ) : (
-                <MenuIcon sx={{ fontSize: 32 }} />
-              )}
+              <MenuIcon sx={{ fontSize: 32 }} />
             </IconButton>
             <Drawer
               anchor="right"
@@ -180,40 +140,65 @@ function ResponsiveAppBar() {
               }}
               PaperProps={{
                 sx: {
-                  width: "15.625rem",
-                  mt: marginTop,
-                  Height: "100%",
+                  width: "60vw",
+                  maxWidth: "400px",
+                  // mt: marginTop,
+                  height: "100%",
+                  overflow: "hidden",
                 },
               }}
             >
               <Box
                 sx={{
-                  width: 250,
+                  width: "inherit",
                   background:
                     "linear-gradient(162deg, rgba(75,67,193,0.9809173669467787) 0%, rgba(58,58,194,1) 32%, rgba(58,110,195,1) 56%)",
-                  minHeight: "110vh",
+                  minHeight: "100vh",
                   color: "white",
-                  overflowY: "scroll",
+                  overflow: "hidden",
                 }}
                 role="presentation"
                 onClick={handleCloseDrawer}
                 onKeyDown={handleCloseDrawer}
               >
-                <List>
+                <IconButton
+                  size="large"
+                  aria-label="close drawer"
+                  onClick={handleCloseDrawer}
+                  color="inherit"
+                  sx={{
+                    position: "absolute",
+                    top: "0.2rem",
+                    right: "0",
+                  }}
+                >
+                  <CloseIcon sx={{ fontSize: 32 }} />
+                </IconButton>
+                <List
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "1rem",
+                    mt: 6,
+                  }}
+                >
                   {pages.map((page) => (
                     <ListItem
                       key={page.name}
-                      component={Link}
+                      component={ForwardedScrollLink}
                       to={page.sname}
+                      spy={true}
+                      smooth={true}
+                      duration={500}
+                       activeClass="active"
                       sx={{
                         color: "white",
                         backgroundColor:
-                          location.pathname === page.sname
-                            ? "rgba(255, 255, 255, 0.2)"
-                            : "transparent",
+                           "transparent",
                         "&:hover": {
                           backgroundColor: "rgba(255, 255, 255, 0.1)",
                         },
+                        
                       }}
                     >
                       <ListItemText primary={page.name} />

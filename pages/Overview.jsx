@@ -2,9 +2,9 @@ import React from 'react';
 
 function Overview() {
   return (
-    <div id="overview">
+    <section id="overview">
      <h1>Overview</h1>
-    </div>
+    </section>
   );
 }
 
