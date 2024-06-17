@@ -2,8 +2,8 @@ import React from 'react'
 
 const Registration = () => {
   return (
-    <div>
-      
+    <div id='reg'>
+      <h1>Registrations</h1>
     </div>
   )
 }

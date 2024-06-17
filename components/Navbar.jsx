@@ -17,15 +17,15 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { keyframes } from "@mui/system";
 
 const pages = [
-  { name: "Overview", path: "/" },
-  { name: "Tracks", path: "/tracks" },
-  { name: "Submission", path: "/submission" },
-  { name: "Committee", path: "/committee" },
-  { name: "Schedule", path: "/schedule" },
-  { name: "Registration", path: "/registration" },
-  { name: "Patrons", path: "/patron" },
-  { name: "Call for papers", path: "/call" },
-  { name: "Contact Us", path: "/contact" },
+  { name: "Overview" , sname: "overview"},
+  { name: "About Us" , sname: "about"},
+  { name: "Tracks", sname: "track"},
+  { name: "Submission", sname: "sub"},
+  { name: "Committee", sname: "commit"},
+  { name: "Schedule", sname: "schedule"},
+  { name: "Registration", sname: "reg"},
+  { name: "Patrons", sname: "patron"},
+  { name: "Contact Us", sname: "contact"},
 ];
 
 const rotateOpen = keyframes`
@@ -172,11 +172,11 @@ function ResponsiveAppBar() {
                     <ListItem
                       key={page.name}
                       component={Link}
-                      to={page.path}
+                      to={page.sname}
                       sx={{
                         color: "white",
                         backgroundColor:
-                          location.pathname === page.path
+                          location.pathname === page.sname
                             ? "rgba(255, 255, 255, 0.2)"
                             : "transparent",
                         "&:hover": {
@@ -202,7 +202,7 @@ function ResponsiveAppBar() {
               <Button
                 key={page.name}
                 component={Link}
-                to={page.path}
+                to={page.sname}
                 sx={{
                   my: 2,
                   color: "white",
