@@ -1,14 +1,15 @@
-import React from 'react'
+import React from 'react';
+import './Comingsoon.css';  // Import the shared CSS file
 
 const Contact = () => {
   return (
-    <section id="contact">
-      <h1>Contact Us</h1>
-      <div style={{marginTop:"20px",textAlign:"center",fontSize:"1.5rem"}}>
+    <section id="contact" className="section">
+      <h1 className="heading">Contact Us</h1>
+      <div className="coming-soon">
         COMING SOON
-    </div>
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

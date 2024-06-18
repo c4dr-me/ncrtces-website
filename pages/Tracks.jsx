@@ -1,14 +1,15 @@
-import React from 'react'
+import React from 'react';
+import './Comingsoon.css';  // Import the CSS file
 
 const Tracks = () => {
   return (
-    <section id='track'>
-      <h1>Tracks</h1>
-      <div style={{marginTop:"20px",textAlign:"center",fontSize:"1.5rem"}}>
+    <section id="track" className="tracks-section section">
+      <h1 className="tracks-heading heading">Tracks</h1>
+      <div className="coming-soon">
         COMING SOON
-    </div>
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default Tracks
+export default Tracks;

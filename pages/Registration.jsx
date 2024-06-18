@@ -1,14 +1,15 @@
-import React from 'react'
+import React from 'react';
+import './Comingsoon.css';  // Import the shared CSS file
 
 const Registration = () => {
   return (
-    <section id='reg'>
-      <h1>Registrations</h1>
-      <div style={{marginTop:"20px",textAlign:"center",fontSize:"1.5rem"}}>
+    <section id="reg" className="section">
+      <h1 className="heading">Registrations</h1>
+      <div className="coming-soon">
         COMING SOON
-    </div>
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default Registration
+export default Registration;

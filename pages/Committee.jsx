@@ -1,14 +1,15 @@
-import React from 'react'
+import React from 'react';
+import './Comingsoon.css';  // Import the CSS file
 
 const Committee = () => {
   return (
-    <section id="commit">
-      <h1>Committee</h1>
-      <div style={{marginTop:"20px",textAlign:"center",fontSize:"1.5rem"}}>
+    <section id="commit" className="committee-section section">
+      <h1 className="committee-heading heading">Committee</h1>
+      <div className="coming-soon">
         COMING SOON
-    </div>
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default Committee
+export default Committee;
