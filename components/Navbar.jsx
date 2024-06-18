@@ -95,7 +95,14 @@ function ResponsiveAppBar() {
                 spy={true}
                 smooth={true}
                 duration={500}
-                offset={-66}
+                offset={page.sname === "patron"
+                    ? -40
+                    : page.sname === "reg"
+                    ? -30
+                    : page.sname === "contact"
+                      ? -10
+                          : -50
+                    }
                 activeClass="active"
                 sx={{
                   my: 2,
