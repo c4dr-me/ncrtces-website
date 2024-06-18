@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Overview() {
+function Home() {
   return (
-    <section id="overview">
+    <section id="home">
      <h1>Overview</h1>
     </section>
   );
 }
 
-export default Overview;
+export default Home;

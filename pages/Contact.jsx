@@ -4,7 +4,9 @@ const Contact = () => {
   return (
     <section id="contact">
       <h1>Contact Us</h1>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae nostrum velit iste minus unde, aspernatur eius ad numquam sequi, officiis dignissimos!</p>
+      <div style={{marginTop:"20px",textAlign:"center",fontSize:"1.5rem"}}>
+        COMING SOON
+    </div>
     </section>
   )
 }

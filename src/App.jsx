@@ -3,12 +3,9 @@ import Navbar from "../components/Navbar";
 import MainContent from "../components/MainContent";
 import About from "../pages/About";
 import Patron from "../pages/Patron";
-// import Overview from "../pages/Overview";
-// import Tracks from "../pages/Tracks";
-// import Submission from "../pages/Submission";
+import Tracks from "../pages/Tracks";
 import Committee from "../pages/Committee";
-// import Schedule from "../pages/Schedule";
-// import Registration from "../pages/Registration";
+import Registration from "../pages/Registration";
 import Contact from "../pages/Contact";
 
 const App = () => {
@@ -25,8 +22,10 @@ const App = () => {
        
         <MainContent />
         <About />
+        <Tracks />
         <Committee />
         <Patron />
+        <Registration />
         <Contact />
         {/* <Routes>
           <Route exact path="/" element={<Overview />} />
