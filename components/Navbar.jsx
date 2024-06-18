@@ -17,14 +17,14 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import "./navbar.css";
 
 const pages = [
-  { name: "Overview", sname: "overview" },
+  { name: "Home", sname: "main" },
   { name: "About Us", sname: "about" },
   { name: "Tracks", sname: "track" },
-  { name: "Submission", sname: "sub" },
+  // { name: "Submission", sname: "sub" },
   { name: "Committee", sname: "commit" },
-  { name: "Schedule", sname: "schedule" },
-  { name: "Registration", sname: "reg" },
+  // { name: "Schedule", sname: "schedule" },
   { name: "Patrons", sname: "patron" },
+  { name: "Registration", sname: "reg" },
   { name: "Contact Us", sname: "contact" },
 ];
 const ForwardedScrollLink = React.forwardRef((props, ref) => (
