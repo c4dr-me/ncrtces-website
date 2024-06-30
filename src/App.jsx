@@ -7,6 +7,7 @@ import Tracks from "../pages/Tracks";
 import Committee from "../pages/Committee";
 import Registration from "../pages/Registration";
 import Contact from "../pages/Contact";
+import Footer from "../components/footer"
 
 const App = () => {
   // const MainContent = () => {
@@ -40,6 +41,7 @@ const App = () => {
         </Routes>
         <MainContent /> */}
       {/* </Router> */}
+      <Footer/>
     </div>
   );
 };

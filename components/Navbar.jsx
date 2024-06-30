@@ -101,7 +101,9 @@ function ResponsiveAppBar() {
                     ? -30
                     : page.sname === "contact"
                       ? -10
-                          : -50
+                      : page.sname === "committee"
+                      ? -30 // Assuming -20 is the desired offset for the "committee" page
+                      : -50
                     }
                 activeClass="active"
                 sx={{
