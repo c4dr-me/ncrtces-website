@@ -29,8 +29,8 @@ const pages = [
 ];
 const ForwardedScrollLink = React.forwardRef((props, ref) => (
   <div ref={ref}>
-  <ScrollLink {...props} />
-</div>
+    <ScrollLink {...props} />
+  </div>
 )); // this function is used for forwarding the ref of custom elemtns i.e which are not native elements like listitems and buttons from react mui
 
 function ResponsiveAppBar() {
@@ -96,15 +96,15 @@ function ResponsiveAppBar() {
                 smooth={true}
                 duration={500}
                 offset={page.sname === "patron"
-                    ? -40
-                    : page.sname === "reg"
+                  ? -40
+                  : page.sname === "reg"
                     ? -30
                     : page.sname === "contact"
                       ? -10
                       : page.sname === "committee"
-                      ? -30 // Assuming -20 is the desired offset for the "committee" page
-                      : -50
-                    }
+                        ? -30
+                        : -50
+                }
                 activeClass="active"
                 sx={{
                   my: 2,
@@ -206,11 +206,11 @@ function ResponsiveAppBar() {
                       sx={{
                         color: "white",
                         backgroundColor:
-                           "transparent",
+                          "transparent",
                         "&:hover": {
                           backgroundColor: "rgba(255, 255, 255, 0.1)",
                         },
-                        
+
                       }}
                     >
                       <ListItemText primary={page.name} />

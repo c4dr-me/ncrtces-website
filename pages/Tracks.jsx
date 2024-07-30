@@ -48,12 +48,11 @@ const Tracks = () => {
                   id: 'track3',
                   title: 'Track III: Renewable Energy',
                   items: [
-                    'IoT Design and Implementations',
-                    'Big Data in IoT',
-                    'Cloud & IoT',
-                    'IoT Applications',
-                    'IoT Enabled Innovation & Entrepreneurship',
-                    'Security and Privacy',
+                    'Energy Efficient and Conversation',
+                    'Green Energy and Applications',
+                    'Hybrid Energy System',
+                    'Clean Energy',
+                    'Energy Harvesting Sensors',
                   ],
                 },
                 {
@@ -71,19 +70,18 @@ const Tracks = () => {
                   id: 'track5',
                   title: 'Track V: Artificial Intelligence & Machine Learning',
                   items: [
-                    'Web Intelligence Applications and Search',
-                    'Semantic Web Techniques and Technologies',
-                    'Information Retrieval',
-                    'Connectivity and Networking',
-                    'Ontology',
-                    'Reasoning about Knowledge and Belief',
+                    'Green and Sustainable AI',
+                    'Smart City',
+                    'Predictive Models for Climate Monitoring',
+                    'ML & DL for Energy optimization',
+                    'Intelligent Smart Technology for Sustainability',
                   ],
                 },
               ].map((track) => (
                 <li key={track.id} className="relative">
                   <button
                     type="button"
-                    className="hover:text-white focus:text-white w-full bg-gray-200 text-left pl-3 py-2 rounded-md font-medium hover:bg-gray-500 focus:outline-none focus:bg-gray-500"
+                    className="hover:text-white focus:text-white w-full bg-gray-200 text-left pl-3 py-2 rounded-md font-medium hover:bg-gray-500 focus:outline-none focus:bg-gray-500 border border-borderColor"
                     onClick={() => toggleDropdown(track.id)}
                   >
                     {track.title}
