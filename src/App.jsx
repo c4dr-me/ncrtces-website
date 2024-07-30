@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import MainContent from "../components/MainContent";
 import About from "../pages/About";
-import Patron from "../pages/Patron";
+// import Patron from "../pages/Patron";
 import Tracks from "../pages/Tracks";
 import Committee from "../pages/Committee";
 import Registration from "../pages/Registration";
@@ -10,6 +10,7 @@ import Contact from "../pages/Contact";
 import Footer from "../components/footer"
 
 const App = () => {
+  
   // const MainContent = () => {
   //   const location = useLocation();
   //   return location.pathname === "/" ? <Main /> : null;
@@ -25,7 +26,7 @@ const App = () => {
         <About />
         <Tracks />
         <Committee />
-        <Patron />
+        {/* <Patron /> */}
         <Registration />
         <Contact />
         {/* <Routes>

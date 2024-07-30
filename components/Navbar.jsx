@@ -23,7 +23,7 @@ const pages = [
   // { name: "Submission", sname: "sub" },
   { name: "Committee", sname: "commit" },
   // { name: "Schedule", sname: "schedule" },
-  { name: "Patrons", sname: "patron" },
+  // { name: "Patrons", sname: "patron" },
   { name: "Registration", sname: "reg" },
   { name: "Contact Us", sname: "contact" },
 ];
