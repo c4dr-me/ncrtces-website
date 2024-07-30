@@ -110,7 +110,7 @@ const Tracks = () => {
                       id={track.id}
                       className={`${
                         activeTrack === track.id ? 'block' : 'hidden'
-                      } md:hidden bg-white mt-2 rounded-md shadow-lg text-left`}
+                      } md:hidden bg-white mt-2 rounded-md shadow-lg text-left p-5 border borderColor`}
                     >
                       {track.items.map((item, index) => (
                         <li key={index} className="px-3 py-1 text-black">
