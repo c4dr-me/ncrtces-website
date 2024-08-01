@@ -30,114 +30,114 @@ const Committee = () => {
       id: 'committee0',
       name: 'Patrons',
       members: [
-        { name: 'Sh. Kaptan Singh', role: 'President, SMES, New Delhi' },
-        { name: 'Ms. Esha Jakhar', role: 'Vice - President, SMES, New Delhi' },
-        { name: 'Prof. Prem Vrat', role: 'Pro - Chancellor, North Cap University, Gurgaon' },
-        { name: 'Sh. Karnal Singh', role: 'IPS, Former Director - Enforcement Directorate' },
-        { name: 'Mr. Ajit Singh Chaudhary', role: 'Secretary, SMES, New Delhi' },
-        { name: 'Mr. Raj Pal Solanki', role: 'Treasurer, SMES, New Delhi' },
-        { name: 'Dr. Tejbir Singh Rana', role: 'Chairman, Academic Committee, SMES, New Delhi' },
-        { name: 'Sh. S.S. Solanki', role: 'Chairman Disciplinary(L), SMES, New Delhi' },
+        { name: 'Sh. Kaptan Singh -President, SMES, New Delhi' },
+        { name: 'Ms. Esha Jakhar -Vice - President, SMES, New Delhi' },
+        { name: 'Prof. Prem Vrat -Pro - Chancellor, North Cap University, Gurgaon' },
+        { name: 'Sh. Karnal Singh -IPS, Former Director - Enforcement Directorate' },
+        { name: 'Mr. Ajit Singh Chaudhary -Secretary, SMES, New Delhi' },
+        { name: 'Mr. Raj Pal Solanki -Treasurer, SMES, New Delhi' },
+        { name: 'Dr. Tejbir Singh Rana -Chairman, Academic Committee, SMES, New Delhi' },
+        { name: 'Sh. S.S. Solanki -Chairman Disciplinary(L), SMES, New Delhi' },
       ],
     },
     {
       id: 'committee1',
       name: 'Organising Chair',
       members: [
-        { name: 'Prof. Archana Balyan', role: 'Director, MSIT' },
+        { name: 'Prof. Archana Balyan -Director, MSIT' },
       ],
     },
     {
       id: 'committee2',
       name: 'Convener',
       members: [
-        { name: 'Prof. Koyel Datta Gupta', role: '' },
+        { name: 'Prof. Koyel Datta Gupta'},
       ],
     },
     {
       id: 'committee3',
       name: 'Co-Conveners',
       members: [
-        { name: 'Prof. Puneet Azad', role: '' },
-        { name: 'Dr. Deepshikha Yadav', role: '' },
-        { name: 'Dr. Anju Dhillon', role: '' },
+        { name: 'Prof. Puneet Azad'},
+        { name: 'Dr. Deepshikha Yadav'},
+        { name: 'Dr. Anju Dhillon'},
       ],
     },
     {
       id: 'committee4',
       name: 'Technical Review Committee',
       members: [
-        { name: 'Dr. Ajay Gahlot', role: '' },
-        { name: 'Dr. Anupama Kaushik', role: '' },
-        { name: 'Dr. Deepti Deshwal', role: '' },
-        { name: 'Dr. Tripti Rathee', role: '' },
+        { name: 'Dr. Ajay Gahlot'},
+        { name: 'Dr. Anupama Kaushik'},
+        { name: 'Dr. Deepti Deshwal'},
+        { name: 'Dr. Tripti Rathee'},
       ],
     },
     {
       id: 'committee5',
       name: 'Program Committee',
       members: [
-        { name: 'Prof. Puneet Azad', role: '' },
-        { name: 'Mr. Manoj Malik', role: '' },
+        { name: 'Prof. Puneet Azad'},
+        { name: 'Mr. Manoj Malik'},
       ],
     },
     {
       id: 'committee6',
       name: 'Finance Committee',
       members: [
-        { name: 'Prof. Man Singh', role: '' },
+        { name: 'Prof. Man Singh'},
       ],
     },
     {
       id: 'committee7',
       name: 'Publication Committee',
       members: [
-        { name: 'Dr. Sakshi Rajput', role: '' },
-        { name: 'Dr. Preeti Sehrawat', role: '' },
+        { name: 'Dr. Sakshi Rajput'},
+        { name: 'Dr. Preeti Sehrawat'},
       ],
     },
     {
       id: 'committee8',
       name: 'Publicity Committee',
       members: [
-        { name: 'Dr. Kavita Sheoran', role: '' },
-        { name: 'Dr. Deepshika Yadav', role: '' },
+        { name: 'Dr. Kavita Sheoran'},
+        { name: 'Dr. Deepshika Yadav'},
       ],
     },
     {
       id: 'committee9',
       name: 'Website Committee',
       members: [
-        { name: 'Dr. Vikrant Shokeen', role: '' },
+        { name: 'Dr. Vikrant Shokeen'},
       ],
     },
     {
       id: 'committee10',
       name: 'Sponsorship Committee, MSIT',
       members: [
-        { name: 'Dr. Anju Dhillon', role: '' },
-        { name: 'Mr. Surender Bhanwala', role: '' },
-        { name: 'Mr. Akshay Singh', role: '' },
+        { name: 'Dr. Anju Dhillon'},
+        { name: 'Mr. Surender Bhanwala'},
+        { name: 'Mr. Akshay Singh'},
       ],
     },
     {
       id: 'committee11',
       name: 'Stage Committee, MSIT',
       members: [
-        { name: 'Dr. Shaily Malik', role: '' },
-        { name: 'Ms. Neelam Nehra', role: '' },
+        { name: 'Dr. Shaily Malik'},
+        { name: 'Ms. Neelam Nehra'},
       ],
     },
     {
       id: 'committee12',
       name: 'Hospitality Committee, MSIT',
       members: [
-        { name: 'Dr. Vimal Gaur', role: '' },
-        { name: 'Dr. Rakhi Kamra', role: '' },
-        { name: 'Dr. Gitanjali', role: '' },
-        { name: 'Ms. Annu Bhure', role: '' },
-        { name: 'Ms. Gunjan', role: '' },
-        { name: 'Ms. Vaani', role: '' },
+        { name: 'Dr. Vimal Gaur'},
+        { name: 'Dr. Rakhi Kamra'},
+        { name: 'Dr. Gitanjali'},
+        { name: 'Ms. Annu Bhure'},
+        { name: 'Ms. Gunjan'},
+        { name: 'Ms. Vaani'},
       ],
     },
   ];
@@ -173,7 +173,7 @@ const Committee = () => {
                   >
                     {committee.members.map((member, index) => (
                       <li key={index} className="px-3 py-1 text-black">
-                        ● {member.name} - {member.role}
+                        ● {member.name}
                       </li>
                     ))}
                   </ul>
@@ -188,7 +188,7 @@ const Committee = () => {
                   <ul key={committee.id} className="text-left">
                     {committee.members.map((member, index) => (
                       <li key={index} className="px-3 py-1 text-black">
-                        ● {member.name} - {member.role}
+                        ● {member.name}
                       </li>
                     ))}
                   </ul>
