@@ -12,9 +12,9 @@ const Tracks = () => {
   useEffect(() => {
     const updateActiveTrack = () => {
       if (window.innerWidth >= 768) {
-        setActiveTrack('track1');
+        setActiveTrack('track1'); // Initially open the first track on desktop
       } else {
-        setActiveTrack(null);
+        setActiveTrack(null); // Close all tracks on mobile
       }
     };
 
@@ -86,15 +86,15 @@ const Tracks = () => {
   ];
 
   return (
-    <section id="track" className="tracks-section section">
+    <section id="track" className="tracks-section section hauto">
       <div className="w-full">
         <div className="bg-white pt-12 md:px-[10%]">
           <div className="pt-16">
             <h1 className="text-[#c00000] text-center text-3xl font-[600]">TRACKS</h1>
             <div className="w-[100px] h-[2px] mx-auto mt-2 bg-[#365372] rounded-xl mb-8"></div>
           </div>
-          <div className="flex flex-col md:flex-row md:space-x-8">
-            <div className="w-full md:w-[300px]">
+          <div className="flex flex-col md:flex-row md:space-x-8 m-5">
+            <div className="w-full md:w-[300px] relative">
               <ul className="space-y-2">
                 {tracks.map((track) => (
                   <li key={track.id} className="relative">

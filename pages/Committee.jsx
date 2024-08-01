@@ -1,276 +1,205 @@
-import React from 'react';
-// import './Comingsoon.css';  // Import the CSS file
+import React, { useState, useEffect } from 'react';
+import './style.css';
 
 const Committee = () => {
+  const [activeCommittee, setActiveCommittee] = useState(null);
+
+  // Function to toggle the dropdown menu
+  const toggleDropdown = (id) => {
+    setActiveCommittee((prevActiveCommittee) => (prevActiveCommittee === id ? null : id));
+  };
+
+  useEffect(() => {
+    const updateActiveCommittee = () => {
+      if (window.innerWidth >= 768) {
+        setActiveCommittee('committee0');
+      } else {
+        setActiveCommittee(null);
+      }
+    };
+
+    updateActiveCommittee();
+    window.addEventListener('resize', updateActiveCommittee);
+    return () => {
+      window.removeEventListener('resize', updateActiveCommittee);
+    };
+  }, []);
+
+  const committees = [
+    {
+      id: 'committee0',
+      name: 'Patrons',
+      members: [
+        { name: 'Sh. Kaptan Singh -President, SMES, New Delhi' },
+        { name: 'Ms. Esha Jakhar -Vice - President, SMES, New Delhi' },
+        { name: 'Prof. Prem Vrat -Pro - Chancellor, North Cap University, Gurgaon' },
+        { name: 'Sh. Karnal Singh -IPS, Former Director - Enforcement Directorate' },
+        { name: 'Mr. Ajit Singh Chaudhary -Secretary, SMES, New Delhi' },
+        { name: 'Mr. Raj Pal Solanki -Treasurer, SMES, New Delhi' },
+        { name: 'Dr. Tejbir Singh Rana -Chairman, Academic Committee, SMES, New Delhi' },
+        { name: 'Sh. S.S. Solanki -Chairman Disciplinary(L), SMES, New Delhi' },
+      ],
+    },
+    {
+      id: 'committee1',
+      name: 'Organising Chair',
+      members: [
+        { name: 'Prof. Archana Balyan -Director, MSIT' },
+      ],
+    },
+    {
+      id: 'committee2',
+      name: 'Convener',
+      members: [
+        { name: 'Prof. Koyel Datta Gupta'},
+      ],
+    },
+    {
+      id: 'committee3',
+      name: 'Co-Conveners',
+      members: [
+        { name: 'Prof. Puneet Azad'},
+        { name: 'Dr. Deepshikha Yadav'},
+        { name: 'Dr. Anju Dhillon'},
+      ],
+    },
+    {
+      id: 'committee4',
+      name: 'Technical Review Committee',
+      members: [
+        { name: 'Dr. Ajay Gahlot'},
+        { name: 'Dr. Anupama Kaushik'},
+        { name: 'Dr. Deepti Deshwal'},
+        { name: 'Dr. Tripti Rathee'},
+      ],
+    },
+    {
+      id: 'committee5',
+      name: 'Program Committee',
+      members: [
+        { name: 'Prof. Puneet Azad'},
+        { name: 'Mr. Manoj Malik'},
+      ],
+    },
+    {
+      id: 'committee6',
+      name: 'Finance Committee',
+      members: [
+        { name: 'Prof. Man Singh'},
+      ],
+    },
+    {
+      id: 'committee7',
+      name: 'Publication Committee',
+      members: [
+        { name: 'Dr. Sakshi Rajput'},
+        { name: 'Dr. Preeti Sehrawat'},
+      ],
+    },
+    {
+      id: 'committee8',
+      name: 'Publicity Committee',
+      members: [
+        { name: 'Dr. Kavita Sheoran'},
+        { name: 'Dr. Deepshika Yadav'},
+      ],
+    },
+    {
+      id: 'committee9',
+      name: 'Website Committee',
+      members: [
+        { name: 'Dr. Vikrant Shokeen'},
+      ],
+    },
+    {
+      id: 'committee10',
+      name: 'Sponsorship Committee, MSIT',
+      members: [
+        { name: 'Dr. Anju Dhillon'},
+        { name: 'Mr. Surender Bhanwala'},
+        { name: 'Mr. Akshay Singh'},
+      ],
+    },
+    {
+      id: 'committee11',
+      name: 'Stage Committee, MSIT',
+      members: [
+        { name: 'Dr. Shaily Malik'},
+        { name: 'Ms. Neelam Nehra'},
+      ],
+    },
+    {
+      id: 'committee12',
+      name: 'Hospitality Committee, MSIT',
+      members: [
+        { name: 'Dr. Vimal Gaur'},
+        { name: 'Dr. Rakhi Kamra'},
+        { name: 'Dr. Gitanjali'},
+        { name: 'Ms. Annu Bhure'},
+        { name: 'Ms. Gunjan'},
+        { name: 'Ms. Vaani'},
+      ],
+    },
+  ];
 
   return (
-    <div className=" bg-white ">
-      <div className="w-full" id="committee">
-        <div className=' bg-white md:px-[10%]  pt-12'>
-          <div className='pt-16'>
-            <h1 className='text-[#c00000] text-center text-3xl font-[600]'>COMMITTEES</h1>
-            <div className='w-48 h-[2px] mx-auto mt-2 bg-[#365372] rounded-xl'></div>
+    <section id="committee" className="committee-section section hauto">
+    <div className="w-full">
+      <div className="bg-white pt-12 md:px-[10%]">
+        <div className="pt-16">
+          <h1 className="text-[#c00000] text-center text-3xl font-[600]">
+            COMMITTEES
+          </h1>
+          <div className="w-[100px] h-[2px] mx-auto mt-2 bg-[#365372] rounded-xl mb-8"></div>
+        </div>
+        <div className="flex flex-col md:flex-row md:space-x-8 m-5">
+          <div className="w-full md:w-[300px] relative">
+            <ul className="space-y-2">
+              {committees.map((committee) => (
+                <li key={committee.id} className="relative">
+                  <button
+                    className={`hover:text-white focus:text-white w-full bg-gray-200 text-left pl-3 py-2 rounded-md font-medium hover:bg-gray-500 focus:outline-none focus:bg-gray-500 border border-borderColor ${
+                      activeCommittee === committee.id ? 'bg-gray-500 text-white' : ''
+                    }`}
+                    onClick={() => toggleDropdown(committee.id)}
+                  >
+                    {committee.name}
+                  </button>
+                  <ul
+                    id={committee.id}
+                    className={`${
+                      activeCommittee === committee.id ? 'block' : 'hidden'
+                    } md:hidden bg-white mt-2 rounded-md shadow-lg text-left p-5 border borderColor`}
+                  >
+                    {committee.members.map((member, index) => (
+                      <li key={index} className="px-3 py-1 text-black">
+                        ● {member.name}
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ul>
           </div>
-          <div id="content1" className="content mt-8">
-                  <div className="mx-auto md:ml-0 w-[90%] md:w-[300px]">
-
-        <ul className="space-y-2">
-
-
-
-        <li className="relative">
-            <button type="button" className="hover:text-white focus:text-white w-full  bg-gray-200 text-left pl-3 py-2 rounded-md font-medium hover:bg-gray-500 focus:outline-none focus:bg-gray-500" onclick="toggleDropdown('patrons_dropdown')">
-              Patrons
-            </button>
-            <ul id="patrons_dropdown" className="md:absolute left-full top-0 mt-2 mx-auto md:ml-2 w-[100%] md:w-[800px] bg-white rounded-md shadow-lg hidden text-left dropdown-menu open">
-              <li className="px-3 py-2">
-              <li className="px-3 py-2"><strong> Sh. Kaptan Singh</strong>,  <strong> (President)</strong> SMES, New Delhi</li>
-                      <li className="px-3 py-2"><strong>Ms. Esha Jakhar</strong>,<strong> (Vice - President)</strong> SMES, New Delhi</li>
-                      <li className="px-3 py-2"><strong> Prof. Prem Vrat</strong>,<strong> (Pro - Chancellor)</strong> North Cap University, Gurgaon</li>
-                      <li className="px-3 py-2"><strong> Sh. Karnal Singh</strong>,<strong> (IPS)</strong> Former Director - Enforcement Directorate </li>
-                      <li className="px-3 py-2"><strong> Mr. Ajit Singh Chaudhary</strong>, <strong> (Secretary)</strong> SMES, New Delhi</li>
-                      <li className="px-3 py-2"><strong> Mr. Raj Pal Solanki</strong>,<strong> (Treasurer)</strong> SMES, New Delhi </li>
-                      <li className="px-3 py-2"><strong> Dr. Tejbir Singh Rana</strong>,<strong> (Chairman, Academic Committee)</strong> SMES, New Delhi </li>
-                      <li className="px-3 py-2"><strong> Sh. S.S. Solanki</strong><strong>(Chairman Disciplinary(L))</strong> SMES, New Delhi</li>
-              </li>
-            </ul>
-          </li>
-
-
-
-
-
-          <li className="relative">
-            <button type="button" className="hover:text-white focus:text-white w-full  bg-gray-200 text-left pl-3 py-2 rounded-md font-medium hover:bg-gray-500 focus:outline-none focus:bg-gray-500" onclick="toggleDropdown('organising_chair_dropdown')">
-              Organising Chair
-            </button>
-            <ul id="organising_chair_dropdown" className="md:absolute left-full top-0 mt-2 mx-auto md:ml-2 w-[100%] md:w-[800px] bg-white rounded-md shadow-lg hidden text-left dropdown-menu open">
-              {/* <li className="px-3 py-2">
-                <strong>General Chair(s)</strong>
-              </li> */}
-              <li className="px-3 py-2">
-                {/* <strong>Conference Chair</strong> */}
-                <li className="px-3 py-2">
-                <h1><span className="font-semibold">Prof. Archana Balyan</span>, Director, MSIT</h1>
-                </li>
-              </li>
-              {/* <li className="px-3 py-2">
-                <strong>Conference Co-Chair</strong>
-                <li className="px-3 py-2">
-                <h1><span className="font-semibold">Durga Suresh-Menon</span>, Dean, School of computing and Data Science, WIT, USA</h1>
-                </li>
-              </li> */}
-            </ul>
-          </li>
-          <li className="relative">
-            <button type="button" className="hover:text-white focus:text-white w-full bg-gray-200 text-left pl-3 py-2 rounded-md font-medium hover:bg-gray-500 focus:outline-none focus:bg-gray-500" onclick="toggleDropdown('convener_dropdown')">
-              Convener
-            </button>
-            <ul id="convener_dropdown" className="md:absolute left-full top-0 mt-2 mx-auto md:ml-2 w-[100%] md:w-[800px] bg-white rounded-md shadow-lg hidden text-left dropdown-menu">
-              <li className="px-3 py-2">
-                <strong>Prof. Koyel Datta Gupta</strong>
-              </li>
-            </ul>
-          </li>
-          <li className="relative">
-            <button type="button" className="hover:text-white focus:text-white w-full bg-gray-200 text-left pl-3 py-2 rounded-md font-medium hover:bg-gray-500 focus:outline-none focus:bg-gray-500" onclick="toggleDropdown('co_conveners_dropdown')">
-              Co-Conveners
-            </button>
-            <ul id="co_conveners_dropdown" className="md:absolute left-full top-0 mt-2 mx-auto md:ml-2 w-[100%] md:w-[800px] bg-white rounded-md shadow-lg hidden text-left dropdown-menu">
-              <li className="px-3 py-2">
-                <strong>Prof. Puneet Azad</strong>
-              </li>
-              <li className="px-3 py-2">
-                <strong>Dr. Deepshikha Yadav</strong>
-              </li>
-              <li className="px-3 py-2">
-                <strong>Dr. Anju Dhillon</strong>
-              </li>
-            </ul>
-          </li>
-          <li className="relative">
-            <button type="button" className="hover:text-white focus:text-white w-full bg-gray-200 text-left pl-3 py-2 rounded-md font-medium hover:bg-gray-500 focus:outline-none focus:bg-gray-500" onclick="toggleDropdown('technical_review_dropdown')">
-              Technical Review Committee
-            </button>
-            <ul id="technical_review_dropdown" className="md:absolute left-full top-0 mt-2 mx-auto md:ml-2 w-[100%] md:w-[800px] bg-white rounded-md shadow-lg hidden text-left dropdown-menu">
-              <li className="px-3 py-2">
-                <strong>Dr. Ajay Gahlot</strong>
-              </li>
-              <li className="px-3 py-2">
-                <strong>Dr. Anupama Kaushik</strong>
-              </li>
-              <li className="px-3 py-2">
-                <strong>Dr. Deepti Deshwal</strong>
-              </li>
-              {/* <li className="px-3 py-2">
-                <span className="org_comm_headings">WIT:</span>
-              </li> */}
-              <li className="px-3 py-2">
-                <strong>Dr. Tripti Rathee</strong>
-              </li>
-            </ul>
-          </li>
-          <li className="relative">
-            <button type="button" className="hover:text-white focus:text-white w-full bg-gray-200 text-left pl-3 py-2 rounded-md font-medium hover:bg-gray-500 focus:outline-none focus:bg-gray-500" onclick="toggleDropdown('program_committee_dropdown')">
-              Program Committee
-            </button>
-            <ul id="program_committee_dropdown" className="md:absolute left-full top-0 mt-2 mx-auto md:ml-2 w-[100%] md:w-[800px] bg-white rounded-md shadow-lg hidden text-left dropdown-menu">
-              {/* <li className="px-3 py-2">
-                <span className="org_comm_headings">MSIT:</span>
-              </li> */}
-              <li className="px-3 py-2">
-                <strong>Prof. Puneet Azad</strong>
-              </li>
-              <li className="px-3 py-2">
-                <strong>Mr. Manoj Malik</strong>
-              </li>
-            </ul>
-          </li>
-          <li className="relative">
-            <button type="button" className="hover:text-white focus:text-white w-full bg-gray-200 text-left pl-3 py-2 rounded-md font-medium hover:bg-gray-500 focus:outline-none focus:bg-gray-500" onclick="toggleDropdown('finance_committee_dropdown')">
-              Finance Committee
-            </button>
-            <ul id="finance_committee_dropdown" className="md:absolute left-full top-0 mt-2 mx-auto md:ml-2 w-[100%] md:w-[800px] bg-white rounded-md shadow-lg hidden text-left dropdown-menu">
-              <li className="px-3 py-2">
-                <strong>Prof. Man Singh</strong>
-              </li>
-            </ul>
-          </li>
-          <li className="relative">
-            <button type="button" className="hover:text-white focus:text-white w-full bg-gray-200 text-left pl-3 py-2 rounded-md font-medium hover:bg-gray-500 focus:outline-none focus:bg-gray-500" onclick="toggleDropdown('publication_committee_dropdown')">
-              Publication Committee
-            </button>
-            <ul id="publication_committee_dropdown" className="md:absolute left-full top-0 mt-2 mx-auto md:ml-2 w-[100%] md:w-[800px] bg-white rounded-md shadow-lg hidden text-left dropdown-menu">
-              <li className="px-3 py-2">
-                <strong>Dr. Sakshi Rajput</strong>
-              </li>
-              <li className="px-3 py-2">
-                <strong>Dr. Preeti Sehrawat</strong>
-              </li>
-            </ul>
-          </li>
-          <li className="relative">
-            <button type="button" className="hover:text-white focus:text-white w-full bg-gray-200 text-left pl-3 py-2 rounded-md font-medium hover:bg-gray-500 focus:outline-none focus:bg-gray-500" onclick="toggleDropdown('publicity_committee_dropdown')">
-              Publicity Committee
-            </button>
-            <ul id="publicity_committee_dropdown" className="md:absolute left-full top-0 mt-2 mx-auto md:ml-2 w-[100%] md:w-[800px] bg-white rounded-md shadow-lg hidden text-left dropdown-menu">
-              <li className="px-3 py-2">
-                <strong>Dr. Kavita Sheoran</strong>
-              </li>
-              <li className="px-3 py-2">
-                <strong>Dr. Deepshikha Yadav</strong>
-              </li>
-            </ul>
-          </li>
-          <li className="relative">
-            <button type="button" className="hover:text-white focus:text-white w-full bg-gray-200 text-left pl-3 py-2 rounded-md font-medium hover:bg-gray-500 focus:outline-none focus:bg-gray-500" onclick="toggleDropdown('website_committee_dropdown')">
-              Website Committee
-            </button>
-            <ul id="website_committee_dropdown" className="md:absolute left-full top-0 mt-2 mx-auto md:ml-2 w-[100%] md:w-[800px] bg-white rounded-md shadow-lg hidden text-left dropdown-menu">
-              <li className="px-3 py-2">
-                <strong>Dr. Vikrant Shokeen</strong>
-              </li>
-            </ul>
-          </li>
-          <li className="relative">
-            <button type="button" className="hover:text-white focus:text-white w-full bg-gray-200 text-left pl-3 py-2 rounded-md font-medium hover:bg-gray-500 focus:outline-none focus:bg-gray-500" onclick="toggleDropdown('registration_committee_dropdown')">
-              Registration Committee, MSIT
-            </button>
-            <ul id="registration_committee_dropdown" className="md:absolute left-full top-0 mt-2 mx-auto md:ml-2 w-[100%] md:w-[800px] bg-white rounded-md shadow-lg hidden text-left dropdown-menu">
-              <li className="px-3 py-2">
-                <strong>Dr. Shaily Malik</strong>
-              </li>
-              <li className="px-3 py-2">
-                <strong>Ms. Annu Dagar</strong>
-              </li>
-              <li className="px-3 py-2">
-                <strong>Ms. Swati Malik</strong>
-              </li>
-            </ul>
-          </li>
-          <li className="relative">
-            <button type="button" className="hover:text-white focus:text-white w-full bg-gray-200 text-left pl-3 py-2 rounded-md font-medium hover:bg-gray-500 focus:outline-none focus:bg-gray-500" onclick="toggleDropdown('sponsorship_committee_dropdown')">
-              Sponsorship Committee, MSIT
-            </button>
-            <ul id="sponsorship_committee_dropdown" className="md:absolute left-full top-0 mt-2 mx-auto md:ml-2 w-[100%] md:w-[800px] bg-white rounded-md shadow-lg hidden text-left dropdown-menu">
-              <li className="px-3 py-2">
-                <strong>Dr. Anju Dhillon</strong>
-              </li>
-              <li className="px-3 py-2">
-                <strong>Mr. Surender Bhanwala</strong>
-              </li>
-              <li className="px-3 py-2">
-                <strong>Mr. Akshay Singh</strong>
-              </li>
-            </ul>
-          </li>
-          <li className="relative">
-            <button type="button" className="hover:text-white focus:text-white w-full bg-gray-200 text-left pl-3 py-2 rounded-md font-medium hover:bg-gray-500 focus:outline-none focus:bg-gray-500" onclick="toggleDropdown('reception_committee_dropdown')">
-              Stage Committee, MSIT
-            </button>
-            <ul id="reception_committee_dropdown" className="md:absolute left-full top-0 mt-2 mx-auto md:ml-2 w-[100%] md:w-[800px] bg-white rounded-md shadow-lg hidden text-left dropdown-menu">
-              <li className="px-3 py-2">
-                <strong>Dr. Shaily Malik</strong>
-              </li>
-              <li className="px-3 py-2">
-                <strong>Ms. Neelam Nehra</strong>
-              </li>
-            </ul>
-          </li>
-          <li className="relative">
-            <button type="button" className="hover:text-white focus:text-white w-full bg-gray-200 text-left pl-3 py-2 rounded-md font-medium hover:bg-gray-500 focus:outline-none focus:bg-gray-500" onclick="toggleDropdown('hospitality_committee_dropdown')">
-              Hospitality Committee, MSIT
-            </button>
-            <ul id="hospitality_committee_dropdown" className="md:absolute left-full top-0 mt-2 mx-auto md:ml-2 w-[100%] md:w-[800px] bg-white rounded-md shadow-lg hidden text-left dropdown-menu">
-              <li className="px-3 py-2">
-                <strong>Dr. Vimal Gaur</strong>
-              </li><li className="px-3 py-2">
-                <strong>Dr. Rakhi Kamra</strong>
-              </li>
-              <li className="px-3 py-2">
-                <strong>Dr. Gitanjali</strong>
-              </li>
-              <li className="px-3 py-2">
-                <strong>Ms. Annu Bhure</strong>
-              </li>
-              <li className="px-3 py-2">
-                <strong>Ms. Gunjan</strong>
-              </li>
-              <li className="px-3 py-2">
-                <strong>Ms. Vaani</strong>
-              </li>
-            </ul>
-          </li>
-          <li className="relative">
-            <button type="button" className="hover:text-white focus:text-white w-full bg-gray-200 text-left pl-3 py-2 rounded-md font-medium hover:bg-gray-500 focus:outline-none focus:bg-gray-500" onclick="toggleDropdown('local_committee_dropdown')">
-              Local Organizing Committee, MSIT
-            </button>
-            <ul id="local_committee_dropdown" className="md:absolute left-full top-0 mt-2 mx-auto md:ml-2 w-[100%] md:w-[800px] bg-white rounded-md shadow-lg hidden text-left dropdown-menu">
-              <li className="px-3 py-2">
-                <strong>Mr. Manoj Malik</strong>
-              </li>
-              <li className="px-3 py-2">
-                <strong>Dr. Rakesh Kumar</strong>
-              </li>
-              <li className="px-3 py-2">
-                <strong>Dr. Sitender Malik</strong>
-              </li>
-            </ul>
-          </li>
-        </ul>
-
-
-
-
-
-
-            </div>
+          <div className="hidden md:block mt-4 md:mt-0 w-full md:w-[800px] bg-white rounded-md shadow-lg p-5 border borderColor">
+            {committees.map(
+              (committee) =>
+                activeCommittee === committee.id && (
+                  <ul key={committee.id} className="text-left">
+                    {committee.members.map((member, index) => (
+                      <li key={index} className="px-3 py-1 text-black">
+                        ● {member.name}
+                      </li>
+                    ))}
+                  </ul>
+                )
+            )}
           </div>
         </div>
       </div>
-  </div>
-
-  );
+    </div>
+  </section>
+);
 };
 
 export default Committee;

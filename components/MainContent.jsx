@@ -7,7 +7,8 @@ const Main = () => {
             <h1>National Conference on Recent Trends in  Environment, Energy and Sustainability</h1>
             <h1 className='name'>Maharaja Surajmal Institute Of Technology.</h1>
             <h1 style={{marginTop:'10px'}}>7-8 November 2024</h1>
-        </div>
+      </div>
+      
     </div>
   )
 }
