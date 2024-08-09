@@ -94,8 +94,8 @@ const Tracks = () => {
             <div className="w-[100px] h-[2px] mx-auto mt-2 bg-[#365372] rounded-xl mb-8"></div>
           </div>
           <div className="flex flex-col md:flex-row md:space-x-8 m-5">
-            <div className="w-full md:w-[300px] relative">
-              <ul className="space-y-2">
+            <div className="w-full md:w-[300px] relative flex">
+              <ul className="space-y-2 flex flex-col justify-around">
                 {tracks.map((track) => (
                   <li key={track.id} className="relative">
                     <button
@@ -123,7 +123,7 @@ const Tracks = () => {
                 ))}
               </ul>
             </div>
-            <div className="hidden md:block mt-4 md:mt-0 w-full md:w-[1300px] bg-white rounded-md shadow-lg p-5 border border-gray-300">
+            <div className="hidden md:block mt-4 md:mt-0 w-full md:w-[800px] bg-white rounded-md shadow-lg p-5 border border-gray-300">
               {tracks.map(
                 (track) =>
                   activeTrack === track.id && (
