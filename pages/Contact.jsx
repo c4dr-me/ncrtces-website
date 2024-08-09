@@ -7,13 +7,13 @@ const Contact = () => {
       <div className="w-full" id="contact">
         <div className=" bg-white pt-16">
           <div className="pt-16">
-            <h1 className="text-[#c00000] text-center text-3xl font-[600]">
+            <h1 className="text-[#c00000] text-center text-3xl font-[600] ">
               CONTACT US
             </h1>
             <div className="w-48 h-[2px] mx-auto mt-2 bg-[#365372] rounded-xl"></div>
           </div>
           <div className="md:flex  justify-center">
-            <div className="bg-[#f0f0f0] md:w-[25%] m-[5%] pb-[2%] rounded-lg">
+            <div className="bg-[#f0f0f0] md:w-[25%] m-[5%] pb-[2%] rounded-lg transform hover:scale-105 transition-transform duration-200 cursor-pointer">
             <i className="fa-solid fa-location-dot ml-[48%] text-[30px] mt-6 mb-4 text-[#c00000]"></i>
               <div className="text-center text-[21px] font-[500] ">
                 CONFERENCE VENUE
@@ -31,7 +31,7 @@ const Contact = () => {
                 </h1>
               </div>
             </div>
-            <div className="bg-[#f0f0f0] md:w-[25%] m-[5%] pb-[2%] rounded-lg">
+            <div className="bg-[#f0f0f0] md:w-[25%] m-[5%] pb-[2%] rounded-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer">
             <i className="fa-solid fa-phone ml-[48%] text-[30px] mt-6 mb-4 text-[#c00000]"></i>
               <div className="text-center text-[21px] font-[500] ">
                 PHONE NUMBER

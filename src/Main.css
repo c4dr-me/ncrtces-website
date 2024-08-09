@@ -1,3 +1,5 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
 .main {
     background: url('../college_blur_img.jpg');
     width: 100vw;
@@ -10,18 +12,43 @@
     background-position: center;
 }
 
-.box {
+/* .box {
     color: white;
-    width: 50rem;
-    font-size: 2.2rem;
+    width: calc(100% - 40vw);
+    font-size: 2rem;
     text-align: center;
-    background:rgba(255,255,255,0.4);
-    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
     border-radius: 6px;
     box-shadow: 0px 0px 5.5px rgb(119, 119, 119);
+    padding: 1rem;
+} */
+
+.text-border {
+    position: relative;
+    color: transparent;
+    -webkit-text-stroke: 1px black;
 }
 
-.name {
-    color: rgb(192 255 0);
-    margin-top: 20px;
+.gradient-text {
+    background: rgb(246, 227, 8);
+    background: linear-gradient(90deg, rgba(246, 227, 8, 1) 26%, rgba(243, 243, 97, 1) 93%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.event-title {
+    animation: fadeInDown 1s;
+}
+
+.event-subtitle {
+    animation: fadeInUp 1s;
+}
+
+.event-date {
+    animation: fadeInUp 1.5s;
+}
+
+.timer {
+    animation: fadeIn 2s;
 }
