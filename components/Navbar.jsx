@@ -21,7 +21,7 @@ const pages = [
   { name: "About Us", sname: "about" },
   { name: "Tracks", sname: "track" },
   // { name: "Submission", sname: "sub" },
-  { name: "Committee", sname: "commit" },
+  { name: "Committee", sname: "committee" },
   // { name: "Schedule", sname: "schedule" },
   // { name: "Patrons", sname: "patron" },
   { name: "Registration", sname: "reg" },
