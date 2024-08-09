@@ -113,8 +113,9 @@ const Tracks = () => {
                       } md:hidden bg-white mt-2 rounded-md shadow-lg text-left p-5 border borderColor`}
                     >
                       {track.items.map((item, index) => (
-                        <li key={index} className="px-3 py-1 text-black">
-                          ● {item}
+                        <li key={index} className="py-2 text-black pl-2 flex items-center transition-all duration-200 hover:bg-gray-100 rounded-md cursor-pointer">
+                          <span className="inline-block w-2 h-2 bg-[#365372] rounded-full mr-2 shrink-0"></span>
+                          <span className="font-semibold">{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -122,14 +123,15 @@ const Tracks = () => {
                 ))}
               </ul>
             </div>
-            <div className="hidden md:block mt-4 md:mt-0 w-full md:w-[800px] bg-white rounded-md shadow-lg p-5 border borderColor">
+            <div className="hidden md:block mt-4 md:mt-0 w-full md:w-[1300px] bg-white rounded-md shadow-lg p-5 border border-gray-300">
               {tracks.map(
                 (track) =>
                   activeTrack === track.id && (
                     <ul key={track.id} className="text-left">
                       {track.items.map((item, index) => (
-                        <li key={index} className="px-3 py-1 text-black">
-                          ● {item}
+                        <li key={index} className="py-2 text-black pl-2 flex items-center transition-all duration-200 hover:bg-gray-100 rounded-md cursor-pointer">
+                          <span className="inline-block w-2 h-2 bg-[#365372] rounded-full mr-2"></span>
+                    <span className="font-semibold">{item}</span>
                         </li>
                       ))}
                     </ul>

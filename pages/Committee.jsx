@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './style.css';
 
 const Committee = () => {
   const [activeCommittee, setActiveCommittee] = useState(null);
+  const listRef = useRef(null);
+ 
 
   // Function to toggle the dropdown menu
   const toggleDropdown = (id) => {
@@ -24,6 +26,22 @@ const Committee = () => {
       window.removeEventListener('resize', updateActiveCommittee);
     };
   }, []);
+
+  useEffect(() => {
+    if (activeCommittee && listRef.current && activeCommittee !== 'committee0') {
+      const element = listRef.current;
+      const offset = 100;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+  
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
+  }, [activeCommittee]);
 
   const committees = [
     {
@@ -143,63 +161,71 @@ const Committee = () => {
   ];
 
   return (
-    <section id="committee" className="committee-section section hauto">
-    <div className="w-full">
-      <div className="bg-white pt-12 md:px-[10%]">
-        <div className="pt-16">
-          <h1 className="text-[#c00000] text-center text-3xl font-[600]">
-            COMMITTEES
-          </h1>
-          <div className="w-[100px] h-[2px] mx-auto mt-2 bg-[#365372] rounded-xl mb-8"></div>
-        </div>
-        <div className="flex flex-col md:flex-row md:space-x-8 m-5">
-          <div className="w-full md:w-[300px] relative">
-            <ul className="space-y-2">
-              {committees.map((committee) => (
-                <li key={committee.id} className="relative">
-                  <button
-                    className={`hover:text-white focus:text-white w-full bg-gray-200 text-left pl-3 py-2 rounded-md font-medium hover:bg-gray-500 focus:outline-none focus:bg-gray-500 border border-borderColor ${
-                      activeCommittee === committee.id ? 'bg-gray-500 text-white' : ''
-                    }`}
-                    onClick={() => toggleDropdown(committee.id)}
-                  >
-                    {committee.name}
-                  </button>
-                  <ul
-                    id={committee.id}
-                    className={`${
-                      activeCommittee === committee.id ? 'block' : 'hidden'
-                    } md:hidden bg-white mt-2 rounded-md shadow-lg text-left p-5 border borderColor`}
-                  >
-                    {committee.members.map((member, index) => (
-                      <li key={index} className="px-3 py-1 text-black">
-                        ● {member.name}
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              ))}
-            </ul>
+    <section id="committee" className="committee-section section hauto py-12">
+      <div className="w-full">
+        <div className="bg-white pt-12 md:px-[10%]">
+          <div className="pt-16">
+            <h1 className="text-[#c00000] text-center text-3xl font-[600]">
+              COMMITTEES
+            </h1>
+            <div className="w-[100px] h-[2px] mx-auto mt-2 bg-[#365372] rounded-xl mb-8"></div>
           </div>
-          <div className="hidden md:block mt-4 md:mt-0 w-full md:w-[800px] bg-white rounded-md shadow-lg p-5 border borderColor">
-            {committees.map(
-              (committee) =>
-                activeCommittee === committee.id && (
-                  <ul key={committee.id} className="text-left">
-                    {committee.members.map((member, index) => (
-                      <li key={index} className="px-3 py-1 text-black">
-                        ● {member.name}
-                      </li>
-                    ))}
-                  </ul>
-                )
-            )}
+          <div className="flex flex-col md:flex-row md:space-x-8 m-5">
+            <div className="w-full md:w-[300px] relative">
+              <ul className="space-y-2">
+                {committees.map((committee) => (
+                  <li key={committee.id} className="relative">
+                    <button
+                      className={`hover:text-white focus:text-white w-full bg-gray-200 text-left pl-3 py-2 rounded-md font-medium hover:bg-gray-500 transition-all duration-200 ease-in-out  focus:outline-none focus:bg-gray-500 border border-borderColor ${
+                        activeCommittee === committee.id ? 'bg-gray-500 text-white' : ''
+                      }`}
+                      onClick={() => toggleDropdown(committee.id)}
+                    >
+                      {committee.name}
+                    </button>
+                    <ul
+                      id={committee.id}
+                      className={`${
+                        activeCommittee === committee.id ? 'block' : 'hidden'
+                      } md:hidden bg-white mt-2 rounded-md shadow-lg text-left p-5 border borderColor`}
+                    >
+                      {committee.members.map((member, index) => (
+                        <li
+                          key={index}
+                          className="py-1 text-black pl-4 flex items-center transition-all duration-200 hover:bg-gray-100 rounded-md"
+                        >
+                          <span className="inline-block w-2 h-2 bg-[#365372] rounded-full mr-2 shrink-0"></span>
+                          <span className="font-semibold">{member.name}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div ref={listRef} className="hidden md:block mt-4 md:mt-0 w-full md:w-[800px] bg-white rounded-md shadow-lg p-6 border border-gray-300">
+              {committees.map(
+                (committee) =>
+                  activeCommittee === committee.id && (
+                    <ul key={committee.id} className="text-left">
+                      {committee.members.map((member, index) => (
+                        <li
+                          key={index}
+                          className="py-2 text-black pl-4 flex items-center transition-all duration-200 hover:bg-gray-100 rounded-md cursor-pointer"
+                        >
+                          <span className="inline-block w-2 h-2 bg-[#365372] rounded-full mr-2"></span>
+                          <span className="font-semibold">{member.name}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )
+              )}
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
 };
 
 export default Committee;
