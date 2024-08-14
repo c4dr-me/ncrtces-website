@@ -31,12 +31,13 @@ const CountdownTimer = ({ targetDate }) => {
   }, [timeLeft, targetDate]);
 
   const getClassName = (unit) => {
-    return timeLeft[unit] !== prevTimeLeft[unit] ? "fade-in" : "";
+    if (unit === "seconds") return "fade-in ";
+    return timeLeft[unit] !== prevTimeLeft[unit] ? "lottery-wheel" : "";
   };
 
   return (
     <div className="flex flex-col items-center justify-center h-auto bg-[rgba(255, 255, 255, 0.8)] text-gray-800 border border-gray-300 rounded-lg">
-      <div className="flex items-center space-x-4 text-2xl p-4 bg-gray-300 rounded-lg shadow-lg bg-opacity-50 backdrop-filter backdrop-blur-lg">
+      <div className="flex items-center space-x-2 md:space-x-4 text-2xl p-4 bg-gray-300 rounded-lg shadow-lg bg-opacity-50 backdrop-filter backdrop-blur-lg">
         <div className="flex flex-col items-center justify-center bg-gray-200 bg-opacity-50 text-gray-800 p-2 rounded-lg w-14 h-14 md:w-20 md:h-20 backdrop-filter backdrop-blur-lg">
           <span className={`font-mono text-3xl md:text-4xl ${getClassName("days")}`}>{String(timeLeft.days || "0").padStart(2, '0')}</span>
           <span className="text-xs md:text-base">Days</span>

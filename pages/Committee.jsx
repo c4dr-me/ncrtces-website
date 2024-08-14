@@ -48,14 +48,14 @@ const Committee = () => {
       id: 'committee0',
       name: 'Patrons',
       members: [
-        { name: 'Sh. Kaptan Singh -President, SMES, New Delhi' },
-        { name: 'Ms. Esha Jakhar -Vice - President, SMES, New Delhi' },
-        { name: 'Prof. Prem Vrat -Pro - Chancellor, North Cap University, Gurgaon' },
-        { name: 'Sh. Karnal Singh -IPS, Former Director - Enforcement Directorate' },
-        { name: 'Mr. Ajit Singh Chaudhary -Secretary, SMES, New Delhi' },
-        { name: 'Mr. Raj Pal Solanki -Treasurer, SMES, New Delhi' },
-        { name: 'Dr. Tejbir Singh Rana -Chairman, Academic Committee, SMES, New Delhi' },
-        { name: 'Sh. S.S. Solanki -Chairman Disciplinary(L), SMES, New Delhi' },
+        { name: 'Sh. Kaptan Singh (President) SMES, New Delhi' },
+        { name: 'Ms. Esha Jakhar (Vice - President) SMES, New Delhi' },
+        { name: 'Prof. Prem Vrat (Pro - Chancellor) North Cap University, Gurgaon' },
+        { name: 'Sh. Karnal Singh (IPS) Former Director - Enforcement Directorate' },
+        { name: 'Mr. Ajit Singh Chaudhary (Secretary) SMES, New Delhi' },
+        { name: 'Mr. Raj Pal Solanki (Treasurer) SMES, New Delhi' },
+        { name: 'Dr. Tejbir Singh Rana (Chairman, Academic Committee) SMES, New Delhi' },
+        { name: 'Sh. S.S. Solanki (Chairman Disciplinary (L)) SMES, New Delhi' },
       ],
     },
     {
@@ -83,6 +83,14 @@ const Committee = () => {
     },
     {
       id: 'committee4',
+      name: 'Program Committee',
+      members: [
+        { name: 'Prof. Puneet Azad' },
+        { name: 'Mr. Manoj Malik' },
+      ],
+    },
+    {
+      id: 'committee5',
       name: 'Technical Review Committee',
       members: [
         { name: 'Dr. Ajay Gahlot'},
@@ -92,22 +100,30 @@ const Committee = () => {
       ],
     },
     {
-      id: 'committee5',
-      name: 'Program Committee',
+      id: 'committee6',
+      name: 'Sponsorship/Funding Committee',
       members: [
-        { name: 'Prof. Puneet Azad'},
-        { name: 'Mr. Manoj Malik'},
+        { name: 'Dr. Anju Dhillon' },
+        { name: 'Mr. Surender Bhanwala' },
+        { name: 'Mr. Akshay Singh' },
       ],
     },
     {
-      id: 'committee6',
+      id: 'committee7',
+      name: 'Website Committee',
+      members: [
+        {name: 'Dr. Vikrant Shokeen'},
+      ],
+    },
+    {
+      id: 'committee8',
       name: 'Finance Committee',
       members: [
         { name: 'Prof. Man Singh'},
       ],
     },
     {
-      id: 'committee7',
+      id: 'committee9',
       name: 'Publication Committee',
       members: [
         { name: 'Dr. Sakshi Rajput'},
@@ -115,32 +131,16 @@ const Committee = () => {
       ],
     },
     {
-      id: 'committee8',
-      name: 'Publicity Committee',
-      members: [
-        { name: 'Dr. Kavita Sheoran'},
-        { name: 'Dr. Deepshika Yadav'},
-      ],
-    },
-    {
-      id: 'committee9',
-      name: 'Website Committee',
-      members: [
-        { name: 'Dr. Vikrant Shokeen'},
-      ],
-    },
-    {
       id: 'committee10',
-      name: 'Sponsorship Committee, MSIT',
+      name: 'Publicity, Design & Printing',
       members: [
-        { name: 'Dr. Anju Dhillon'},
-        { name: 'Mr. Surender Bhanwala'},
-        { name: 'Mr. Akshay Singh'},
+        { name: 'Dr. Deepshikha Yadav'},
+        { name: 'Dr. Kavita Sheoran'},
       ],
     },
     {
       id: 'committee11',
-      name: 'Stage Committee, MSIT',
+      name: 'Stage Committee',
       members: [
         { name: 'Dr. Shaily Malik'},
         { name: 'Ms. Neelam Nehra'},
@@ -150,8 +150,8 @@ const Committee = () => {
       id: 'committee12',
       name: 'Hospitality Committee, MSIT',
       members: [
-        { name: 'Dr. Vimal Gaur'},
         { name: 'Dr. Rakhi Kamra'},
+        { name: 'Dr. Vimal Gaur'},
         { name: 'Dr. Gitanjali'},
         { name: 'Ms. Annu Bhure'},
         { name: 'Ms. Gunjan'},
