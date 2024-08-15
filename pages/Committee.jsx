@@ -62,7 +62,7 @@ const Committee = () => {
       id: 'committee1',
       name: 'Organising Chair',
       members: [
-        { name: 'Prof. Archana Balyan -Director, MSIT' },
+        { name: 'Prof. Archana Balyan' },
       ],
     },
     {
