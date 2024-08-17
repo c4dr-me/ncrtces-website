@@ -5,7 +5,9 @@ import About from "../pages/About";
 // import Patron from "../pages/Patron";
 import Tracks from "../pages/Tracks";
 import Committee from "../pages/Committee";
+import Schedule from "../pages/Schedule";
 import Registration from "../pages/Registration";
+import CallForPapers from "../pages/callforpapers"
 import Contact from "../pages/Contact";
 import Footer from "../components/footer"
 
@@ -26,8 +28,9 @@ const App = () => {
         <About />
         <Tracks />
         <Committee />
-        {/* <Patron /> */}
-        <Registration />
+        <Schedule />
+      <Registration />
+        <CallForPapers />
         <Contact />
         {/* <Routes>
           <Route exact path="/" element={<Overview />} />
