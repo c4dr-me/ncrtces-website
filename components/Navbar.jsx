@@ -5,7 +5,7 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown"; // Import the arrow icon
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Drawer from "@mui/material/Drawer";
