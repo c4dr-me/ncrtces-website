@@ -268,10 +268,10 @@ function ResponsiveAppBar() {
             background: "linear-gradient(162deg, rgba(75,67,193,0.9809173669467787) 0%, rgba(58,58,194,1) 32%, rgba(58,110,195,1) 56%)",
             mt: 2,
           },
-          "& .MuiMenu-list": {
+          "& .MuiMenu-list": { //dropdwon list container
             padding: "10px",
           },
-          "& .MuiMenuItem-root": {
+          "& .MuiMenuItem-root": { //li item
           backdropFilter: "blur(10px)",
           color: "white",
           fontWeight: "400",
