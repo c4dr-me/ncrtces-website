@@ -8,7 +8,7 @@ const Guide = () => {
         <div className='container mx-auto px-[8%] md:px-[15%] pt-20'>
           <div className='bg-blue-400 p-8 rounded-lg shadow-lg border-white border'>
             <h1 className='text-[#c00000] text-3xl font-bold text-center mb-4'>PAPER SUBMISSION GUIDELINES</h1>
-            <div className='w-24 h-1 mx-auto bg-[#365372] rounded-full mb-6'></div>
+            <div className='w-24 h-[2px] mx-auto bg-[#365372] rounded-full mb-6'></div>
             <div className='text-lg'>
               <p className='py-2'>
                 1. Authors are invited to submit full-length, original, unpublished papers via the link: 
@@ -34,7 +34,7 @@ const Guide = () => {
         <div className='container mx-auto px-[8%] md:px-[15%] py-20'>
           <div className='bg-gradient-to-b from-blue-400 to-blue-500 p-8 rounded-lg shadow-lg border border-white '>
             <h1 className='text-[#c00000] text-3xl font-bold text-center mb-4'>AUTHOR GUIDELINES</h1>
-            <div className='w-24 h-1 mx-auto bg-[#365372] rounded-full mb-6'></div>
+            <div className='w-24 h-[2px] mx-auto bg-[#365372] rounded-full mb-6'></div>
             <div className='text-lg'>
               <strong className='block text-xl font-semibold italic underline mb-4'>
                 PLAGIARISM POLICY :
