@@ -5,6 +5,8 @@ import About from "../pages/About";
 // import Patron from "../pages/Patron";
 import Tracks from "../pages/Tracks";
 import Committee from "../pages/Committee";
+import PaperSubmit from "../pages/papersubmit";
+import AuthorGuide from "../pages/authorguide";
 import Schedule from "../pages/Schedule";
 import Registration from "../pages/Registration";
 import CallForPapers from "../pages/callforpapers"
@@ -28,6 +30,8 @@ const App = () => {
         <About />
         <Tracks />
         <Committee />
+        <PaperSubmit />
+        <AuthorGuide />
         <Schedule />
       <Registration />
         <CallForPapers />
