@@ -14,10 +14,10 @@ const papersubmit = () => {
     <br/>
     <br/>
     <div className="pl-3 text-lg mt-3"  id="submissionsText">
-          <p>1. Authors are invited to submit full-length, original, unpublished papers via the link: [submission link] through https://ncrtees-msit.in/. </p>
-          <p>2.	Kindly ensure that your paper is formatted (minimum 8 pages written in A4 size.)</p>
-          <p>3.	Submissions will be subject to the standard review procedure.</p>
-          <p>4. Author and contact information (name, affiliation, mailing address, telephone, fax, e-mail) must be entered during submission process. All accepted and presented papers will be published in reputed series [will be confirmed soon].</p>
+          <p className='py-1'>1. Authors are invited to submit full-length, original, unpublished papers via the link: [submission link] through <a href="#" className=' text-blue-100 underline'>https://ncrtees-msit.in/.</a> </p>
+          <p className='py-1'>2.	Kindly ensure that your paper is formatted <em>(minimum 8 pages written in A4 size.)</em></p>
+          <p className='p-1'>3.	Submissions will be subject to the standard review procedure.</p>
+          <p className='py-1'>4. Author and contact information <em>(name, affiliation, mailing address, telephone, fax, e-mail)</em> must be entered during submission process. All accepted and presented papers will be published in reputed series [will be confirmed soon].</p>
     </div>
     </div>
     </div>

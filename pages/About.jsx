@@ -1,31 +1,56 @@
 import React from 'react'
 // import "./Comingsoon.css"
-import New from './new.gif'
+//import New from './new.gif'
+import { Campaign } from '@mui/icons-material';
 const About = () => {
   return (
     <section id="about" className="w-full  text-white">
-    <div className='bg-blue-400' >
-    <div className='mt-4'>
-    <div className="w-full py-6">
-        <marquee className="text-xl">
-          <div className="flex w-[250%]">
-            <div><img src={New} alt="123"/></div><a href="#submissionsText"
-              className="ml-2 text-[#FF0000 ] text-white text-lg mr-2">•<strong>Paper Submission Deadline: </strong>September 15,2024</a>
+    <div className='bg-blue-400'>
+        <div className='mt-4'>
+          <div className="relative w-full py-6">
+            <marquee className="text-xl" behavior="scroll" direction="left" scrollamount="8">
+              <div className="flex w-[250%] items-center">
+                <div className="flex items-center justify-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-2 mb-2 shadow-md mr-3">
+                  <Campaign className="text-red-700" />
+                  <span className="ml-2 text-red-600 font-semibold">News</span>
+                </div>
+                <a href="#submissionsText"
+                  className="ml-2 text-white text-lg font-semibold bg-white/10 backdrop-blur-sm border border-white/20 px-2 mb-2 rounded-md shadow-md mr-2">
+                  • <strong className='tracking-wider'>Paper Submission Deadline : </strong>September 15, 2024
+                </a>
+              </div>
+              <div className="flex w-[500%] items-center">
+                <div className="flex items-center justify-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-2 mb-2 shadow-md mr-3">
+                  <Campaign className="text-red-700" />
+                  <span className="ml-2 text-red-600 font-semibold">News</span>
+                </div>
+                <a href="#submissionsText"
+                  className="ml-2 text-white text-lg font-semibold bg-white/10 backdrop-blur-sm border border-white/20 px-2 mb-2 rounded-md shadow-md">
+                  • <strong className='tracking-wider'>Notification of acceptance : </strong> September 30, 2024
+                </a>
+              </div>
+              <div className="flex w-[500%] items-center">
+                <div className="flex items-center justify-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-2 mb-2 shadow-md mr-3">
+                  <Campaign className="text-red-700" />
+                  <span className="ml-2 text-red-600 font-semibold">News</span>
+                </div>
+                <a href="#"
+                  className="ml-2 text-white text-lg font-semibold bg-white/10 backdrop-blur-sm border border-white/20 px-2 mb-2 rounded-md shadow-md">
+                  • <strong className='tracking-wider'>Camera-Ready Paper Submission : </strong>October 15, 2024
+                </a>
+              </div>
+              <div className="flex w-[250%] items-center">
+                <div className="flex items-center justify-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-2 mb-2 shadow-md mr-3">
+                  <Campaign className="text-red-700" />
+                  <span className="ml-2 text-red-600 font-semibold">News</span>
+                </div>
+                <a href="#"
+                  className="ml-2 text-white text-lg font-semibold bg-white/10 backdrop-blur-sm border border-white/20 px-2 mb-2 rounded-md shadow-md">
+                  • <strong className='tracking-wider'>Conference Dates : </strong>November 07-08, 2024
+                </a>
+              </div>
+            </marquee>
           </div>
-          <div className="flex w-[500%]">
-            <div><img src={New} alt="123"/></div><a href="#submissionsText"
-              className="ml-2 text-[#FF0000 ] text-white text-lg ">•<strong>Notification of acceptance: </strong>September 30,2024</a>
-          </div>
-          <div className="flex w-[500%]">
-            <div><img src={New} alt="123"/></div><a href="#"
-              className="ml-2 text-[#FF0000 ] text-white text-lg ">•<strong>Camera-Ready Paper Submission: </strong>October 15,2024</a>
-          </div>
-          <div className="flex w-[250%]">
-            <div><img src={New} alt="123"/></div><a href="#"
-              className="ml-2 text-[#FF0000 ] text-white text-lg ">•<strong>Conference Dates: </strong>November 07-08,2024</a>
-          </div>
-        </marquee>
-      </div>
       <div className=" px-[8%] md:px-[15%]">
         <h1 className='text-[#c00000] pt-6 text-center text-3xl font-[600]'>CONFERENCE OVERVIEW</h1>
         <div className='w-72 h-[3px] mx-auto mt-2 bg-[#365372] rounded-xl'></div>

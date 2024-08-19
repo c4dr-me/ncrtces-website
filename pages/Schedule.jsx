@@ -15,8 +15,8 @@ const cfp = () => {
             <div className="w-1/2 text-center">EVENT</div>
             <div className="w-1/2 text-center">DATE</div>
         </div>
-        <div className="flex   text-md md:text-lg md:text-xl py-3 bg-[#e9e9e9]">
-            <div className="w-1/2 text-center">Paper submission Deadline</div>
+        <div className="flex   text-md md:text-lg md:text-xl py-3 bg-[#e9e9e9] ">
+            <div className="w-1/2 text-center ">Paper submission Deadline</div>
             <div className="w-1/2 text-center">September 15, 2024</div>
         </div>
         <div className="flex   text-md md:text-lg md:text-xl py-3 ">
