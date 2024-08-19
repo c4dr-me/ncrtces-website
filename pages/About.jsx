@@ -5,7 +5,7 @@ import { Campaign } from '@mui/icons-material';
 const About = () => {
   return (
     <section id="about" className="w-full  text-white">
-    <div className='bg-blue-400'>
+    <div className='bg-gradient-to-b from-blue-400 to-blue-600'>
         <div className='mt-4'>
           <div className="relative w-full py-6">
             <marquee className="text-xl" behavior="scroll" direction="left" scrollamount="8">
