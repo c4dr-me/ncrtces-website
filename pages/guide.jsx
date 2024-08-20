@@ -12,7 +12,7 @@ const Guide = () => {
             <div className='text-lg'>
               <p className='py-2'>
                 1. Authors are invited to submit full-length, original, unpublished papers via the link: 
-                <a href='https://ncrtees-msit.in/' className='text-blue-200 underline hover:text-blue-100'>[https://ncrtees-msit.in/]</a>.
+                {`{submission-link}`} through https://ncrtees-msit.in/. 
               </p>
               <p className='py-2'>
                 2. Kindly ensure that your paper is formatted <em>(minimum 8 pages in A4 size)</em>.
