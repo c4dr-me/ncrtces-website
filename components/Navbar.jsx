@@ -24,10 +24,10 @@ const pages = [
   { name: "About Us", sname: "about" },
   { name: "Tracks", sname: "track" },
   { name: "Committee", sname: "committee" },
+  { name: "Call for Papers", sname: "cfp" },
   { name: "Guidelines", sname: "guide" },
   { name: "Schedule", sname: "schedule" },
   { name: "Registration", sname: "reg" },
-  { name: "Call for Papers", sname: "cfp" },
   { name: "Contact Us", sname: "contact" },
 ];
 
