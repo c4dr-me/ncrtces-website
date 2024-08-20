@@ -17,6 +17,7 @@ import MenuItem from "@mui/material/MenuItem";
 import { Link as ScrollLink, scroller, Events } from "react-scroll";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import Logo from './Logo.jpg';
 import "./navbar.css";
 
 const pages = [
@@ -174,7 +175,13 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
-
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <img
+              src={Logo}
+              alt="Logo"
+              style={{ height: "55px", width: "60px", marginRight: "5px" }}
+            />
+          </Box>
           <Box
             sx={{
               flexGrow: 1,
