@@ -14,7 +14,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { Link as ScrollLink } from "react-scroll";
+import { Link as ScrollLink, scroller, Events } from "react-scroll";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import "./navbar.css";
@@ -41,6 +41,7 @@ function ResponsiveAppBar() {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [guidelinesMenuOpen, setGuidelinesMenuOpen] = React.useState(false);
+  const [guidelinesActive, setGuidelinesActive] = React.useState(false);
 
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up("md"));
@@ -65,9 +66,9 @@ function ResponsiveAppBar() {
 
   const handleMenuItemClick = (section) => {
     handleMenuClose();
-    window.scrollTo({
-      top: document.getElementById(section).offsetTop,
-      behavior: "smooth"
+    scroller.scrollTo(section, {
+      duration: 500,
+      smooth: true,
     });
   };
 
@@ -76,6 +77,24 @@ function ResponsiveAppBar() {
       setDrawerOpen(false);
     }
   }, [isLargeScreen, drawerOpen]);
+
+  React.useEffect(() => {
+    const handleSetActive = (to) => {
+      if (to === "submission-guideline" || to === "author-guideline") {
+        setGuidelinesActive(true);
+      } else {
+        setGuidelinesActive(false);
+      }
+    };
+
+    Events.scrollEvent.register("begin", handleSetActive);
+    Events.scrollEvent.register("end", handleSetActive);
+
+    return () => {
+      Events.scrollEvent.remove("begin", handleSetActive);
+      Events.scrollEvent.remove("end", handleSetActive);
+    };
+  }, []);
 
   return (
     <AppBar
@@ -110,24 +129,24 @@ function ResponsiveAppBar() {
             {pages.map((page) => (
               <Button
                 key={page.name}
-                component={ForwardedScrollLink}
-                to={page.sname}
+                component={page.sname !== "guide" ? ForwardedScrollLink : "button"}
+                to={page.sname !== "guide" ? page.sname : null}
                 spy={true}
                 smooth={true}
                 duration={500}
-                offset={page.sname === "patron"
-                  ? -40
-                  : page.sname === "reg"
+                offset={page.sname === "about" || "track"
+                  ? -10
+                  : page.sname === "reg" 
                     ? -20
                     : page.sname === "contact"
                       ? -10
                       : page.sname === "committee"
-                      ? -30
+                      ? -15
                         : page.sname === "cfp" || "schedule"
                           ? -20
                             : -50
                 }
-                activeClass="active"
+                activeClass={page.sname !== "guide" ? "active" : "active"}
                 sx={{
                   my: 2,
                   color: "white",
@@ -140,6 +159,7 @@ function ResponsiveAppBar() {
                   position: "relative",
                 }}
                 onClick={page.sname === "guide" ? handleGuidelinesClick : null}
+                className={guidelinesActive && page.sname === "guide" ? "active" : ""}
               >
                 {page.name}
                 {page.sname === "guide" && (
@@ -285,10 +305,24 @@ function ResponsiveAppBar() {
           },
         }}
       >
-        <MenuItem onClick={() => handleMenuItemClick("submission-guideline")}>
+        <MenuItem
+           component={ForwardedScrollLink}
+           to="submission-guideline"
+           spy={true}
+           smooth={true}
+           duration={500}
+           activeClass="active"
+          onClick={() => handleMenuItemClick("submission-guideline")}>
           Submission Guideline
         </MenuItem>
-        <MenuItem onClick={() => handleMenuItemClick("author-guideline")}>
+        <MenuItem
+           component={ForwardedScrollLink}
+           to="author-guideline"
+           spy={true}
+           smooth={true}
+           duration={500}
+           activeClass="active"
+          onClick={() => handleMenuItemClick("author-guideline")}>
           Author Guideline
         </MenuItem>
       </Menu>

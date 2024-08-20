@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section id="about" className="w-full  text-white">
     <div className='bg-gradient-to-b from-blue-400 to-blue-600'>
-        <div className='mt-4'>
+        <div className='mt-4 pt-20'>
           <div className="relative w-full py-6">
             <marquee className="text-xl" behavior="scroll" direction="left" scrollamount="8">
               <div className="flex w-[250%] items-center">
@@ -14,7 +14,7 @@ const About = () => {
                   <Campaign className="text-red-700" />
                   <span className="ml-2 text-red-600 font-semibold">News</span>
                 </div>
-                <a href="#submissionsText"
+                <a href="#submission-guideline"
                   className="ml-2 text-white text-lg font-semibold bg-white/10 backdrop-blur-sm border border-white/20 px-2 mb-2 rounded-md shadow-md mr-2">
                   • <strong className='tracking-wider'>Paper Submission Deadline : </strong>September 15, 2024
                 </a>
@@ -24,7 +24,7 @@ const About = () => {
                   <Campaign className="text-red-700" />
                   <span className="ml-2 text-red-600 font-semibold">News</span>
                 </div>
-                <a href="#submissionsText"
+                <a href="#author-guideline"
                   className="ml-2 text-white text-lg font-semibold bg-white/10 backdrop-blur-sm border border-white/20 px-2 mb-2 rounded-md shadow-md">
                   • <strong className='tracking-wider'>Notification of acceptance : </strong> September 30, 2024
                 </a>
