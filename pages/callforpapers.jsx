@@ -3,9 +3,9 @@ import './Comingsoon.css'; // Import the shared CSS file
 
 const Cfp = () => {
   return (
-    <>
+    <div id="cfp">
       {/* Placeholder Header for Smooth Scrolling */}
-      <div id="cfp" className="h-16 bg-white w-full"></div>
+      <div  className="h-16 bg-white w-full"></div>
 
       {/* Main Content */}
       <div className="w-full text-white min-h-screen">
@@ -43,7 +43,7 @@ const Cfp = () => {
           </article>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

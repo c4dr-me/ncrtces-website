@@ -3,8 +3,8 @@ import './Comingsoon.css';  // Import the shared CSS file
 
 const Registration = () => {
   return (
-    <>
-      <div id="reg"  className="h-8 bg-white w-full">
+    <div id="reg">
+      <div   className="h-8 bg-white w-full">
       </div>
       <div class='w-full '>
       <div class='bg-white px-[5%] md:px-[15%]'>
@@ -25,7 +25,7 @@ const Registration = () => {
         <p class=" text-md md:text-lg ">Every accepted paper MUST have at least one author registered to the conference by the time the camera-ready paper is submitted for the paper to appear in the proceedings and be included in the Technical Program.</p>
       </div>
     </div>
-    </>
+    </div>
   );
 };
 

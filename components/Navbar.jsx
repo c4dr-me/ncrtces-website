@@ -80,13 +80,85 @@ function ResponsiveAppBar() {
   }, [isLargeScreen, drawerOpen]);
 
   React.useEffect(() => {
+    // Select the guide section by its ID
+    const guideSection = document.getElementById('guide');
+  
+    // Create an IntersectionObserver instance to monitor the visibility of the guide section
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Check if the guide section is in view based on the threshold
+        if (entry.isIntersecting) {
+          // If in view, set guidelinesActive state to true
+          setGuidelinesActive(true);
+        } else {
+          // If not in view, set guidelinesActive state to false
+          setGuidelinesActive(false);
+        }
+      },
+      {
+        // Threshold defines how much of the section should be visible for the callback to trigger
+        threshold: 0.1, // 10% visibility triggers the callback (adjust this value as needed)
+      }
+    );
+  
+    // Start observing the guide section
+    if (guideSection) {
+      observer.observe(guideSection);
+    }
+  
+    // Cleanup the observer when the component unmounts to prevent memory leaks
+    return () => {
+      if (guideSection) {
+        observer.unobserve(guideSection);
+      }
+    };
+  }, []); // Empty dependency array ensures this effect runs only once when the component mounts
+  React.useEffect(() => {
+    // Select the guide section by its ID
+    const guideSection = document.getElementById('guide');
+  
+    // Create an IntersectionObserver instance to monitor the visibility of the guide section
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Check if the guide section is in view based on the threshold
+        if (entry.isIntersecting) {
+          // If in view, set guidelinesActive state to true
+          setGuidelinesActive(true);
+        } else {
+          // If not in view, set guidelinesActive state to false
+          setGuidelinesActive(false);
+        }
+      },
+      {
+        // Threshold defines how much of the section should be visible for the callback to trigger
+        threshold: 0.1, // 10% visibility triggers the callback (adjust this value as needed)
+      }
+    );
+  
+    // Start observing the guide section
+    if (guideSection) {
+      observer.observe(guideSection);
+    }
+  
+    // Cleanup the observer when the component unmounts to prevent memory leaks
+    return () => {
+      if (guideSection) {
+        observer.unobserve(guideSection);
+      }
+    };
+  }, []); // Empty dependency array ensures this effect runs only once when the component mounts
+    
+  
+
+  React.useEffect(() => {
     const handleSetActive = (to) => {
-      if (to === "submission-guideline" || to === "author-guideline") {
+      if (["guide", "submission-guideline", "author-guideline"].includes(to)) {
         setGuidelinesActive(true);
       } else {
         setGuidelinesActive(false);
       }
     };
+    
 
     Events.scrollEvent.register("begin", handleSetActive);
     Events.scrollEvent.register("end", handleSetActive);
@@ -130,24 +202,24 @@ function ResponsiveAppBar() {
             {pages.map((page) => (
               <Button
                 key={page.name}
-                component={page.sname !== "guide" ? ForwardedScrollLink : "button"}
+                component={page.sname !== "guide" ? ForwardedScrollLink : ""}
                 to={page.sname !== "guide" ? page.sname : null}
                 spy={true}
                 smooth={true}
                 duration={500}
                 offset={page.sname === "about" || "track"
                   ? -10
-                  : page.sname === "reg" 
+                  : page.sname === "reg" || "schedule"
                     ? -20
                     : page.sname === "contact"
                       ? -10
                       : page.sname === "committee"
                       ? -15
-                        : page.sname === "cfp" || "schedule"
-                          ? -20
+                        : page.sname === "cfp" 
+                          ? -15
                             : -50
                 }
-                activeClass={page.sname !== "guide" ? "active" : "active"}
+                activeClass={page.sname !== "guide" ? "active" : ""}
                 sx={{
                   my: 2,
                   color: "white",
@@ -178,8 +250,8 @@ function ResponsiveAppBar() {
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <img
               src={Logo}
-              alt="Logo"
-              style={{ height: "55px", width: "60px", marginRight: "5px" }}
+              alt="Conference Logo"
+              style={{ height: "60px", width: "60px", marginRight: "5px", borderRadius: "50%" }}
             />
           </Box>
           <Box
@@ -312,6 +384,7 @@ function ResponsiveAppBar() {
           },
         }}
       >
+    
         <MenuItem
            component={ForwardedScrollLink}
            to="submission-guideline"
