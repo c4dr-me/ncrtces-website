@@ -14,40 +14,40 @@ const About = () => {
                   <Campaign className="text-red-700" />
                   <span className="ml-2 text-red-600 font-semibold">News</span>
                 </div>
-                <a href="#submission-guideline"
+                <p
                   className="ml-2 text-white text-lg font-semibold bg-white/10 backdrop-blur-sm border border-white/20 px-2 mb-2 rounded-md shadow-md mr-2">
                   • <strong className='tracking-wider'>Paper Submission Deadline : </strong>September 15, 2024
-                </a>
+                </p>
               </div>
               <div className="flex w-[500%] items-center">
                 <div className="flex items-center justify-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-2 mb-2 shadow-md mr-3">
                   <Campaign className="text-red-700" />
                   <span className="ml-2 text-red-600 font-semibold">News</span>
                 </div>
-                <a href="#author-guideline"
+                <p
                   className="ml-2 text-white text-lg font-semibold bg-white/10 backdrop-blur-sm border border-white/20 px-2 mb-2 rounded-md shadow-md">
                   • <strong className='tracking-wider'>Notification of acceptance : </strong> September 30, 2024
-                </a>
+                </p>
               </div>
               <div className="flex w-[500%] items-center">
                 <div className="flex items-center justify-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-2 mb-2 shadow-md mr-3">
                   <Campaign className="text-red-700" />
                   <span className="ml-2 text-red-600 font-semibold">News</span>
                 </div>
-                <a href="#"
+                <p
                   className="ml-2 text-white text-lg font-semibold bg-white/10 backdrop-blur-sm border border-white/20 px-2 mb-2 rounded-md shadow-md">
                   • <strong className='tracking-wider'>Camera-Ready Paper Submission : </strong>October 15, 2024
-                </a>
+                </p>
               </div>
               <div className="flex w-[250%] items-center">
                 <div className="flex items-center justify-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-2 mb-2 shadow-md mr-3">
                   <Campaign className="text-red-700" />
                   <span className="ml-2 text-red-600 font-semibold">News</span>
                 </div>
-                <a href="#"
+                <p
                   className="ml-2 text-white text-lg font-semibold bg-white/10 backdrop-blur-sm border border-white/20 px-2 mb-2 rounded-md shadow-md">
                   • <strong className='tracking-wider'>Conference Dates : </strong>November 07-08, 2024
-                </a>
+                </p>
               </div>
             </marquee>
           </div>

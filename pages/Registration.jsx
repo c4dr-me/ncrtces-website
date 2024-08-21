@@ -6,7 +6,7 @@ const Registration = () => {
     <div id="reg">
       <div   className="h-8 bg-white w-full">
       </div>
-      <div class='w-full '>
+      <div class='w-full min-h-screen'>
       <div class='bg-white px-[5%] md:px-[15%]'>
       <div>
         <h1 class='text-[#c00000] pt-16 text-center text-3xl font-[600]'>REGISTRATIONS</h1>
@@ -14,7 +14,7 @@ const Registration = () => {
         <div class="h-12 bg-white w-full"></div>
       </div>
         <br/>
-        <h2 class="pb-6 text-md md:text-lg "><strong>Author/Co-Author Registration Fee Includes:</strong><br/>
+        <h2 class="pb-6 text-md md:text-lg mt-20"><strong>Author/Co-Author Registration Fee Includes:</strong><br/>
             1.	Access to Keynote talks <br/>
             2.	Access to paper presentation sessions <br/>
             3.	Conference lunch and refreshment* <br/>
