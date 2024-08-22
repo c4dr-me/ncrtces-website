@@ -17,7 +17,7 @@ import MenuItem from "@mui/material/MenuItem";
 import { Link as ScrollLink, scroller, Events } from "react-scroll";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import Logo from './Logo.jpg';
+// import Logo from './Logo.jpg';
 import "./navbar.css";
 
 const pages = [
@@ -26,6 +26,7 @@ const pages = [
   { name: "Tracks", sname: "track" },
   { name: "Committee", sname: "committee" },
   { name: "Call for Papers", sname: "cfp" },
+  { name: "Venue", sname: "venue" },
   { name: "Guidelines", sname: "guide" },
   { name: "Schedule", sname: "schedule" },
   { name: "Registration", sname: "reg" },
@@ -113,13 +114,13 @@ function ResponsiveAppBar() {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Box sx={{ display: "flex", alignItems: "center" }}>
+          {/* <Box sx={{ display: "flex", alignItems: "center" }}>
             <img
               src="https://msit.in/static/img/msit.png"
               alt="Logo"
               style={{ height: "50px", width: "50px", marginRight: "5px" }}
             />
-          </Box>
+          </Box> */}
           <Box
             sx={{
               flexGrow: 1,
@@ -175,13 +176,13 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
-          <Box sx={{ display: "flex", alignItems: "center" }}>
+          {/* <Box sx={{ display: "flex", alignItems: "center" }}>
             <img
               src={Logo}
               alt="Logo"
               style={{ height: "55px", width: "60px", marginRight: "5px" }}
             />
-          </Box>
+          </Box> */}
           <Box
             sx={{
               flexGrow: 1,

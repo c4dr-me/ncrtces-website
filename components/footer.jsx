@@ -2,19 +2,20 @@ import React from "react";
 
 const footer = () => {
   return (
-    <footer className="flex flex-col">
-      <div className="google-map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.3026434125186!2d77.08987957495634!3d28.620690284619396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04afb8dbcfe1%3A0xaff19e718be2136b!2sMaharaja%20Surajmal%20Institute%20Of%20Technology!5e0!3m2!1sen!2sin!4v1719752315118!5m2!1sen!2sin"
-          width="100%"
-          height="450"
-          style={{ border: 0, marginTop: 10 }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
-      </footer>
+    <div className='w-full md:h-96 footer bg-[#365372]'>    
+    <img className='mx-auto pt-6 md:pt-12 w-[80px] md:w-[120px]' src="https://msit.in/static/img/msit.png" alt="" />
+    <h1 href="https://msit.in/" className='cursor-pointer text-white font-[600] text-center pt-4 text-lg md:text-2xl'>msit.in</h1>
+    <div className='w-[60%] mx-auto h-[0px] border-dashed border-blue-900 border-[1px]  mt-2 md:mt-4'></div>
+    <h1 className='text-white   mt-2 md:mt-4 text-center font-[600] mx-[5%]'><span  className='text-[#ecb227]'>Copyright © 2024</span> National Conference on Recent Trends in Climate Change, Energy and
+    Sustainability (NCRTCES)<span  className='text-[#ecb227]'>All Rights Reserved.</span></h1>
+    {/* <div  className='flex justify-center text-xl md:text-3xl   py-3 md:mt-4 '>
+        <i href="https://m.facebook.com/340860243221497/" className="cursor-pointer fa-brands fa-facebook "></i>
+        <i href="https://www.instagram.com/invites/contact/?i=1db3ohssgsiqo&utm_content=5yz2oup" className="cursor-pointer fa-brands fa-instagram ml-3"></i>
+        <i href="https://www.linkedin.com/school/maharaja-surajmal-institute-of-technology-msitnewdelhi/" className="cursor-pointer fa-brands fa-linkedin ml-3 "></i>
+        <i href="https://twitter.com/msitnewdelhi?t=G_i_U0kRl1RIF6_Yt-w3sQ&s=08" className="cursor-pointer fa-brands fa-square-twitter ml-3  "></i>
+
+    </div> */}
+</div>
   );
 };
 

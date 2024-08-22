@@ -11,6 +11,7 @@ import Schedule from "../pages/Schedule";
 import Registration from "../pages/Registration";
 import CallForPapers from "../pages/callforpapers"
 import Contact from "../pages/Contact";
+import Venue from "../pages/Venue";
 import Footer from "../components/footer"
 
 const App = () => {
@@ -50,6 +51,7 @@ const App = () => {
         </Routes>
         <MainContent /> */}
       {/* </Router> */}
+      <Venue />
       <Footer/>
     </div>
   );
