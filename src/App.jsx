@@ -31,12 +31,13 @@ const App = () => {
         <About />
         <Tracks />
         <Committee />
+         <CallForPapers />
         <Guidelines/>
         {/* <PaperSubmit />
         <AuthorGuide /> */}
         <Schedule />
       <Registration />
-        <CallForPapers />
+       
         <Contact />
         {/* <Routes>
           <Route exact path="/" element={<Overview />} />

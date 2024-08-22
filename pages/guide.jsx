@@ -2,11 +2,11 @@ import React from 'react';
 
 const Guide = () => {
   return (
-    <div id='guide' className='bg-gradient-to-b from-blue-400 to-blue-500 text-white'>
+    <div id='guide' className='bg-gradient-to-b from-blue-500 to-blue-700 text-white'>
       {/* Submission Guidelines */}
       <section id='submission-guideline' className='py-12 text-justify'>
         <div className='container mx-auto px-[8%] md:px-[15%] pt-20'>
-          <div className='bg-blue-400 p-8 rounded-lg shadow-lg border-white border'>
+          <div className='bg-transparent p-8 rounded-lg shadow-lg border-white border'>
             <h1 className='text-[#c00000] text-3xl font-bold text-center mb-4'>PAPER SUBMISSION GUIDELINES</h1>
             <div className='w-24 h-[2px] mx-auto bg-[#365372] rounded-full mb-6'></div>
             <div className='text-lg'>
@@ -32,7 +32,7 @@ const Guide = () => {
       {/* Author Guidelines */}
       <section id='author-guideline' className='py-12 text-justify'>
         <div className='container mx-auto px-[8%] md:px-[15%] py-20'>
-          <div className='bg-gradient-to-b from-blue-400 to-blue-500 p-8 rounded-lg shadow-lg border border-white '>
+          <div className='bg-transparent to-blue-500 p-8 rounded-lg shadow-lg border border-white '>
             <h1 className='text-[#c00000] text-3xl font-bold text-center mb-4'>AUTHOR GUIDELINES</h1>
             <div className='w-24 h-[2px] mx-auto bg-[#365372] rounded-full mb-6'></div>
             <div className='text-lg'>

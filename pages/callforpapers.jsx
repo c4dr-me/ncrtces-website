@@ -3,9 +3,9 @@ import './Comingsoon.css'; // Import the shared CSS file
 
 const Cfp = () => {
   return (
-    <>
+    <div id="cfp">
       {/* Placeholder Header for Smooth Scrolling */}
-      <div id="cfp" className="h-16 bg-white w-full"></div>
+      <div  className="h-16 bg-white w-full"></div>
 
       {/* Main Content */}
       <div className="w-full text-white min-h-screen">
@@ -15,7 +15,7 @@ const Cfp = () => {
           <header className="text-center">
             <h2 className="text-[#c00000] text-xl font-semibold uppercase tracking-wider mb-10">
               Call for Papers 
-              <div className="w-32 h-[2px] mx-auto bg-[#c00000] rounded-full my-4"></div>
+              <div className="w-32 h-[2px] mx-auto bg-[#365372] rounded-full my-4"></div>
              <div className='text-yellow-200'> Submit by 15th September, 2024</div>
             </h2>
           </header>
@@ -43,7 +43,7 @@ const Cfp = () => {
           </article>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
