@@ -4,17 +4,18 @@ import CountdownTimer from "../components/CountdownTimer";
 import Logo from './Logo.jpg';
 import 'react-slideshow-image/dist/styles.css'
 import { Fade,Zoom,Slide } from 'react-slideshow-image'
+import { Opacity } from "@mui/icons-material";
 const divStyle={
   display:'flex',
   alignItems:'center',
   justifyContent:'center',
   height:'550px',
-  backgroundSize:'cover'
+  backgroundSize:'cover',
 }
 const Main = () => {
   const slides=[
     {
-      url:'../college_blur_img.jpg'
+      url:'https://msit.in/media/2017/03/15/aboutmsit.png'
     },
     {
       url:'https://images.squarespace-cdn.com/content/v1/5b9c8fb3c258b42748351a07/1597188834721-JRFYXCZIONFBUFUGUD6V/climate+change+women+gender+equality+action+1'
