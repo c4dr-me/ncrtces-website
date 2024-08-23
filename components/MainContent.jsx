@@ -14,7 +14,7 @@ const divStyle={
 const Main = () => {
   const slides=[
     {
-      url:'college_blur_img.jpg'
+      url:'../college_blur_img.jpg'
     },
     {
       url:'https://images.squarespace-cdn.com/content/v1/5b9c8fb3c258b42748351a07/1597188834721-JRFYXCZIONFBUFUGUD6V/climate+change+women+gender+equality+action+1'
