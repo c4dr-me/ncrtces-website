@@ -57,7 +57,7 @@ const Main = () => {
           <div key={index}>
             <div
               style={{ ...divStyle, backgroundImage: `url(${image.url})` }}
-              className="flex flex-col min-h-full"
+              className="flex flex-col min-h-full bg-cover bg-center"
             >
               <div className="box text-center mb-8 text-white w-full sm:w-[calc(100%-35vw)] text-2xl sm:text-xl md:text-2xl lg:text-3xl bg-white bg-opacity-40 backdrop-blur-md rounded-xl shadow p-4 flex items-center justify-center">
                 <div className="flex items-center justify-center">
