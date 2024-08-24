@@ -26,11 +26,11 @@ const pages = [
   { name: "Tracks", sname: "track" },
   { name: "Committee", sname: "committee" },
   { name: "Call for Papers", sname: "cfp" },
-  { name: "Venue", sname: "venue" },
   { name: "Guidelines", sname: "guide" },
   { name: "Schedule", sname: "schedule" },
   { name: "Registration", sname: "reg" },
   { name: "Contact Us", sname: "contact" },
+  { name: "Venue", sname: "venue" },
 ];
 
 const ForwardedScrollLink = React.forwardRef((props, ref) => (

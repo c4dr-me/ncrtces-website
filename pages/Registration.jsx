@@ -7,7 +7,7 @@ const Registration = () => {
 
       <div className="h-8 bg-white w-full">
       </div>
-      <div className='w-full min-h-screen'>
+      <div className='w-full min-h-80'>
       <div className='bg-white px-[5%] md:px-[15%]'>
       <div>
         <h1 className='text-[#c00000] pt-16 text-center text-3xl font-[600]'>REGISTRATIONS</h1>
@@ -15,7 +15,7 @@ const Registration = () => {
         <div className="h-12 bg-white w-full"></div>
       </div>
         <br/>
-        <h2 className="pb-6 text-md md:text-lg mt-20"><strong>Author/Co-Author Registration Fee Includes:</strong><br/>
+        <h2 className="pb-6 text-md md:text-xl mt-20"><strong>Author/Co-Author Registration Fee Includes:</strong><br/>
             1.	Access to Keynote talks <br/>
             2.	Access to paper presentation sessions <br/>
             3.	Conference lunch and refreshment* <br/>
@@ -23,7 +23,7 @@ const Registration = () => {
             5.	Publication in Proceeding <br/>
             6.	Participation Certificate <br/>
         </h2>
-        <p className=" text-md md:text-lg ">Every accepted paper MUST have at least one author registered to the conference by the time the camera-ready paper is submitted for the paper to appear in the proceedings and be included in the Technical Program.</p>
+        <p className=" text-md md:text-xl ">Every accepted paper MUST have at least one author registered to the conference by the time the camera-ready paper is submitted for the paper to appear in the proceedings and be included in the Technical Program.</p>
       </div>
     </div>
     </div>

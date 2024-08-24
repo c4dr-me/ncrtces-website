@@ -3,7 +3,7 @@ import React from 'react';
 const Contact = () => {
   return (
     <div>
-      <div className="w-full" id="contact">
+      <div className="w-full my-8" id="contact">
         <div className=" bg-white pt-16">
           <div className="pt-16">
             <h1 className="text-[#c00000] text-center text-3xl font-[600] ">
