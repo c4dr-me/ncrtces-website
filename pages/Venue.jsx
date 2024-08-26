@@ -3,7 +3,7 @@ import React from 'react';
 const Venue = () => {
   return (
     <section className="flex flex-col p-4 pt-10" id='venue'>
-      <h1 className="text-[#c00000] text-center text-3xl font-[600] mt-8 mb-4">VENUE</h1>
+      <h1 className="text-[#c00000] text-center text-3xl font-[600] mt-8 mb-4">THE VENUE</h1>
       <div className="w-[100px] h-[2px] mx-auto mt-2 bg-[#365372] rounded-xl mb-8"></div>
 
       <div className="grid grid-cols-2 grid-rows-2 gap-4 mt-10">
