@@ -12,7 +12,7 @@ const Guide = () => {
             <div className='text-lg'>
               <p className='py-2'>
                 1. Authors are invited to submit full-length, original, unpublished papers via the link: 
-                {`{https://cmt3.research.microsoft.com/NCRTCES2024}`} through https://ncrtees-msit.in/. 
+                <a href="https://cmt3.research.microsoft.com/NCRTCES2024" className='text-blue-200 underline hover:text-blue-100'>{`{https://cmt3.research.microsoft.com/NCRTCES2024}`}</a> through <a href="https://ncrtees-msit.in/" className='text-blue-200 underline hover:text-blue-100'>https://ncrtees-msit.in/. </a>
               </p>
               <p className='py-2'>
                 2. Kindly ensure that your paper is formatted <em>(minimum 8 pages in A4 size)</em>.
