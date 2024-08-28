@@ -75,7 +75,7 @@ const Main = () => {
                 </div>
                 <div>
                   <h1 className="font-semibold bg-gradient-to-t from-slate-900 to-slate-700 bg-clip-text text-transparent text-border event-title text-2xl sm:text-1xl md:text-2xl lg:text-3xl">
-                    National Conference on Recent Trends in Climate Change, Energy and Sustainability (NCRTCES)
+                    National Conference on Recent Trends in Climate Change, Energy and Sustainability (NCRTCES-2024)
                   </h1>
                   <h1 className="name mt-5 font-bold gradient-text event-subtitle text-2xl sm:text-1xl md:text-2xl lg:text-3xl bg-clip-text text-transparent text-border">
                     Maharaja Surajmal Institute Of Technology.
