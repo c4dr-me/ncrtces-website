@@ -53,7 +53,12 @@ const Main = () => {
 
   return (
     <div className="slide-container" id="main">
-      <Zoom prevArrow={customPrevArrow} nextArrow={customNextArrow}>
+      <Zoom prevArrow={customPrevArrow} 
+        nextArrow={customNextArrow} 
+        autoplay={true}         
+        pauseOnHover={false}     
+        duration={3000}        
+        transitionDuration={1000}>
         {slides.map((image, index) => (
           <div key={index}>
             <div
