@@ -217,7 +217,7 @@ function ResponsiveAppBar() {
                       : page.sname === "committee"
                       ? -15
                         : page.sname === "cfp" 
-                          ? -15
+                          ? -5
                             : -50
                 }
                 activeClass={page.sname !== "guide" ? "active" : ""}
