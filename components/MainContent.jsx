@@ -70,6 +70,8 @@ const Main = () => {
                   <img
                     src="https://msit.in/static/img/msit.png"
                     alt="Logo"
+                    width={30}
+                    height={30}
                     className="self-center w-32 h-32 object-contain" // Adjust size here
                   />
                 </div>
@@ -88,6 +90,8 @@ const Main = () => {
                   <img
                     src={Logo}
                     alt="Logo"
+                    width={30}
+                    height={30}
                     className="self-center w-32 object-contain ml-[-5%] rounded-full" // Adjust size here
                   />
                 </div>

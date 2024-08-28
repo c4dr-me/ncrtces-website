@@ -25,6 +25,8 @@ const Venue = () => {
           <img
             src="https://images.unsplash.com/photo-1587474260584-136574528ed5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="India Gate"
+            width={30}
+            height={30}
             className="object-cover w-full h-full transition-transform duration-300 ease-in-out group-hover:scale-110"
           />
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
@@ -37,6 +39,8 @@ const Venue = () => {
           <img
             src="https://images.unsplash.com/photo-1688257899811-d96d969416bf?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Lotus Temple"
+            width={30}
+            height={30}
             className="object-cover w-full h-full transition-transform duration-300 ease-in-out group-hover:scale-110"
           />
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
@@ -49,6 +53,8 @@ const Venue = () => {
           <img
             src="https://plus.unsplash.com/premium_photo-1661919589683-f11880119fb7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Red Fort"
+            width={30}
+            height={30}
             className="object-cover w-full h-full transition-transform duration-300 ease-in-out group-hover:scale-110"
           />
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">

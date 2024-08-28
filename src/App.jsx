@@ -21,7 +21,7 @@ const App = () => {
   //   return location.pathname === "/" ? <Main /> : null;
   // };
   return (
-    <div>
+    <>
       {/* <Router> */}
    
         <Navbar />
@@ -54,7 +54,7 @@ const App = () => {
       {/* </Router> */}
       <Venue />
       <Footer/>
-    </div>
+    </>
   );
 };
 
