@@ -209,7 +209,7 @@ function ResponsiveAppBar() {
                 smooth={true}
                 duration={500}
                 offset={page.sname === "about" || "track"
-                  ? -10
+                  ? 0
                   : page.sname === "reg" || "schedule"
                     ? -20
                     : page.sname === "contact"
@@ -217,7 +217,7 @@ function ResponsiveAppBar() {
                       : page.sname === "committee"
                       ? -15
                         : page.sname === "cfp" 
-                          ? -5
+                          ? 0
                             : -50
                 }
                 activeClass={page.sname !== "guide" ? "active" : ""}

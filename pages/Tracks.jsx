@@ -28,15 +28,13 @@ const Tracks = () => {
   const tracks = [
     {
       id: 'track1',
-      title: 'Track I: Climate Change',
+      title: 'Track I: Climate Change and Extreme Weather',
       items: [
-        'Climate Change and Health',
+        'Climate Management',
+        'Global Issues and Risk Assessment',
+        'Health And Environment',
+        'Pollution',
         'Global Warming',
-        'Climate change, modelling, measurements, and predictions',
-        'Change economics, law and policy',
-        'Climate change, Green initiatives and products',
-        'Natural resources and Biodiversity in a warming world',
-        'Impacts, Hazards, risks, and effective adaptation to climate change',
       ],
     },
     {
@@ -52,13 +50,13 @@ const Tracks = () => {
     },
     {
       id: 'track3',
-      title: 'Track III: Renewable Energy',
+      title: 'Track III: Weather Forecasting & Information Management',
       items: [
-        'Energy Efficient and Conversation',
-        'Green Energy and Applications',
-        'Hybrid Energy System',
-        'Clean Energy',
-        'Energy Harvesting Sensors',
+        'Generalisation of Ensemble Forecasts',
+        'History of weather forecasting',
+        'Modern methods of weather forecasting',
+        'Numerical Prediction of Weather',
+        'Use of forcast models',
       ],
     },
     {

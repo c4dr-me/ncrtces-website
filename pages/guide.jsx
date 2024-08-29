@@ -11,24 +11,20 @@ const Guide = () => {
             <div className='w-24 h-[2px] mx-auto bg-[#365372] rounded-full mb-6'></div>
             <div className='text-lg'>
               <p className='py-2 '>
-                1. Authors are invited to submit full-length, original, unpublished papers via the link <a href="https://cmt3.research.microsoft.com/NCRTCES2024" 
+                1. Authors are invited to submit full-length, original, unpublished papers 
+              </p>
+              <p className='py-2'>
+                2. 	Kindly ensure that your paper is formatted <em>(minimum 6 pages and maximum 10 pages written in A4 size.)</em>
+              </p>
+              <p className='py-2'>
+                3. 	Submissions will be subject to the standard review procedure.
+              </p>
+              <p className='py-2'>
+              5.	All papers must be submitted via the link:  <a href="https://cmt3.research.microsoft.com/NCRTCES2024" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className='text-blue-200 underline hover:text-blue-100 md:break-keep break-words'
-                >
-                  &#123;https://cmt3.research.microsoft.com/NCRTCES2024&#125;
-                </a>
-                &nbsp;through <a className='text-blue-200 hover:text-blue-100'>https://ncrtees-msit.in/. </a>
-              </p>
-              <p className='py-2'>
-                2. Kindly ensure that your paper is formatted <em>(minimum 8 pages in A4 size)</em>.
-              </p>
-              <p className='py-2'>
-                3. Submissions will be subject to the standard review procedure.
-              </p>
-              <p className='py-2'>
-                4. Author and contact information <em>(name, affiliation, mailing address, telephone, fax, e-mail) </em> 
-                must be entered during the submission process. All accepted and presented papers will be published in a reputed series [will be confirmed soon].
+                  className='text-blue-200 underline hover:text-blue-100 md:break-keep break-words'>https://cmt3.research.microsoft.com/NCRTCES2024</a> on Conference Website: <span className='text-blue-200 hover:text-blue-100 font-[600]'>https://ncrtees-msit.in/</span>
+
               </p>
             </div>
           </div>
@@ -46,20 +42,20 @@ const Guide = () => {
                 PLAGIARISM POLICY :
               </strong>
               <p className='py-2'>
-                1. The paper should be checked for plagiarism using licensed software like Turnitin or iThenticate. The similarity content should not exceed 15% (in any case either self contents or others). Further, the author<em>(s)</em> have to strictly implement the following ethical guidelines for publication.  
+                1.The paper prior to submission should be checked for plagiarism from licensed plagiarism software like Turnitin/ithenticate etc. The similarity content should not exceed 15% <em>(in any case either self contents or others)</em>. Further, the author<em>(s)</em> have to strictly implement the following ethical guidelines for publication.
               </p>
               <p className='py-2'>
-                2. Any form of self-plagiarism or plagiarism from others' work should not be present in the article. If any model/ concept/ figure/ table/ data/ or conclusive comment from any previously published work is used in your article, you should properly cite a reference to the original work.
+                2. Any form of self-plagiarism or plagiarism from others' work<em>(s)</em> should not be there in an article. If any model / concept / figure / table / data / conclusive comment by any previously published work is used in the article, author should properly cite a reference to the original work.
               </p>
               <p className='py-2'>
-                3. Also, the language of explaining it should not be same as language of the work from which you have adopted it. If you are using any copyrighted material, you should acquire prior permission from the copyright holder.
+                3. Also, language of explaining it should not be same as language of the work from which you have adopted it. If you are using any copyrighted material, you should acquire prior permission from the copyright holder.
               </p>
 
               <strong className='block text-xl font-semibold italic underline mt-6 mb-4'>
                 PRIVACY POLICY :
               </strong>
               <p className='py-2'>
-                1. Consent to Use Photographic, Video and Audio Recordings: Conference official photographers will be taking photographs, recording video or making audio recordings during the Conference. The photographs, videos, and audio recordings will be used for Conference-related activities included in the promotional material, in both print and electronic format, including on the Internet via MSIT website and Social media for Conference purpose only.
+                1. 	Consent to Use Photographic, Video and Audio Recordings: Conference official photographers will be taking photographs, recording video or making audio recordings during the Conference. The photographs, videos, and audio recordings will be used for Conference-related activities included in the promotional material, in both print and electronic format, including on the Internet via MSIT website and Social media for Conference purpose only.
               </p>
               <p className='py-2'>
                 2. By registering for a specific event, you agree to NCRTCES 2024 processing of the personal data you submit as part of registration for the following purposes :

@@ -3,12 +3,12 @@ import './Comingsoon.css'; // Import the shared CSS file
 
 const Cfp = () => {
   return (
-    <div id="cfp">
+    <div >
       {/* Placeholder Header for Smooth Scrolling */}
       <div  className="h-16 bg-white w-full"></div>
 
       {/* Main Content */}
-      <div className="w-full text-white min-h-screen">
+      <div id="cfp" className="w-full text-white min-h-screen">
         <div className="bg-gradient-to-b from-blue-500 to-blue-700 px-[8%] md:px-[15%] py-16 shadow-lg">
 
           {/* Submission Header */}
@@ -38,7 +38,7 @@ const Cfp = () => {
           {/* Conference Description */}
           <article className="bg-white bg-opacity-10 p-6 rounded-lg shadow-md">
             <p className="text-justify text-md md:text-xl pt-3 pb-16 leading-relaxed">
-              NCRTCES 2024 aims to identify unresolved research issues related to climate, energy, and sustainability and to provide fresh, creative concepts in this area. The conference also covers Artificial Intelligence trends that promote environmental sustainability and effective energy use. Researchers and application developers from these fields will gather to present their original research findings, discuss innovative ideas, and explore new possibilities in climate change, energy, and sustainability.
+            <strong>NCRTCES 2024</strong> aims to identify unresolved research issues related to climate, energy and sustainability and to provide fresh, creative concepts in this area. It also covers Artificial Intelligence trends that promote environmental sustainability and effective energy use. The conference brings together researchers and application developers from the fields of climate change, energy, and sustainability to present their original research findings as well as discuss and disseminate creative ideas.
             </p>
           </article>
         </div>
