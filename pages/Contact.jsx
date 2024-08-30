@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const Contact = () => {
   return (
@@ -47,11 +47,11 @@ const Contact = () => {
             </div>
             <div className="bg-[#f0f0f0] md:w-[25%] m-[5%] pb-[2%] rounded-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer shadow-lg">
             <i className="fa-solid fa-envelope ml-[48%] text-[30px] mt-6 mb-4 text-[#c00000]"></i>
-              <div className="text-center text-[24px] font-[600] ">
+              <div className="text-center text-[24px] font-[600] md:p-2 p-0 ">
                 EMAIL ADDRESS
               </div>
               <div className="text-center">
-                <h1 className="text-gray-400 text-[22px] font-[500] mt-6">
+                <h1 className="text-gray-400 text-[22px] font-[500] mt-6 break-all md:p-2 p-0">
                  ncrtces2024@msit.in
                 </h1>
               </div>

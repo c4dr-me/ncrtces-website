@@ -1,14 +1,17 @@
-import React, { useState, useEffect, useRef } from 'react';
+import  { useState, useEffect, useRef } from 'react';
 import './style.css';
 
 const Committee = () => {
   const [activeCommittee, setActiveCommittee] = useState(null);
   const listRef = useRef(null);
- 
 
-  // Function to toggle the dropdown menu
-  const toggleDropdown = (id) => {
-    setActiveCommittee((prevActiveCommittee) => (prevActiveCommittee === id ? null : id));
+  // Function to set the active committee (no toggling off on desktop)
+  const handleCommitteeClick = (id) => {
+    if (window.innerWidth < 768) {
+      setActiveCommittee((prevActiveCommittee) => (prevActiveCommittee === id ? null : id));
+    } else {
+      setActiveCommittee(id);
+    }
   };
 
   useEffect(() => {
@@ -16,7 +19,7 @@ const Committee = () => {
       if (window.innerWidth >= 768) {
         setActiveCommittee('committee0');
       } else {
-        setActiveCommittee(null);
+        setActiveCommittee(null); 
       }
     };
 
@@ -44,6 +47,7 @@ const Committee = () => {
   }, [activeCommittee]);
 
   const committees = [
+    
     {
       id: 'committee0',
       name: 'Patrons',
@@ -176,10 +180,10 @@ const Committee = () => {
                 {committees.map((committee) => (
                   <li key={committee.id} className="relative">
                     <button
-                      className={`hover:text-white focus:text-white w-full bg-gray-200 text-left pl-3 py-2 rounded-md font-medium hover:bg-gray-500 transition-all duration-200 ease-in-out  focus:outline-none focus:bg-gray-500 border border-borderColor ${
+                      className={`hover:text-white focus:text-white w-full bg-gray-200 text-left pl-3 py-2 rounded-md font-medium hover:bg-gray-500 transition-all duration-200 ease-in-out  focus:outline-none focus:bg-gray-500 lg:w-full md:w-[190px] border border-borderColor ${
                         activeCommittee === committee.id ? 'bg-gray-500 text-white' : ''
                       }`}
-                      onClick={() => toggleDropdown(committee.id)}
+                      onClick={() => handleCommitteeClick(committee.id)}
                     >
                       {committee.name}
                     </button>

@@ -1,4 +1,3 @@
-import React from 'react';
 
 const Guide = () => {
   return (
@@ -45,7 +44,7 @@ const Guide = () => {
                 1.The paper prior to submission should be checked for plagiarism from licensed plagiarism software like Turnitin/ithenticate etc. The similarity content should not exceed 15% <em>(in any case either self contents or others)</em>. Further, the author<em>(s)</em> have to strictly implement the following ethical guidelines for publication.
               </p>
               <p className='py-2'>
-                2. Any form of self-plagiarism or plagiarism from others' work<em>(s)</em> should not be there in an article. If any model / concept / figure / table / data / conclusive comment by any previously published work is used in the article, author should properly cite a reference to the original work.
+                2. Any form of self-plagiarism or plagiarism from others work<em>(s)</em> should not be there in an article. If any model / concept / figure / table / data / conclusive comment by any previously published work is used in the article, author should properly cite a reference to the original work.
               </p>
               <p className='py-2'>
                 3. Also, language of explaining it should not be same as language of the work from which you have adopted it. If you are using any copyrighted material, you should acquire prior permission from the copyright holder.

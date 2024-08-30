@@ -1,20 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import './style.css';
 
 const Tracks = () => {
   const [activeTrack, setActiveTrack] = useState(null);
+  const [isMobileView, setIsMobileView] = useState(false);
 
-  // Function to toggle the dropdown menu
+  // Function to toggle the dropdown menu for mobile view
   const toggleDropdown = (id) => {
-    setActiveTrack((prevActiveTrack) => (prevActiveTrack === id ? null : id));
+    if (isMobileView) {
+      setActiveTrack((prevActiveTrack) => (prevActiveTrack === id ? null : id));
+    } else {
+      setActiveTrack(id);
+    }
   };
 
   useEffect(() => {
     const updateActiveTrack = () => {
-      if (window.innerWidth >= 768) {
-        setActiveTrack('track1'); // Initially open the first track on desktop
+      const isMobile = window.innerWidth < 768;
+      setIsMobileView(isMobile);
+
+      if (!isMobile) {
+        setActiveTrack('track1'); 
       } else {
-        setActiveTrack(null); // Close all tracks on mobile
+        setActiveTrack(null); 
       }
     };
 
@@ -56,7 +64,7 @@ const Tracks = () => {
         'History of weather forecasting',
         'Modern methods of weather forecasting',
         'Numerical Prediction of Weather',
-        'Use of forcast models',
+        'Use of forecast models',
       ],
     },
     {
@@ -97,7 +105,7 @@ const Tracks = () => {
                 {tracks.map((track) => (
                   <li key={track.id} className="relative">
                     <button
-                      className={`hover:text-white focus:text-white w-full bg-gray-200 text-left pl-3 py-2 rounded-md font-medium hover:bg-gray-500 focus:outline-none focus:bg-gray-500 border border-borderColor ${
+                      className={`hover:text-white focus:text-white w-full bg-gray-200 text-left pl-3 py-2 rounded-md font-medium hover:bg-gray-500 focus:outline-none focus:bg-gray-500 md:w-[190px] lg:w-full  border border-borderColor ${
                         activeTrack === track.id ? 'bg-gray-500 text-white' : ''
                       }`}
                       onClick={() => toggleDropdown(track.id)}
@@ -129,7 +137,7 @@ const Tracks = () => {
                       {track.items.map((item, index) => (
                         <li key={index} className="py-2 text-black pl-2 flex items-center transition-all duration-200 hover:bg-gray-100 rounded-md cursor-pointer">
                           <span className="inline-block w-2 h-2 bg-[#365372] rounded-full mr-2"></span>
-                    <span className="font-semibold">{item}</span>
+                          <span className="font-semibold">{item}</span>
                         </li>
                       ))}
                     </ul>
