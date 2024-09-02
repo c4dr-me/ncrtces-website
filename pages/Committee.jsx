@@ -3,8 +3,15 @@ import './style.css';
 
 const Committee = () => {
   const [activeCommittee, setActiveCommittee] = useState(null);
+  const [activeTab, setActiveTab] = useState(null);
   const listRef = useRef(null);
-
+  const changeTab = (id) =>{
+    if (window.innerWidth < 768) {
+      setActiveTab((prevActiveCommittee) => (prevActiveCommittee === id ? null : id));
+    } else {
+      setActiveTab(id);
+    }
+  };
   // Function to set the active committee (no toggling off on desktop)
   const handleCommitteeClick = (id) => {
     if (window.innerWidth < 768) {
@@ -29,7 +36,21 @@ const Committee = () => {
       window.removeEventListener('resize', updateActiveCommittee);
     };
   }, []);
-
+  useEffect(() => {
+    if (activeTab && listRef.current && activeTab !== 'committee0') {
+      const element = listRef.current;
+      const offset = 100;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+  
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
+  }, [activeTab]);
   useEffect(() => {
     if (activeCommittee && listRef.current && activeCommittee !== 'committee0') {
       const element = listRef.current;
@@ -45,7 +66,38 @@ const Committee = () => {
       });
     }
   }, [activeCommittee]);
-
+  const commiteeNew = [
+    {
+      id:'advisory',
+      members:[
+        {name: 'Dr. Arun Kumar Tripathi, Former DG National Institute Solar Energy, Ministry of New and Renewable Energy'},
+        {name: 'Dr. R. Krishnan, Director IITM, Pune'},
+        {name: 'Dr. Purnima Jalihal, Scientist G, NIOT Chennai'},
+        {name: 'Dr. V.S. Prasad, Director, NCMRWF, Noida'},
+        {name: 'Dr. Jagvir Singh, Scientist G, Ministry of Earth Sciences, New Delhi'},
+        {name: 'Prof. Prem Vrat, Pro-Chancellor; Professor of Eminence and Chief Mentor, The NorthCap University'},
+        {name: 'Prof. Ved Prakash Former Chairman University Grant Commission '},
+        {name: 'Prof. Saroj Kaushik Department of computer science & Engineering IIT, Delhi'},
+        {name: 'Prof. K.K. Aggarwal, Former VC, IP University, India'},
+        {name: 'Prof. Amit Prakash, GGSIPU, New Delhi'},
+        {name: 'Prof. Ashok De, DTU Delhi'},
+        {name: 'Dr. Darshana Hooda, DCRUST, Haryana'},
+        {name: 'Prof. Poonam Bansal, IGDTU, New Delhi'},
+        {name: 'Prof. Rajendra Singh, IIT Delhi'},
+        {name: 'Prof. Narender Kumar, DTU, Delhi'},
+        {name: 'Prof. J.S Lather, NIT, Kurukshetra'},
+        {name: 'Dr. Kiran Gulia, University of Wolverhampton, UK'},
+        {name: 'Sumita Singh, Senior Vice President and General Manager, Health, U.S. News & World Report'},
+        {name: 'Dr. Vijender Singh Professor, Department of instrumentation and Control Engineering, NSUT, Delhi '},
+        {name: 'Dr. Tejbir Singh Rana Associate Professor Shivaji College, University of Delhi '},
+        {name: 'Prof. Devi Singh Former Director, IIM Lucknow and MDI Gurgaon Founding Vice Chancellor, FLAME University, Pune'},
+        {name: 'Dr. N.K. Gupta Member, National Executive Council ISTE, Delhi '},
+        {name: 'Prof. S.D. Joshi Department of Electrical Engineering IIT, Delhi '},
+        {name: 'Dr. Sushil Chandra Former Scientist ‘G’, DRDO'},
+        {name: 'Dr. T.V. Vijay Kumar Professor, School of Computer &Systems JNU, Delhi'},
+      ],
+    },
+  ];
   const committees = [
     
     {
@@ -174,9 +226,18 @@ const Committee = () => {
             </h1>
             <div className="w-[100px] h-[2px] mx-auto mt-2 bg-[#365372] rounded-xl mb-8"></div>
           </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 mt-8 mx-auto">
+            <button className="mx-auto tab text-lg rounded-lg text-white w-[80%] py-1 bg-[#365372]" onClick={()=>changeTab('committee0')}>Organising Committee</button>
+            <button className="mx-auto tab text-lg rounded-lg text-black w-[80%] py-1 bg-white" onClick={()=>changeTab('advisory')}>Advisory Committee</button>
+          </div>
           <div className="flex flex-col md:flex-row md:space-x-8 m-5">
             <div className="w-full md:w-[300px] relative">
               <ul className="space-y-2">
+                {`${activeTab==='committee0' ?(
+                  <h1>Hello</h1>
+                ) :(
+                  <h2>Help</h2>
+                ) }`}
                 {committees.map((committee) => (
                   <li key={committee.id} className="relative">
                     <button
