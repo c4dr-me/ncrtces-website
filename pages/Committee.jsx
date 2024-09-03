@@ -2,15 +2,17 @@ import { useState, useEffect, useRef } from 'react';
 import './style.css';
 
 const Committee = () => {
-  const [activeCommittee, setActiveCommittee] = useState(null);
-  const [activeTab, setActiveTab] = useState('committee0'); // Default to 'committee0' tab
+  const [activeCommittee, setActiveCommittee] = useState('committee0'); // Default to 'committee0'
+  const [activeTab, setActiveTab] = useState('committee0'); // Default to 'committee0'
   const listRef = useRef(null);
 
   const changeTab = (id) => {
+    setActiveTab(id);
+    // Set active committee based on tab
     if (window.innerWidth < 768) {
-      setActiveTab((prevActiveCommittee) => (prevActiveCommittee === id ? null : id));
+      setActiveCommittee(null); // Reset active committee on mobile
     } else {
-      setActiveTab(id);
+      setActiveCommittee(id); // Set active committee on desktop
     }
   };
 
@@ -25,9 +27,9 @@ const Committee = () => {
   useEffect(() => {
     const updateActiveCommittee = () => {
       if (window.innerWidth >= 768) {
-        setActiveCommittee('committee0');
+        setActiveCommittee(activeTab); // Sync active committee with active tab on desktop
       } else {
-        setActiveCommittee(null);
+        setActiveCommittee(null); // Reset active committee on mobile
       }
     };
 
@@ -36,10 +38,10 @@ const Committee = () => {
     return () => {
       window.removeEventListener('resize', updateActiveCommittee);
     };
-  }, []);
+  }, [activeTab]);
 
   useEffect(() => {
-    if (activeTab && listRef.current && activeTab !== 'committee0') {
+    if (activeTab && listRef.current) {
       const element = listRef.current;
       const offset = 100;
       const bodyRect = document.body.getBoundingClientRect().top;
@@ -53,22 +55,6 @@ const Committee = () => {
       });
     }
   }, [activeTab]);
-
-  useEffect(() => {
-    if (activeCommittee && listRef.current && activeCommittee !== 'committee0') {
-      const element = listRef.current;
-      const offset = 100;
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      });
-    }
-  }, [activeCommittee]);
 
   const commiteeNew = [
     {
@@ -220,7 +206,7 @@ const Committee = () => {
     },
   ];
 
- 
+
 
   const renderMembers = () => {
     const committeeList = activeTab === 'committee0' ? committees : commiteeNew;
