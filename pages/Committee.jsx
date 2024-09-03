@@ -1,18 +1,19 @@
-import  { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './style.css';
 
 const Committee = () => {
   const [activeCommittee, setActiveCommittee] = useState(null);
-  const [activeTab, setActiveTab] = useState(null);
+  const [activeTab, setActiveTab] = useState('committee0'); // Default to 'committee0' tab
   const listRef = useRef(null);
-  const changeTab = (id) =>{
+
+  const changeTab = (id) => {
     if (window.innerWidth < 768) {
       setActiveTab((prevActiveCommittee) => (prevActiveCommittee === id ? null : id));
     } else {
       setActiveTab(id);
     }
   };
-  // Function to set the active committee (no toggling off on desktop)
+
   const handleCommitteeClick = (id) => {
     if (window.innerWidth < 768) {
       setActiveCommittee((prevActiveCommittee) => (prevActiveCommittee === id ? null : id));
@@ -26,7 +27,7 @@ const Committee = () => {
       if (window.innerWidth >= 768) {
         setActiveCommittee('committee0');
       } else {
-        setActiveCommittee(null); 
+        setActiveCommittee(null);
       }
     };
 
@@ -36,6 +37,7 @@ const Committee = () => {
       window.removeEventListener('resize', updateActiveCommittee);
     };
   }, []);
+
   useEffect(() => {
     if (activeTab && listRef.current && activeTab !== 'committee0') {
       const element = listRef.current;
@@ -44,13 +46,14 @@ const Committee = () => {
       const elementRect = element.getBoundingClientRect().top;
       const elementPosition = elementRect - bodyRect;
       const offsetPosition = elementPosition - offset;
-  
+
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth',
       });
     }
   }, [activeTab]);
+
   useEffect(() => {
     if (activeCommittee && listRef.current && activeCommittee !== 'committee0') {
       const element = listRef.current;
@@ -59,13 +62,14 @@ const Committee = () => {
       const elementRect = element.getBoundingClientRect().top;
       const elementPosition = elementRect - bodyRect;
       const offsetPosition = elementPosition - offset;
-  
+
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth',
       });
     }
   }, [activeCommittee]);
+
   const commiteeNew = [
     {
       id:'advisory',
@@ -216,6 +220,28 @@ const Committee = () => {
     },
   ];
 
+ 
+
+  const renderMembers = () => {
+    const committeeList = activeTab === 'committee0' ? committees : commiteeNew;
+    return committeeList.map(
+      (committee) =>
+        activeCommittee === committee.id && (
+          <ul key={committee.id} className="text-left">
+            {committee.members.map((member, index) => (
+              <li
+                key={index}
+                className="py-2 text-black pl-4 flex items-center transition-all duration-200 hover:bg-gray-100 rounded-md cursor-pointer"
+              >
+                <span className="inline-block w-2 h-2 bg-[#365372] rounded-full mr-2"></span>
+                <span className="font-semibold">{member.name}</span>
+              </li>
+            ))}
+          </ul>
+        )
+    );
+  };
+
   return (
     <section id="committee" className="committee-section section hauto py-12">
       <div className="w-full">
@@ -227,64 +253,75 @@ const Committee = () => {
             <div className="w-[100px] h-[2px] mx-auto mt-2 bg-[#365372] rounded-xl mb-8"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 mt-8 mx-auto">
-            <button className="mx-auto tab text-lg rounded-lg text-white w-[80%] py-1 bg-[#365372]" onClick={()=>changeTab('committee0')}>Organising Committee</button>
-            <button className="mx-auto tab text-lg rounded-lg text-black w-[80%] py-1 bg-white" onClick={()=>changeTab('advisory')}>Advisory Committee</button>
+            <button className={`mx-auto tab text-lg rounded-lg ${activeTab === 'committee0' ? 'text-white bg-[#365372]' : 'text-black bg-white'} w-[80%] py-1`} onClick={() => changeTab('committee0')}>Organising Committee</button>
+            <button className={`mx-auto tab text-lg rounded-lg ${activeTab === 'advisory' ? 'text-white bg-[#365372]' : 'text-black bg-white'} w-[80%] py-1`} onClick={() => changeTab('advisory')}>Advisory Committee</button>
           </div>
           <div className="flex flex-col md:flex-row md:space-x-8 m-5">
             <div className="w-full md:w-[300px] relative">
               <ul className="space-y-2">
-                {`${activeTab==='committee0' ?(
-                  <h1>Hello</h1>
-                ) :(
-                  <h2>Help</h2>
-                ) }`}
-                {committees.map((committee) => (
-                  <li key={committee.id} className="relative">
-                    <button
-                      className={`hover:text-white focus:text-white w-full bg-gray-200 text-left pl-3 py-2 rounded-md font-medium hover:bg-gray-500 transition-all duration-200 ease-in-out  focus:outline-none focus:bg-gray-500 lg:w-full md:w-[190px] border border-borderColor ${
-                        activeCommittee === committee.id ? 'bg-gray-500 text-white' : ''
-                      }`}
-                      onClick={() => handleCommitteeClick(committee.id)}
-                    >
-                      {committee.name}
-                    </button>
-                    <ul
-                      id={committee.id}
-                      className={`${
-                        activeCommittee === committee.id ? 'block' : 'hidden'
-                      } md:hidden bg-white mt-2 rounded-md shadow-lg text-left p-5 border borderColor`}
-                    >
-                      {committee.members.map((member, index) => (
-                        <li
-                          key={index}
-                          className="py-1 text-black pl-4 flex items-center transition-all duration-200 hover:bg-gray-100 rounded-md"
-                        >
-                          <span className="inline-block w-2 h-2 bg-[#365372] rounded-full mr-2 shrink-0"></span>
-                          <span className="font-semibold">{member.name}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </li>
-                ))}
+                {activeTab === 'committee0' ? (
+                  committees.map((committee) => (
+                    <li key={committee.id} className="relative">
+                      <button
+                        className={`hover:text-white focus:text-white w-full bg-gray-200 text-left pl-3 py-2 rounded-md font-medium hover:bg-gray-500 transition-all duration-200 ease-in-out  focus:outline-none focus:bg-gray-500 lg:w-full md:w-[190px] border border-borderColor ${
+                          activeCommittee === committee.id ? 'bg-gray-500 text-white' : ''
+                        }`}
+                        onClick={() => handleCommitteeClick(committee.id)}
+                      >
+                        {committee.name}
+                      </button>
+                      <ul
+                        id={committee.id}
+                        className={`${
+                          activeCommittee === committee.id ? 'block' : 'hidden'
+                        } md:hidden bg-white mt-2 rounded-md shadow-lg text-left p-5 border borderColor`}
+                      >
+                        {committee.members.map((member, index) => (
+                          <li
+                            key={index}
+                            className="py-1 text-black pl-4 flex items-center transition-all duration-200 hover:bg-gray-100 rounded-md"
+                          >
+                            <span className="inline-block w-2 h-2 bg-[#365372] rounded-full mr-2 shrink-0"></span>
+                            <span className="font-semibold">{member.name}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  ))
+                ) : (
+                  commiteeNew.map((committee) => (
+                    <li key={committee.id} className="relative">
+                      <button
+                        className={`hover:text-white focus:text-white w-full bg-gray-200 text-left pl-3 py-2 rounded-md font-medium hover:bg-gray-500 transition-all duration-200 ease-in-out  focus:outline-none focus:bg-gray-500 lg:w-full md:w-[190px] border border-borderColor ${
+                          activeCommittee === committee.id ? 'bg-gray-500 text-white' : ''
+                        }`}
+                        onClick={() => handleCommitteeClick(committee.id)}
+                      >
+                        {committee.id === 'advisory' ? 'Advisory Committee' : committee.name}
+                      </button>
+                      <ul
+                        id={committee.id}
+                        className={`${
+                          activeCommittee === committee.id ? 'block' : 'hidden'
+                        } md:hidden bg-white mt-2 rounded-md shadow-lg text-left p-5 border borderColor`}
+                      >
+                        {committee.members.map((member, index) => (
+                          <li
+                            key={index}
+                            className="py-1 text-black pl-4 flex items-center transition-all duration-200 hover:bg-gray-100 rounded-md"
+                          >
+                            <span className="inline-block w-2 h-2 bg-[#365372] rounded-full mr-2 shrink-0"></span>
+                            <span className="font-semibold">{member.name}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  ))
+                )}
               </ul>
             </div>
-            <div ref={listRef} className="hidden md:block mt-4 md:mt-0 w-full md:w-[800px] bg-white rounded-md shadow-lg p-6 border border-gray-300">
-              {committees.map(
-                (committee) =>
-                  activeCommittee === committee.id && (
-                    <ul key={committee.id} className="text-left">
-                      {committee.members.map((member, index) => (
-                        <li
-                          key={index}
-                          className="py-2 text-black pl-4 flex items-center transition-all duration-200 hover:bg-gray-100 rounded-md cursor-pointer"
-                        >
-                          <span className="inline-block w-2 h-2 bg-[#365372] rounded-full mr-2"></span>
-                          <span className="font-semibold">{member.name}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )
-              )}
+            <div className="md:w-[calc(100%-300px)] border-b md:border-0 border-gray-300 pb-5" ref={listRef}>
+              {renderMembers()}
             </div>
           </div>
         </div>
