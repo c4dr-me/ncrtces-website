@@ -2,8 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import './style.css';
 
 const Committee = () => {
-  const [activeCommittee, setActiveCommittee] = useState('committee0'); // Default to 'committee0'
-  const [activeTab, setActiveTab] = useState('committee0'); // Default to 'committee0'
+  const [activeCommittee, setActiveCommittee] = useState(null); // Default to 'committee0'
+  const [activeTab, setActiveTab] = useState(null); // Default to 'home'
   const listRef = useRef(null);
 
   const changeTab = (id) => {
