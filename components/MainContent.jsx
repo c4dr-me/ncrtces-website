@@ -16,7 +16,7 @@ const divStyle = {
 
 const Main = () => {
   const slides = [
-    { url: 'https://msit.in/media/2017/03/15/aboutmsit.png' },
+    { url: '../college_blur_img.png' },
     { url: 'https://images.squarespace-cdn.com/content/v1/5b9c8fb3c258b42748351a07/1597188834721-JRFYXCZIONFBUFUGUD6V/climate+change+women+gender+equality+action+1' },
     { url: 'https://www.ece.fr/wp-content/uploads/sites/2/2024/04/42045_large.jpg?w=1200&h=630&crop=1' },
     { url: 'https://news.sap.com/india/files/2022/08/09/sustainability-banner.jpg' },
