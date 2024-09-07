@@ -3,7 +3,7 @@ import './style.css';
 
 const Committee = () => {
   const [activeCommittee, setActiveCommittee] = useState(null); // Default to 'committee0'
-  const [activeTab, setActiveTab] = useState(null); // Default to 'home'
+  const [activeTab, setActiveTab] = useState('committee0'); // Default to 'home'
   const listRef = useRef(null);
 
   const changeTab = (id) => {
@@ -49,10 +49,10 @@ const Committee = () => {
       const elementPosition = elementRect - bodyRect;
       const offsetPosition = elementPosition - offset;
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      });
+      // window.scrollTo({
+      //   top: offsetPosition,
+      //   behavior: 'smooth',
+      // });
     }
   }, [activeTab]);
 
