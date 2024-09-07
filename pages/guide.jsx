@@ -18,12 +18,15 @@ const Guide = () => {
               <p className='py-2'>
                 3. 	Submissions will be subject to the standard review procedure.
               </p>
+              <p className="py-2">
+                4. All papers must be submitted via the link: <br /><a href="https://cmt3.research.microsoft.com/NCRTCES2024" className='text-blue-200 underline hover:text-blue-100'>https://cmt3.research.microsoft.com/NCRTCES2024</a> on Conference Website: <br /><a href="https://ncrtees-msit.in/" className='text-blue-200 hover:text-blue-100 font-[600]'>https://ncrtees-msit.in/</a>
+              </p>
               <p className='py-2'>
-              5.	All papers must be submitted via the link:  <a href="https://cmt3.research.microsoft.com/NCRTCES2024" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className='text-blue-200 underline hover:text-blue-100 md:break-keep break-words'>https://cmt3.research.microsoft.com/NCRTCES2024</a> on Conference Website: <span className='text-blue-200 hover:text-blue-100 font-[600]'>https://ncrtees-msit.in/</span>
-
+              Few selected papers, after further reviewing, will be published in the following SCI indexed journals.
+              <p className="py-2">
+              1. Special issue Cognitive Computing and Human Understandable Artificial Intelligence of  New Generation Computing.
+              </p>
+              <p className="py-2">2. MAPAN Journal of Metrology Society of India. The papers submitted for the journals must be in the scope of the Journals.</p>
               </p>
             </div>
           </div>
