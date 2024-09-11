@@ -15,6 +15,27 @@ const Registration = () => {
         <div className="h-12 bg-white w-full"></div>
       </div>
         <br/>
+        <div className="flex text-md md:text-lg md:text-xl text-white bg-blue-400 font-[500] py-3">
+            <div className="w-1/3"></div>
+            <div className="w-1/3 text-center">INR</div>
+        </div>
+        <div className="flex text-md md:text-lg md:text-xl py-3 bg-[#e9e9e9]">
+            <div className="w-1/3 text-center">Student/Research Scholar</div>
+            <div className="w-1/3 text-center">1,500</div>
+        </div>
+        <div className="flex   text-md md:text-lg md:text-xl py-3 ">
+            <div className="w-1/3 text-center">Academic/Faculty</div>
+            <div className="w-1/3 text-center">3,000</div>
+        </div>
+        <div className="flex   text-md md:text-lg md:text-xl py-3 bg-[#e9e9e9]">
+            <div className="w-1/3 text-center">Industry/Delegates</div>
+            <div className="w-1/3 text-center">5,000 </div>
+        </div>
+        <div className="flex   text-md md:text-lg md:text-xl py-3">
+            <div className="w-1/3 text-center">Attendees</div>
+            <div className="w-1/3 text-center">1,000</div>
+        </div>
+        <br />
         <h2 className="pb-6 text-md md:text-xl mt-20"><strong>Author/Co-Author Registration Fee Includes:</strong><br/>
             1.	Access to Keynote talks <br/>
             2.	Access to paper presentation sessions <br/>
