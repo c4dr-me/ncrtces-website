@@ -1,5 +1,3 @@
-import React from 'react';
-import './Comingsoon.css'; // Import the shared CSS file
 
 const Cfp = () => {
   return (
@@ -9,7 +7,7 @@ const Cfp = () => {
 
       {/* Main Content */}
       <div id="cfp" className="w-full text-white min-h-screen">
-        <div className="bg-gradient-to-b from-blue-400 to-blue-600 px-[8%] md:px-[15%] py-16 shadow-lg">
+        <div className="bg-gradient-to-t from-blue-400 to-blue-500 px-[8%] md:px-[15%] py-16 shadow-lg">
 
           {/* Submission Header */}
           <header className="text-center">

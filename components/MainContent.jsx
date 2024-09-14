@@ -1,4 +1,4 @@
-import React from "react";
+
 import "../src/Main.css";
 import CountdownTimer from "../components/CountdownTimer";
 import Logo from './Logo.jpg';

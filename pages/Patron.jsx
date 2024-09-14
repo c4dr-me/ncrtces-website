@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './Patron.css'; // Ensure the correct path to your CSS file
 
 const Patrons = () => {

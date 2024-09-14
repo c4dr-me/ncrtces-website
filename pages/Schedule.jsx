@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './Comingsoon.css';  // Import the shared CSS file
 
 const cfp = () => {
@@ -11,29 +11,29 @@ const cfp = () => {
             <div className='w-48 h-[3px] mx-auto mt-2 bg-[#365372] rounded-xl'></div>
             <div className="h-12 bg-white w-full"></div>
         </div>
-        <div className="flex text-md md:text-lg md:text-xl text-white bg-blue-400 font-[500] ">
+        <div className="flex text-md md:text-xl text-white bg-blue-400 font-[500] ">
           <div className="w-1/2 text-center py-3">EVENT</div>
           <div className='w-1 h-auto border-r-2 border-white'></div>
             <div className="w-1/2 text-center py-3">DATE</div>
         </div>
-        <div className="flex   text-md md:text-lg md:text-xl bg-[#e9e9e9] ">
+        <div className="flex   text-md md:text-xl  ">
           <div className="w-1/2 text-center py-3 ">Paper submission Deadline</div>
-          <div className='w-1 h-auto border-r-2 border-white'></div>
+          <div className='w-1 h-auto border-r-2 border-[#e9e9e9]'></div>
             <div className="w-1/2 text-center py-3">September 15, 2024</div>
         </div>
-        <div className="flex   text-md md:text-lg md:text-xl ">
+        <div className="flex   text-md  md:text-xl bg-[#e9e9e9] ">
           <div className="w-1/2 text-center py-3">Notification of acceptance</div>
-          <div className='w-1 h-auto border-r-2 border-[#e9e9e9]'></div>
+          <div className='w-1 h-auto border-r-2 border-white'></div>
             <div className="w-1/2 text-center py-3">September 30, 2024</div>
         </div>
-        <div className="flex   text-md md:text-lg md:text-xl bg-[#e9e9e9]">
+        <div className="flex   text-md  md:text-xl ">
             <div className="w-1/2 text-center py-3">Camera-Ready Paper Submission</div>
-            <div className='w-1 h-auto border-r-2 border-white'></div>
+            <div className='w-1 h-auto border-r-2 border-[#e9e9e9]'></div>
             <div className="w-1/2 text-center py-3">October 15, 2024</div>
         </div>
-        <div className="flex   text-md md:text-lg md:text-xl">
+        <div className="flex   text-md  md:text-xl bg-[#e9e9e9]">
             <div className="w-1/2 text-center py-3">Conference</div>
-            <div className='w-1 h-auto border-r-2 border-[#e9e9e9]'></div>
+            <div className='w-1 h-auto border-r-2 border-white'></div>
             <div className="w-1/2 text-center py-3">November 07-08, 2024</div>
         </div>
     </div>
