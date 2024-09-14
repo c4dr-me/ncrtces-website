@@ -22,6 +22,10 @@ const Committee = () => {
     } else {
       setActiveCommittee(id);
     }
+    if (listRef.current) {
+      // Scroll to the element
+      listRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   useEffect(() => {
@@ -239,8 +243,8 @@ const Committee = () => {
             <div className="w-[100px] h-[2px] mx-auto mt-2 bg-[#365372] rounded-xl mb-8"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 mt-8 mx-auto">
-            <button className={`mx-auto tab text-lg rounded-lg ${activeTab === 'committee0' ? 'text-white bg-[#365372]' : 'text-black bg-white'} w-[80%] py-1`} onClick={() => changeTab('committee0')}>Organising Committee</button>
-            <button className={`mx-auto tab text-lg rounded-lg ${activeTab === 'advisory' ? 'text-white bg-[#365372]' : 'text-black bg-white'} w-[80%] py-1`} onClick={() => changeTab('advisory')}>Advisory Committee</button>
+            <button className={`mx-auto tab text-lg rounded-lg ${activeTab === 'committee0' ? 'text-white bg-[#365372] ' : 'text-black border-black bg-white hover:border shadow-lg '} w-[80%] py-1`} onClick={() => changeTab('committee0')}>Organising Committee</button>
+            <button className={`mx-auto tab text-lg rounded-lg ${activeTab === 'advisory' ? 'text-white bg-[#365372] ' : 'text-black bg-white hover:border shadow-lg'} w-[80%] py-1`} onClick={() => changeTab('advisory')}>Advisory Committee</button>
           </div>
           <div className="flex flex-col md:flex-row md:space-x-8 m-5">
             <div className="w-full md:w-[300px] relative">
