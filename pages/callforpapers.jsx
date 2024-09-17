@@ -14,7 +14,7 @@ const Cfp = () => {
             <h2 className="text-[#c00000] text-2xl font-semibold uppercase tracking-wider mb-10">
               Call for Papers 
               <div className="w-32 h-[4px] mx-auto bg-[#365372] rounded-xl mt-2 mb-4"></div>
-             <div className='text-yellow-200'> Submit by 15th September, 2024</div>
+             <div className='text-yellow-200'> Submit by 30th September, 2024</div>
             </h2>
           </header>
 
