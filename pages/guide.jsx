@@ -26,13 +26,13 @@ const Guide = () => {
               Special issue Cognitive Computing and Human Understandable Artificial Intelligence of  New Generation Computing.
               </li>
                   <li className="py-2 font-bold">MAPAN Journal of Metrology Society of India. The papers submitted for the journals must be in the scope of the Journals.</li>
+                  <li>Asian Journal Of Chemistry</li>
                   </ul>
               </p>
               <p className="py-2">
               The Asian Journal of Chemistry papers submitted for the journals must be in the scope of the Journals<br/>
-                5. All papers must be submitted via the link: <a href="https://cmt3.research.microsoft.com/NCRTCES2024" className='text-blue-200 underline hover:text-blue-100'>https://cmt3.research.microsoft.com/NCRTCES2024</a>
+                5. All papers must be submitted via the link: <br /><a href="https://cmt3.research.microsoft.com/NCRTCES2024" className='text-blue-200 underline hover:text-blue-100'>https://cmt3.research.microsoft.com/NCRTCES2024</a>
               </p>
-
             </div>
           </div>
         </div>
