@@ -5,7 +5,7 @@ import About from "../pages/About";
 // import Patron from "../pages/Patron";
 import Tracks from "../pages/Tracks";
 import Committee from "../pages/Committee";
-
+import Keynote from "../pages/Keynote";
 import Guidelines from "../pages/guide"
 import Schedule from "../pages/Schedule";
 import Registration from "../pages/Registration";
@@ -29,6 +29,7 @@ const App = () => {
        
         <MainContent />
         <About />
+        <Keynote />
         <Tracks />
         <Committee />
          <CallForPapers />
