@@ -6,7 +6,7 @@ import img4 from '../public/img4.png'
 import img5 from '../public/img5.jpg'
 import img6 from '../public/img6.png'
 import img7 from '../public/img7.jpg'
-import img8 from '../public/imag8.jpg'
+import img8 from '../public/img8.jpg'
 
 const Keynote = () => {
   const speakers = [
