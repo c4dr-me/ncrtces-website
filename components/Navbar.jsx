@@ -14,6 +14,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import { Link } from 'react-router-dom';
 import { Link as ScrollLink, scroller, Events } from "react-scroll";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -29,6 +30,7 @@ const pages = [
   { name: "Guidelines", sname: "guide" },
   { name: "Schedule", sname: "schedule" },
   { name: "Registration", sname: "reg" },
+  { name: "Call For Special Session", sname: "call"},
   { name: "Contact Us", sname: "contact" },
   { name: "Venue", sname: "venue" },
 ];
@@ -72,6 +74,9 @@ function ResponsiveAppBar() {
       duration: 500,
       smooth: true,
     });
+  };
+  const handleNew = () =>{
+    <Link to="https://docs.google.com/document/d/1cP5ofNbdWMGT1xofUB_XkenpVttwWz0I/edit"></Link>
   };
 
   React.useEffect(() => {
@@ -203,7 +208,7 @@ function ResponsiveAppBar() {
             {pages.map((page) => (
               <Button
                 key={page.name}
-                component={page.sname !== "guide" ? ForwardedScrollLink : ""}
+                component={page.sname !== "guide" ? ForwardedScrollLink : page.sname === "call" ? handleNew : ""}
                 to={page.sname !== "guide" ? page.sname : null}
                 spy={true}
                 smooth={true}
@@ -221,6 +226,7 @@ function ResponsiveAppBar() {
                             : -50
                 }
                 activeClass={page.sname !== "guide" ? "active" : ""}
+                // {...page.sname==="call" ? <Link to="https://github.com/"></Link>: ""}
                 sx={{
                   my: 2,
                   color: "white",
