@@ -64,12 +64,18 @@ const Committee = () => {
     {
       id:'advisory',
       members:[
+        {name: 'Dr. Arun Kumar Tripathi, Former DG National Institute Solar Energy, Ministry of New and Renewable Energy'},
+        {name: 'Dr. R. Krishnan, Director IITM, Pune'},
+        {name: 'Dr. Purnima Jalihal, Scientist G, NIOT Chennai'},
+        {name: 'Dr. V.S. Prasad, Director, NCMRWF, Noida'},
+        {name: 'Dr. Jagvir Singh, Scientist G, Ministry of Earth Sciences, New Delhi'},
+        {name: 'Prof. Prem Vrat, Pro-Chancellor; Professor of Eminence and Chief Mentor, The NorthCap University'},
+        {name: 'Prof. Ved Prakash Former Chairman University Grant Commission '},
+        {name: 'Dr. Sanjay Yadav, Chief Scientist (Former), National Physical Laboratory'},
+        {name: 'Prof. Saroj Kaushik Department of computer science & Engineering IIT, Delhi'},
         {name: 'Prof. K.K. Aggarwal, Former VC, IP University, India'},
         {name: 'Prof. Amit Prakash, GGSIPU, New Delhi'},
-        {name: 'Prof. Ashok Dey, DTU Delhi'},
-        {name: 'Sanjay Yadav Chief Scientist (Former) at National Physical Laboratory'},
         {name: 'Dr. Darshana Hooda, DCRUST, Haryana'},
-        {name: 'Prof. Poonam Bansal, IGDTU, New Delhi'},
         {name: 'Prof. Rajendra Singh, IIT Delhi'},
         {name: 'Prof. Narender Kumar, DTU, Delhi'},
         {name: 'Prof. J.S Lather, NIT, Kurukshetra'},
@@ -82,18 +88,11 @@ const Committee = () => {
         {name: 'Prof. S.D. Joshi Department of Electrical Engineering IIT, Delhi '},
         {name: 'Dr. Sushil Chandra Former Scientist ‘G’, DRDO'},
         { name: 'Dr. T.V. Vijay Kumar Professor, School of Computer &Systems JNU, Delhi' },
-
-        {name: 'Dr. Arun Kumar Tripathi, Former DG National Institute Solar Energy, Ministry of New and Renewable Energy'},
-        {name: 'Dr. R. Krishnan, Director IITM, Pune'},
-        {name: 'Dr. Purnima Jalihal, Scientist G, NIOT Chennai'},
-        {name: 'Dr. V.S. Prasad, Director, NCMRWF, Noida'},
-        {name: 'Dr. Jagvir Singh, Scientist G, Ministry of Earth Sciences, New Delhi'},
-        {name: 'Prof. Prem Vrat, Pro-Chancellor; Professor of Eminence and Chief Mentor, The NorthCap University'},
-        {name: 'Prof. Ved Prakash Former Chairman University Grant Commission '},
-        {name: 'Prof. Saroj Kaushik Department of computer science & Engineering IIT, Delhi'},
+        { name: 'Dr. Anushree Malik Professor, Centre for Rural Development and Technology, Indian Institute of Technology (IIT) Delhi'},
+        { name:'Sh. Rajdeep Verma, Senior officer (S&M), National Science Centre, Delhi'}
       ],
     },
-  ];
+  ]
   const committees = [
     
     {
