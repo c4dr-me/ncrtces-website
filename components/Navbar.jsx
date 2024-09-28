@@ -30,7 +30,7 @@ const pages = [
   { name: "Guidelines", sname: "guide" },
   { name: "Schedule", sname: "schedule" },
   { name: "Registration", sname: "reg" },
-  { name: "Call For Special Session", sname: "call"},
+  // { name: "Call For Special Session", sname: "call"},
   { name: "Contact Us", sname: "contact" },
   { name: "Venue", sname: "venue" },
 ];

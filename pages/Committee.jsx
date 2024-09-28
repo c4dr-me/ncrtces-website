@@ -88,19 +88,8 @@ const Committee = () => {
         {name: 'Prof. S.D. Joshi Department of Electrical Engineering IIT, Delhi '},
         {name: 'Dr. Sushil Chandra Former Scientist ‘G’, DRDO'},
         { name: 'Dr. T.V. Vijay Kumar Professor, School of Computer &Systems JNU, Delhi' },
-<<<<<<< HEAD
-        {name: 'Dr. Arun Kumar Tripathi, Former DG National Institute Solar Energy, Ministry of New and Renewable Energy'},
-        {name: 'Dr. R. Krishnan, Director IITM, Pune'},
-        {name: 'Dr. Purnima Jalihal, Scientist G, NIOT Chennai'},
-        {name: 'Dr. V.S. Prasad, Director, NCMRWF, Noida'},
-        {name: 'Dr. Jagvir Singh, Scientist G, Ministry of Earth Sciences, New Delhi'},
-        {name: 'Prof. Prem Vrat, Pro-Chancellor; Professor of Eminence and Chief Mentor, The NorthCap University'},
-        {name: 'Prof. Ved Prakash Former Chairman University Grant Commission '},
-        {name: 'Prof. Saroj Kaushik Department of computer science & Engineering IIT, Delhi'},
-=======
         { name: 'Dr. Anushree Malik Professor, Centre for Rural Development and Technology, Indian Institute of Technology (IIT) Delhi'},
         { name:'Sh. Rajdeep Verma, Senior officer (S&M), National Science Centre, Delhi'}
->>>>>>> 6a1684c78b05f6985268f618457d3d874bf0ea83
       ],
     },
   ]
