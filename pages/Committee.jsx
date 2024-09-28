@@ -82,7 +82,6 @@ const Committee = () => {
         {name: 'Prof. S.D. Joshi Department of Electrical Engineering IIT, Delhi '},
         {name: 'Dr. Sushil Chandra Former Scientist ‘G’, DRDO'},
         { name: 'Dr. T.V. Vijay Kumar Professor, School of Computer &Systems JNU, Delhi' },
-
         {name: 'Dr. Arun Kumar Tripathi, Former DG National Institute Solar Energy, Ministry of New and Renewable Energy'},
         {name: 'Dr. R. Krishnan, Director IITM, Pune'},
         {name: 'Dr. Purnima Jalihal, Scientist G, NIOT Chennai'},
