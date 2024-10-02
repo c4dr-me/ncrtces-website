@@ -1,4 +1,4 @@
-
+import "../src/Main.css";
 const Guide = () => {
   return (
     <div id='guide' className='bg-gradient-to-b from-blue-400 to-blue-600 text-white'>
@@ -26,7 +26,7 @@ const Guide = () => {
               Special issue Cognitive Computing and Human Understandable Artificial Intelligence of  New Generation Computing. <span className="text-red-600">(SCI)</span>
               </li>
                   <li className="py-2 font-bold">MAPAN Journal of Metrology Society of India. The papers submitted for the journals must be in the scope of the Journals. <span className="text-red-600">(SCI)</span></li>
-                  <li>Asian Journal Of Chemistry <span className="text-red-600">(Scopus)</span></li>
+                  <li>Asian Journal Of Chemistry <span className="text-red-600 ">(Scopus)</span></li>
                   <li className="py-2 font-bold">Privacy-Preserving Techniques for Data Collection and Analysis in Ambient Intelligence Networks-Computing and Informatics. <span className="text-red-600">(SCI)</span></li>
                   <li className="py-2 font-bold">Proceedings on Engineering Sciences. <span className="text-red-600">(Scopus)</span></li>
                   </ul>

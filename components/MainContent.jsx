@@ -82,7 +82,7 @@ const Main = () => {
                   <h1 className="name mt-5 font-bold gradient-text event-subtitle text-2xl sm:text-1xl md:text-2xl lg:text-3xl bg-clip-text text-transparent text-border">
                     Maharaja Surajmal Institute Of Technology.
                   </h1>
-                  <h1 className="mt-3 font-bold bg-gradient-to-r from-slate-50 to-zinc-300 bg-clip-text text-transparent text-border event-date text-2xl sm:text-1xl md:text-2xl lg:text-3xl">
+                  <h1 className=" mt-3 font-bold bg-gradient-to-r from-slate-50 to-zinc-300 bg-clip-text text-transparent text-border event-date text-2xl sm:text-1xl md:text-2xl lg:text-3xl">
                     November 7th - 8th 2024
                   </h1>
                 </div>

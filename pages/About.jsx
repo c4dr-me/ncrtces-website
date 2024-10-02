@@ -18,7 +18,7 @@ const About = () => {
                 </div>
                 <p
                   className="ml-2 text-white text-lg font-semibold bg-white/10 backdrop-blur-sm border border-white/20 px-2 mb-2 rounded-md shadow-md mr-2">
-                  • <strong className='tracking-wider'>Paper Submission Deadline : </strong>September 30, 2024
+                  • <strong className='tracking-wider'>Paper Submission Deadline : </strong>October 10, 2024
                 </p>
               </div>
               <div className="flex w-[500%] items-center">
@@ -28,7 +28,7 @@ const About = () => {
                 </div>
                 <p
                   className="ml-2 text-white text-lg font-semibold bg-white/10 backdrop-blur-sm border border-white/20 px-2 mb-2 rounded-md shadow-md">
-                  • <strong className='tracking-wider'>Notification of acceptance : </strong> October 10, 2024
+                  • <strong className='tracking-wider'>Notification of acceptance : </strong> October 20, 2024
                 </p>
               </div>
               <div className="flex w-[500%] items-center">
@@ -38,7 +38,7 @@ const About = () => {
                 </div>
                 <p
                   className="ml-2 text-white text-lg font-semibold bg-white/10 backdrop-blur-sm border border-white/20 px-2 mb-2 rounded-md shadow-md">
-                  • <strong className='tracking-wider'>Camera-Ready Paper Submission : </strong>October 15, 2024
+                  • <strong className='tracking-wider'>Camera-Ready Paper Submission : </strong>October 25, 2024
                 </p>
               </div>
               <div className="flex w-[250%] items-center">

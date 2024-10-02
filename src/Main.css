@@ -52,3 +52,36 @@
 .timer {
     animation: fadeInUp 1s;
 }
+
+:root {
+    --duration: 5s;
+    --shine-color: rgba(255, 255, 255, 0.5);
+}
+
+.shine-effect {
+    display: inline-block;
+    font-weight: bold;
+    /* Optional, to match the font style */
+    color: red;
+    /* Set text color */
+    background: linear-gradient(90deg, transparent, var(--shine-color), transparent);
+    background-size: 200% 100%;
+    background-clip: text;
+    /* Clip background to text */
+    -webkit-background-clip: text;
+    /* For Safari */
+    animation: shine var(--duration) infinite;
+    /* Animation for shine */
+}
+
+@keyframes shine {
+
+    0%,
+    100% {
+        background-position: -200%;
+    }
+
+    50% {
+        background-position: 200%;
+    }
+}
