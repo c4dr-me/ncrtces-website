@@ -23,12 +23,12 @@ const Guide = () => {
                 4. Few good quality accepted and presented papers will be selected,and after further reviewing will be published in the following SCI/Scopus indexed journals.
                 <ul className="list-[lower-roman] list-inside pl-5">
               <li className="py-2 font-bold">
-              Special issue Cognitive Computing and Human Understandable Artificial Intelligence of  New Generation Computing.
+              Special issue Cognitive Computing and Human Understandable Artificial Intelligence of  New Generation Computing. <span className="text-red-600">(SCI)</span>
               </li>
-                  <li className="py-2 font-bold">MAPAN Journal of Metrology Society of India. The papers submitted for the journals must be in the scope of the Journals.</li>
-                  <li>Asian Journal Of Chemistry</li>
-                  <li className="py-2 font-bold">Privacy-Preserving Techniques for Data Collection and Analysis in Ambient Intelligence Networks-Computing and Informatics.</li>
-                  <li className="py-2 font-bold">Proceedings on Engineering Sciences.</li>
+                  <li className="py-2 font-bold">MAPAN Journal of Metrology Society of India. The papers submitted for the journals must be in the scope of the Journals. <span className="text-red-600">(SCI)</span></li>
+                  <li>Asian Journal Of Chemistry <span className="text-red-600">(Scopus)</span></li>
+                  <li className="py-2 font-bold">Privacy-Preserving Techniques for Data Collection and Analysis in Ambient Intelligence Networks-Computing and Informatics. <span className="text-red-600">(SCI)</span></li>
+                  <li className="py-2 font-bold">Proceedings on Engineering Sciences. <span className="text-red-600">(Scopus)</span></li>
                   </ul>
               </p>
               <p className="py-2">
