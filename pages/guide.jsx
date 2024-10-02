@@ -32,7 +32,7 @@ const Guide = () => {
                   </ul>
               </p>
               <p className="py-2">
-              The Asian Journal of Chemistry papers submitted for the journals must be in the scope of the Journals<br/>
+              The papers submitted for the journals must be in the scope of the Journals<br/>
                 5. All papers must be submitted via the link: <br /><a href="https://cmt3.research.microsoft.com/NCRTCES2024" className='text-blue-200 underline hover:text-blue-100'>https://cmt3.research.microsoft.com/NCRTCES2024</a>
               </p>
             </div>
