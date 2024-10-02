@@ -27,6 +27,8 @@ const Guide = () => {
               </li>
                   <li className="py-2 font-bold">MAPAN Journal of Metrology Society of India. The papers submitted for the journals must be in the scope of the Journals.</li>
                   <li>Asian Journal Of Chemistry</li>
+                  <li className="py-2 font-bold">Privacy-Preserving Techniques for Data Collection and Analysis in Ambient Intelligence Networks-Computing and Informatics.</li>
+                  <li className="py-2 font-bold">Proceedings on Engineering Sciences.</li>
                   </ul>
               </p>
               <p className="py-2">
