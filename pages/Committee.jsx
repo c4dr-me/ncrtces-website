@@ -138,16 +138,21 @@ const Committee = () => {
       members: [
         { name: 'Prof. Puneet Azad' },
         { name: 'Mr. Manoj Malik' },
+        { name: 'Dr. Geetika Dhand'},
       ],
     },
     {
       id: 'committee5',
       name: 'Technical Review Committee',
       members: [
+        { name: 'Dr. Deepshikha Yadav'},
+        { name: 'Dr. Jyoti Khurana'},
+        { name: 'Dr. Parul Choudhary'},
         { name: 'Dr. Ajay Gahlot'},
         { name: 'Dr. Anupama Kaushik'},
         { name: 'Dr. Deepti Deshwal'},
         { name: 'Dr. Tripti Rathee'},
+        { name: 'Dr. Narender Malik'},
       ],
     },
     {
@@ -171,6 +176,8 @@ const Committee = () => {
       name: 'Finance Committee',
       members: [
         { name: 'Prof. Man Singh'},
+        { name: 'Dr. Sunil Gupta'},
+        { name: 'Dr. Deeba Naqvi'},
       ],
     },
     {
@@ -179,14 +186,15 @@ const Committee = () => {
       members: [
         { name: 'Dr. Sakshi Rajput'},
         { name: 'Dr. Preeti Sehrawat'},
+        { name: 'Mr. Praveen Kumar'},
       ],
     },
     {
       id: 'committee10',
       name: 'Publicity, Design & Printing',
       members: [
-        { name: 'Dr. Deepshikha Yadav'},
         { name: 'Dr. Kavita Sheoran'},
+        { name: 'Dr. Deenesh Sheoran'},
       ],
     },
     {
@@ -195,6 +203,9 @@ const Committee = () => {
       members: [
         { name: 'Dr. Shaily Malik'},
         { name: 'Ms. Neelam Nehra'},
+        { name: 'Dr. Meenakshi Tomer'},
+        { name: 'Dr. Swati Choudhary'},
+        { name: 'Ms. Saba Khanum'},
       ],
     },
     {
@@ -207,6 +218,41 @@ const Committee = () => {
         { name: 'Ms. Annu Bhure'},
         { name: 'Ms. Gunjan'},
         { name: 'Ms. Vaani'},
+        { name: 'Dr. Priya Dalal'},
+        { name: 'Ms. Vishakha'},
+        { name: 'Ms. Nishtha Saroha'},
+        { name: 'Ms. Astha Solanki'},
+      ],
+    },
+    {
+      id: 'committee13',
+      name: 'Registration Committee, MSIT',
+      members: [
+        { name: 'Dr. Meena Rao'},
+        { name: 'Ms. Jyoti'},
+        { name: 'Dr. Medhavi Malik'},
+      ],
+    },
+    {
+      id: 'committee14',
+      name: 'Media Committee, MSIT',
+      members: [
+        { name: 'Dr. Aman Dahiya'},
+        { name: 'Dr. Sitendar Malik'},
+      ],
+    },
+    {
+      id: 'committee15',
+      name: 'Audio/Video Committee, MSIT',
+      members: [
+        { name: 'Mr. Deepak Goyal'},
+      ],
+    },
+    {
+      id: 'committee16',
+      name: 'Internet Committee, MSIT',
+      members: [
+        { name: 'Dr. Bharti Sharma'},
       ],
     },
   ];
