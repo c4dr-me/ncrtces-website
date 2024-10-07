@@ -13,7 +13,6 @@ const Tracks = () => {
       setActiveTrack(id);
     }
   };
-
   useEffect(() => {
     const updateActiveTrack = () => {
       const isMobile = window.innerWidth < 768;
@@ -93,24 +92,15 @@ const Tracks = () => {
       id: "track6",
       title: "Special Session Proposal",
       items: [
-        `Special Session On : `,
-        `Holistic Climate Resilience for Agriculture and Health Systems
-
-        SESSION ORGANIZERS:
-
-        Dr. Varuna Gupta, CHRIST University, Delhi-NCR, India, varunagupta.cs@gmail.com
-
-        Dr. Aakansha Garg, ABES Institute of Technology, Ghaziabad, India, aakansha1986@gmail.com 
-        `,
-        `AI for Global Sustainable Development
-
-        SESSION ORGANIZERS:
-
-        Dr. Megha Rathi, Department of CSE & IT, Jaypee Institute of Information Technology, Noida, INDIA , drmegharathi.25@gmail.com
-
-        Dr. Adwitiya Sinha, Department of Natural and Applied Sciences, TERI School of Advanced Studies, New Delhi, INDIA, mailtoadwitiya@gmail.com 
-        `,
-        // `Click on the link : ${<a href={'https://docs.google.com/document/d/1bQWRXwvZHXI2W7n2puQyfSy84YMTAQl3/edit?usp=drivesdk&ouid=107939780468160870267&rtpof=true&sd=true'}>https://docs.google.com/document/d/1bQWRXwvZHXI2W7n2puQyfSy84YMTAQl3/edit?usp=drivesdk&ouid=107939780468160870267&rtpof=true&sd=true</a>}` 
+        `1.  Special Session On Holistic Climate Resilience for Agriculture and Health Systems `, 
+        'SESSION ORGANIZERS:',
+        'Dr. Varuna Gupta, CHRIST University, Delhi-NCR, India, varunagupta.cs@gmail.com',
+        'Dr. Aakansha Garg, ABES Institute of Technology, Ghaziabad, India, aakansha1986@gmail.com ',
+        '2.  Special Session On AI for Global Sustainable Development',
+        'SESSION ORGANIZERS:',
+        ' Dr. Megha Rathi, Department of CSE & IT, Jaypee Institute of Information Technology, Noida, INDIA , drmegharathi.25@gmail.com',
+        ' Dr. Adwitiya Sinha, Department of Natural and Applied Sciences, TERI School of Advanced Studies, New Delhi, INDIA, mailtoadwitiya@gmail.com ',
+        `3. Click here : https://docs.google.com/document/d/1bQWRXwvZHXI2W7n2puQyfSy84YMTAQl3/edit?usp=drivesdk&ouid=107939780468160870267&rtpof=true&sd=true`,
       ],
     },
   ];
@@ -151,27 +141,26 @@ const Tracks = () => {
                           className="py-2 text-black pl-2 flex items-center transition-all duration-200 hover:bg-gray-100 rounded-md cursor-pointer"
                         >
                           <span className="inline-block w-2 h-2 bg-[#365372] rounded-full mr-2 shrink-0"></span>
-                          <pre className="font-semibold" style={{whiteSpace:'pre-wrap'}}>{item}</pre>
+                          <span className="font-semibold" style={{whiteSpace:'pre-wrap'}}>{item}</span>
                         </li>
                       ))}
                     </ul>
                   </li>
                 ))}
                 {/* Special Session Button with href */}
-                {/* <li className="relative mt-4">
-                  <a
+                
+                  {/* <a
                     href="https://docs.google.com/document/d/1bQWRXwvZHXI2W7n2puQyfSy84YMTAQl3/edit?usp=drivesdk&ouid=107939780468160870267&rtpof=true&sd=true"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full"
-                  >
-                    <button className="w-full bg-gradient-to-r from-blue-300 to-blue-400 p-1 rounded-md">
+                  > */}
+                    {/* <button className="w-full bg-gradient-to-r from-blue-300 to-blue-400 p-1 rounded-md">
                       <div className="bg-blue-500 text-white rounded-md py-2 font-medium hover:bg-blue-600 focus:outline-none">
                         Special Session
                       </div>
-                    </button>
-                  </a>
-                </li> */}
+                    </button> */}
+                  {/* </a> */}
               </ul>
             </div>
             <div className="hidden md:block mt-4 md:mt-0 w-full md:w-[800px] bg-white rounded-md shadow-lg p-5 border border-gray-300">
