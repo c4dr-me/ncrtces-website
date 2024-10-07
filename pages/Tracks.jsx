@@ -89,6 +89,30 @@ const Tracks = () => {
         "Intelligent Smart Technology for Sustainability",
       ],
     },
+    {
+      id: "track6",
+      title: "Special Session Proposal",
+      items: [
+        `Special Session On : `,
+        `Holistic Climate Resilience for Agriculture and Health Systems
+
+        SESSION ORGANIZERS:
+
+        Dr. Varuna Gupta, CHRIST University, Delhi-NCR, India, varunagupta.cs@gmail.com
+
+        Dr. Aakansha Garg, ABES Institute of Technology, Ghaziabad, India, aakansha1986@gmail.com 
+        `,
+        `AI for Global Sustainable Development
+
+        SESSION ORGANIZERS:
+
+        Dr. Megha Rathi, Department of CSE & IT, Jaypee Institute of Information Technology, Noida, INDIA , drmegharathi.25@gmail.com
+
+        Dr. Adwitiya Sinha, Department of Natural and Applied Sciences, TERI School of Advanced Studies, New Delhi, INDIA, mailtoadwitiya@gmail.com 
+        `,
+        // `Click on the link : ${<a href={'https://docs.google.com/document/d/1bQWRXwvZHXI2W7n2puQyfSy84YMTAQl3/edit?usp=drivesdk&ouid=107939780468160870267&rtpof=true&sd=true'}>https://docs.google.com/document/d/1bQWRXwvZHXI2W7n2puQyfSy84YMTAQl3/edit?usp=drivesdk&ouid=107939780468160870267&rtpof=true&sd=true</a>}` 
+      ],
+    },
   ];
 
   return (
@@ -127,14 +151,14 @@ const Tracks = () => {
                           className="py-2 text-black pl-2 flex items-center transition-all duration-200 hover:bg-gray-100 rounded-md cursor-pointer"
                         >
                           <span className="inline-block w-2 h-2 bg-[#365372] rounded-full mr-2 shrink-0"></span>
-                          <span className="font-semibold">{item}</span>
+                          <pre className="font-semibold" style={{whiteSpace:'pre-wrap'}}>{item}</pre>
                         </li>
                       ))}
                     </ul>
                   </li>
                 ))}
                 {/* Special Session Button with href */}
-                <li className="relative mt-4">
+                {/* <li className="relative mt-4">
                   <a
                     href="https://docs.google.com/document/d/1bQWRXwvZHXI2W7n2puQyfSy84YMTAQl3/edit?usp=drivesdk&ouid=107939780468160870267&rtpof=true&sd=true"
                     target="_blank"
@@ -147,7 +171,7 @@ const Tracks = () => {
                       </div>
                     </button>
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
             <div className="hidden md:block mt-4 md:mt-0 w-full md:w-[800px] bg-white rounded-md shadow-lg p-5 border border-gray-300">
