@@ -89,7 +89,8 @@ const Committee = () => {
         {name: 'Dr. Sushil Chandra Former Scientist ‘G’, DRDO'},
         { name: 'Dr. T.V. Vijay Kumar Professor, School of Computer &Systems JNU, Delhi' },
         { name: 'Dr. Anushree Malik Professor, Centre for Rural Development and Technology, Indian Institute of Technology (IIT) Delhi'},
-        { name:'Sh. Rajdeep Verma, Senior officer (S&M), National Science Centre, Delhi'}
+        { name: 'Sh. Rajdeep Verma, Senior officer (S&M), National Science Centre, Delhi' },
+        { name: 'Darshan Malik, Associate Professor, University of Delhi' },
       ],
     },
   ]
