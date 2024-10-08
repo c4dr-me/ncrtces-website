@@ -189,7 +189,7 @@ const Tracks = () => {
                         <li
                           key={index}
                           className={`py-2 text-black pl-2 flex items-center transition-all duration-200 hover:bg-gray-100 rounded-md cursor-pointer ${
-                            item.startsWith("1.") || item.startsWith("2.")
+                            item.startsWith("1.") || item.startsWith("2.") || item.startsWith("3.")
                               ? "pl-4"
                               : ""
                             }
