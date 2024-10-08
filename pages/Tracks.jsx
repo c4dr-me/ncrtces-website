@@ -93,15 +93,15 @@ const Tracks = () => {
       id: "track6",
       title: "Special Session Proposal",
       items: [
-        `1.  Special Session On Holistic Climate Resilience for Agriculture and Health Systems `, 
-        'SESSION ORGANIZERS:',
-        'Dr. Varuna Gupta, CHRIST University, Delhi-NCR, India, varunagupta.cs@gmail.com',
-        'Dr. Aakansha Garg, ABES Institute of Technology, Ghaziabad, India, aakansha1986@gmail.com ',
-        '2.  Special Session On AI for Global Sustainable Development',
-        'SESSION ORGANIZERS:',
-        ' Dr. Megha Rathi, Department of CSE & IT, Jaypee Institute of Information Technology, Noida, INDIA , drmegharathi.25@gmail.com',
-        ' Dr. Adwitiya Sinha, Department of Natural and Applied Sciences, TERI School of Advanced Studies, New Delhi, INDIA, mailtoadwitiya@gmail.com ',
-        `Click here`,
+        `1.  Special Session On Holistic Climate Resilience for Agriculture and Health Systems `,
+        "SESSION ORGANIZERS:",
+        "Dr. Varuna Gupta, CHRIST University, Delhi-NCR, India, varunagupta.cs@gmail.com",
+        "Dr. Aakansha Garg, ABES Institute of Technology, Ghaziabad, India, aakansha1986@gmail.com ",
+        "2.  Special Session On AI for Global Sustainable Development",
+        "SESSION ORGANIZERS:",
+        " Dr. Megha Rathi, Department of CSE & IT, Jaypee Institute of Information Technology, Noida, INDIA , drmegharathi.25@gmail.com",
+        " Dr. Adwitiya Sinha, Department of Natural and Applied Sciences, TERI School of Advanced Studies, New Delhi, INDIA, mailtoadwitiya@gmail.com ",
+        `3. Special Session Form`,
       ],
     },
   ];
@@ -139,25 +139,39 @@ const Tracks = () => {
                       {track.items.map((item, index) => (
                         <li
                           key={index}
-                          className="py-2 text-black pl-2 flex items-center transition-all duration-200 hover:bg-gray-100 rounded-md cursor-pointer"
+                          className={`py-2 text-black pl-2 flex items-center transition-all duration-200 hover:bg-gray-100 rounded-md cursor-pointer ${
+                            item.startsWith("1.") || item.startsWith("2.")
+                              ? "pl-4"
+                              : ""
+                          }`}
                         >
-                          {!item.includes("SESSION ORGANIZERS:") && !item.includes("Click here") && !item.includes("Special Session On") && (
-        <span className="inline-block w-2 h-2 bg-[#365372] rounded-full mr-2 shrink-0"></span>
-      )}
-                          {item.includes("Click here") ? (
+                          {!item.includes("SESSION ORGANIZERS:") &&
+                            !item.includes("Special Session Form") &&
+                            !item.includes("Special Session On") && (
+                              <span className="inline-block w-2 h-2 bg-[#365372] rounded-full mr-2 shrink-0"></span>
+                            )}
+                          {item.includes("Special Session Form") ? (
                             <a
                               href="https://docs.google.com/document/d/1bQWRXwvZHXI2W7n2puQyfSy84YMTAQl3/edit?usp=drivesdk&ouid=107939780468160870267&rtpof=true&sd=true"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="font-semibold underline hover:text-blue-400"
+                              className="font-semibold hover:text-blue-400"
                               style={{ whiteSpace: "pre-wrap" }}
                             >
-                              {item}
+                              3. <span className="text-red-600">Special Session Form</span>
                             </a>
                           ) : (
-                            <span className="font-semibold" style={{ whiteSpace: "pre-wrap" }}>
-                              {item}
-                            </span>
+                            <span
+                              className="font-semibold"
+                              style={{ whiteSpace: "pre-wrap" }}
+                              dangerouslySetInnerHTML={{
+                                __html: item.replace(
+                                  /Special Session/g,
+                                  (match) =>
+                                    `<span class="text-red-600">${match}</span>`
+                                ),
+                              }}
+                            ></span>
                           )}
                         </li>
                       ))}
@@ -174,25 +188,42 @@ const Tracks = () => {
                       {track.items.map((item, index) => (
                         <li
                           key={index}
-                          className="py-2 text-black pl-2 flex items-center transition-all duration-200 hover:bg-gray-100 rounded-md cursor-pointer"
+                          className={`py-2 text-black pl-2 flex items-center transition-all duration-200 hover:bg-gray-100 rounded-md cursor-pointer ${
+                            item.startsWith("1.") || item.startsWith("2.")
+                              ? "pl-4"
+                              : ""
+                            }
+                          ${
+                            item.startsWith("SESSION ORGANIZERS:") ? "font-semibold text-red-600 bg-yellow-100 p-1 rounded" : ""
+                          }`}
                         >
-                          {!item.includes("SESSION ORGANIZERS:") && !item.includes("Click here") && !item.includes("Special Session On") && (
-        <span className="inline-block w-2 h-2 bg-[#365372] rounded-full mr-2 shrink-0"></span>
-      )}
-                          {item.includes("Click here") ? (
+                          {!item.includes("SESSION ORGANIZERS:") &&
+                            !item.includes("Special Session Form") &&
+                            !item.includes("Special Session On") && (
+                              <span className="inline-block w-2 h-2 bg-[#365372] rounded-full mr-2 shrink-0"></span>
+                            )}
+                          {item.includes("Special Session Form") ? (
                             <a
                               href="https://docs.google.com/document/d/1bQWRXwvZHXI2W7n2puQyfSy84YMTAQl3/edit?usp=drivesdk&ouid=107939780468160870267&rtpof=true&sd=true"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="font-semibold underline hover:text-blue-400"
+                              className="font-semibold "
                               style={{ whiteSpace: "pre-wrap" }}
                             >
-                              {item}
+                              3. <span className="text-blue-600 hover:text-blue-400 underline">Special Session Form</span>
                             </a>
                           ) : (
-                            <span className="font-semibold" style={{ whiteSpace: "pre-wrap" }}>
-                              {item}
-                            </span>
+                            <span
+                              className="font-semibold"
+                              style={{ whiteSpace: "pre-wrap" }}
+                              dangerouslySetInnerHTML={{
+                                __html: item.replace(
+                                  /Special Session/g,
+                                  (match) =>
+                                    `<span class="text-blue-600">${match}</span>`
+                                ),
+                              }}
+                            ></span>
                           )}
                         </li>
                       ))}
@@ -209,17 +240,25 @@ const Tracks = () => {
 
 export default Tracks;
 
- {/* Special Session Button with href */}
-                
-                  {/* <a
+{
+  /* Special Session Button with href */
+}
+
+{
+  /* <a
                     href="https://docs.google.com/document/d/1bQWRXwvZHXI2W7n2puQyfSy84YMTAQl3/edit?usp=drivesdk&ouid=107939780468160870267&rtpof=true&sd=true"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full"
-                  > */}
-                    {/* <button className="w-full bg-gradient-to-r from-blue-300 to-blue-400 p-1 rounded-md">
+                  > */
+}
+{
+  /* <button className="w-full bg-gradient-to-r from-blue-300 to-blue-400 p-1 rounded-md">
                       <div className="bg-blue-500 text-white rounded-md py-2 font-medium hover:bg-blue-600 focus:outline-none">
                         Special Session
                       </div>
-                    </button> */}
-                  {/* </a> */}
+                    </button> */
+}
+{
+  /* </a> */
+}
