@@ -6,7 +6,7 @@ const CopyableField = ({ label, value }) => {
   const handleCopy = () => {
     navigator.clipboard.writeText(value);
     setCopied(true);
-    setTimeout(() => setCopied(false), 1000); // Reset after 2 seconds
+    setTimeout(() => setCopied(false), 1000); 
   };
 
   return (
