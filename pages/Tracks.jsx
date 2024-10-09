@@ -114,7 +114,7 @@ const Tracks = () => {
             <h1 className="text-[#c00000] text-center text-3xl font-[600]">
               TRACKS
             </h1>
-            <div className="w-[100px] h-[2px] mx-auto mt-2 bg-[#365372] rounded-xl mb-8"></div>
+            <div className="w-[100px] h-[3px] mx-auto mt-2 bg-[#365372] rounded-xl mb-8"></div>
           </div>
           <div className="flex flex-col md:flex-row md:space-x-8 m-5">
             <div className="w-full md:w-[300px] relative flex">

@@ -288,7 +288,7 @@ const Committee = () => {
             <h1 className="text-[#c00000] text-center text-3xl font-[600]">
               COMMITTEES
             </h1>
-            <div className="w-[100px] h-[2px] mx-auto mt-2 bg-[#365372] rounded-xl mb-8"></div>
+            <div className="w-[100px] h-[3px] mx-auto mt-2 bg-[#365372] rounded-xl mb-8"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 mt-8 mx-auto">
             <button className={`mx-auto tab text-lg rounded-lg ${activeTab === 'committee0' ? 'text-white bg-[#365372] ' : 'text-black border-black bg-white hover:border shadow-lg '} w-[80%] py-1`} onClick={() => changeTab('committee0')}>Organising Committee</button>

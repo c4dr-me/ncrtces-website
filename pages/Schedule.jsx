@@ -4,6 +4,7 @@ const cfp = () => {
       <div className='bg-white w-full px-[5%] md:px-[15%]'>
         <div>
           <h1 className='text-[#c00000] pt-10 text-center text-3xl font-[600]'>SCHEDULE</h1>
+          <div className="w-[100px] h-[3px] mx-auto mt-2 bg-[#365372] rounded-xl mb-8"></div>
           <h2 className='text-[#000000] pt-12 text-center text-3xl font-[450]'>IMPORTANT DATES</h2>
           <div className='w-48 h-[3px] mx-auto mt-2 bg-[#365372] rounded-xl'></div>
           <div className="h-12 bg-white w-full"></div>
