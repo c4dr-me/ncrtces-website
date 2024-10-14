@@ -18,17 +18,17 @@ const cfp = () => {
           <div className="flex text-md md:text-xl">
             <div className="w-1/2 text-center py-3">Paper submission Deadline</div>
             <div className='w-1 h-auto border-r-2 border-[#e9e9e9]'></div>
-            <div className="w-1/2 text-center py-3">September 30, 2024</div>
+            <div className="w-1/2 text-center py-3">October 20, 2024</div>
           </div>
           <div className="flex text-md md:text-xl bg-[#e9e9e9]">
             <div className="w-1/2 text-center py-3">Notification of acceptance</div>
             <div className='w-1 h-auto border-r-2 border-white'></div>
-            <div className="w-1/2 text-center py-3">October 10, 2024</div>
+            <div className="w-1/2 text-center py-3">October 25, 2024</div>
           </div>
           <div className="flex text-md md:text-xl">
             <div className="w-1/2 text-center py-3">Camera-Ready Paper Submission</div>
             <div className='w-1 h-auto border-r-2 border-[#e9e9e9]'></div>
-            <div className="w-1/2 text-center py-3">October 15, 2024</div>
+            <div className="w-1/2 text-center py-3">October 30, 2024</div>
           </div>
           <div className="flex text-md md:text-xl bg-[#e9e9e9]">
             <div className="w-1/2 text-center py-3">Conference</div>
