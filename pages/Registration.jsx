@@ -1,5 +1,5 @@
 import CopyableField from "../components/copyable";
-
+import qr from '../public/qr.jpg'
 const Registration = () => {
   return (
     <section id="reg">
@@ -87,7 +87,7 @@ const Registration = () => {
                 <CopyableField key={idx} label={field.label} value={field.value} />
               ))}
             </div>
-
+            <img src={qr} alt="" srcset="" />
             <p className="text-md md:text-lg text-center font-medium mt-6">
               Ensure to include your full name and registration category while making the payment.
             </p>
