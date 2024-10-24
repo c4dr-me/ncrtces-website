@@ -35,6 +35,7 @@ const Registration = () => {
                 <div className="w-1/2 text-center py-3">{fee}</div>
               </div>
             ))}
+            <p className="font-bold mt-5 text-lg">* The registration fees is non-refundable.</p>
           </div>
 
           <br />
