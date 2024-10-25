@@ -22,7 +22,7 @@ const Main = () => {
     { url: 'https://news.sap.com/india/files/2022/08/09/sustainability-banner.jpg' },
   ];
 
-  const targetDate = "2024-11-07T00:00:00";
+  const targetDate = "2024-11-11T00:00:00";
 
   const customArrowStyles = {
     width: '32px',
@@ -83,7 +83,7 @@ const Main = () => {
                     Maharaja Surajmal Institute Of Technology.
                   </h1>
                   <h1 className=" mt-3 font-bold bg-gradient-to-r from-slate-50 to-zinc-300 bg-clip-text text-transparent text-border event-date text-2xl sm:text-1xl md:text-2xl lg:text-3xl">
-                    November 7th - 8th 2024
+                    November 11th - 12th 2024
                   </h1>
                 </div>
                 <div className="flex items-center justify-center">

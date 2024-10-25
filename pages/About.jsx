@@ -48,7 +48,7 @@ const About = () => {
                 </div>
                 <p
                   className="ml-2 text-white text-lg font-semibold bg-white/10 backdrop-blur-sm border border-white/20 px-2 mb-2 rounded-md shadow-md">
-                  • <strong className='tracking-wider'>Conference Dates : </strong>November 07-08, 2024
+                  • <strong className='tracking-wider'>Conference Dates : </strong>November 11-12, 2024
                 </p>
               </div>
             </marquee>
