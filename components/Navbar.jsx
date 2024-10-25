@@ -187,7 +187,7 @@ function ResponsiveAppBar() {
         marginBottom: "3px",
         overflow: "hidden",
         width: "100vw",
-        position: "fixed",
+        position: "sticky",
       }}
     >
       <Container maxWidth="xl">
