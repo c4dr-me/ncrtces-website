@@ -28,7 +28,7 @@ const Cfp = () => {
               and Sustainability (NCRTCES) 2024
             </p>
             <p className="mt-1 text-lg md:text-xl font-bold italic py-2">
-              to be held on <br/> <span className="font-bold text-yellow-200 underline pb-2">7-8 November, 2024</span><br/> at <br />
+              to be held on <br/> <span className="font-bold text-yellow-200 underline pb-2">11-12 November, 2024</span><br/> at <br />
               <span className="font-bold md:text-xl text-yellow-200 underline pb-2">Maharaja Surajmal Institute of Technology, C-4, Janakpuri, New Delhi, India</span>
             </p>
           </section>
