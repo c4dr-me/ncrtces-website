@@ -33,7 +33,7 @@ const cfp = () => {
           <div className="flex text-md md:text-xl bg-[#e9e9e9]">
             <div className="w-1/2 text-center py-3">Conference</div>
             <div className='w-1 h-auto border-r-2 border-white'></div>
-            <div className="w-1/2 text-center py-3">November 07-08, 2024</div>
+            <div className="w-1/2 text-center py-3">November 11-12, 2024</div>
           </div>
         </div>
       </div>
