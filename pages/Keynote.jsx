@@ -56,10 +56,11 @@ const Keynote = () => {
         title: 'Professor, School of Computer Science and Engineering',
         subtitle: 'VIT-AP University, Amaravati, AP, India',
     },
+    
     {
-      img: img6,
-      name: 'Dr Parul Singh',
-      title: 'Assistant Professor, University of Delhi',
+      img: img11,
+      name: 'Dr. O.P.Mishra',
+      title: 'Director, National Centre for Seismology (NCS) and Advisor/Head of Seismology and Geosciences (SAGE), Ministry of Earth Sciences, Government of India.',
       subtitle: '',
     },
     {
@@ -75,9 +76,9 @@ const Keynote = () => {
     subtitle: '',
   },
   {
-    img: img11,
-    name: 'Dr. O.P.Mishra',
-    title: 'Director, National Centre for Seismology (NCS) and Advisor/Head of Seismology and Geosciences (SAGE), Ministry of Earth Sciences, Government of India.',
+    img: img6,
+    name: 'Dr Parul Singh',
+    title: 'Assistant Professor, University of Delhi',
     subtitle: '',
   },
   {
